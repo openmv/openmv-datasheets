@@ -1,0 +1,86 @@
+meta:
+  product_name: "Multispectral Event Camera Module"
+  sku: "OMV-MECM-PAG7936-V1"
+  filename: "OpenMV-Multispectral-Event-Camera-Module-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/openmv-cam/openmv-n6/multispectral-event-camera-module/mecm-hero.jpg"
+
+description: >
+  The Multispectral Event Camera Module allows your OpenMV Cam to interface with the Prophesee
+  GENX320 event vision sensor and the PAG7936 1 MP 120 FPS color global shutter sensor
+  simultaneously. The PAG7936 exposure trigger is shared with the GENX320 event timestamp
+  input, allowing synchronized event information with image capture. Inspired by the human
+  retina, each sensor pixel responds independently and asynchronously to changes in
+  illumination, enabling efficient, high-speed, and low-power vision sensing.
+
+target_areas: >
+  Event-based vision, high-speed motion detection, vibration analysis, autonomous systems,
+  robotics, industrial inspection, low-power surveillance.
+
+features:
+  - label: "Dual sensing"
+    detail: "Simultaneous GENX320 event camera + PAG7936 1 MP 120 FPS color global shutter."
+  - label: "Synchronized capture"
+    detail: "PAG7936 exposure trigger shared with GENX320 event timestamp for time-synchronized multispectral data."
+  - label: "375 Hz+ event rate"
+    detail: "Event histograms at 375 Hz+. No exposure time, no motion blur."
+  - label: "3 mW sensor power"
+    detail: "Ultra-low power event sensing starting at 3 mW streaming."
+  - label: "140 dB dynamic range"
+    detail: "Extended dynamic range \u2014 sees changes in both dark and bright zones simultaneously."
+  - label: "<5 lux low-light"
+    detail: "Senses into twilight light levels with 0.05 lux sensor cutoff."
+
+system_components_title: "Specifications"
+system_components:
+  - title: "Event Camera"
+    components:
+      - name: "Sensor"
+        details: "Prophesee GENX320 event vision sensor."
+      - name: "Event Rate"
+        details: "Event histograms at 375 Hz+."
+      - name: "Power"
+        details: "Starting at 3 mW streaming data."
+      - name: "Dynamic Range"
+        details: "Up to 140 dB."
+      - name: "Low-Light"
+        details: "Senses below 5 lux; sensor cutoff at 0.05 lux."
+
+  - title: "Color Camera"
+    components:
+      - name: "Sensor"
+        details: "PAG7936 1 MP color global shutter at 120 FPS."
+      - name: "Synchronization"
+        details: "Exposure trigger shared with GENX320 event timestamp input."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "OpenMV N6 only."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "5 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/multispectral-event-camera-module"
+  - name: "Prophesee GENX320"
+    link: "https://www.prophesee.ai/event-based-sensor-genx320/"
+  - name: "Prophesee Documentation"
+    link: "https://docs.prophesee.ai/stable/hw/partners/openmv.html"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

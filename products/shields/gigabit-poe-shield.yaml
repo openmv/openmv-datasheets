@@ -1,0 +1,76 @@
+meta:
+  product_name: "Gigabit PoE Shield"
+  sku: "OMV-SHIELD-GIGABIT-POE"
+  filename: "OpenMV-Gigabit-PoE-Shield-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/gigabit-poe-shield/gigabit-poe-camea-hero.jpg"
+
+description: >
+  The Gigabit PoE Shield lets you connect your OpenMV Cam to PoE Ethernet with gigabit speeds,
+  providing a one-cable solution for power and connectivity. It features a 10/100/1000 Mb/s
+  capable Ethernet jack with IEEE 802.3af PoE support providing up to ~6 W of power. The
+  shield supplies 5.6 V via VIN through an ideal OR'ing diode, allowing it to be combined with
+  other dual header column shields. Peak UDP transmit performance exceeds 500 Mb/s using
+  Python sockets with the N6.
+
+target_areas: >
+  High-bandwidth vision, video streaming, IP camera, industrial Ethernet,
+  gigabit PoE deployments, high-throughput data transfer.
+
+features:
+  - label: "Gigabit Ethernet"
+    detail: "10/100/1000 Mb/s capable Ethernet jack."
+  - label: "IEEE 802.3af PoE"
+    detail: "Power over Ethernet providing up to ~6 W to your OpenMV Cam."
+  - label: "500+ Mb/s throughput"
+    detail: "Peak UDP transmit performance exceeds 500 Mb/s with N6."
+  - label: "One-cable solution"
+    detail: "Single Ethernet cable provides both power and gigabit data."
+  - label: "Shield stacking"
+    detail: "Supplies 5.6 V on VIN via ideal OR'ing diode for multi-shield combinations."
+
+system_components_title: "Features"
+system_components:
+  - title: "Ethernet"
+    components:
+      - name: "Speed"
+        details: "10/100/1000 Mb/s Gigabit Ethernet."
+      - name: "PoE"
+        details: "IEEE 802.3af compliant. Provides up to ~6 W of power."
+      - name: "Performance"
+        details: "Peak UDP transmit exceeds 500 Mb/s using Python sockets (tested with N6)."
+
+  - title: "Power Output"
+    components:
+      - name: "VIN"
+        details: "Supplies 5.6 V via VIN through ideal OR'ing diode. Compatible with other dual header column shields."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "Only OpenMV Cams with onboard Ethernet: OpenMV N6 and OpenMV Cam RT1062."
+    notes:
+      - "Comes with mounting hardware and screws."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "23 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/gigabit-poe-shield"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

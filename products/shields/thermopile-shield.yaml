@@ -1,0 +1,77 @@
+meta:
+  product_name: "Thermopile Shield"
+  sku: "OMV-SHIELD-THERMOPILE-V1"
+  filename: "OpenMV-Thermopile-Shield-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/thermopile-shield/new-thermopile-angle.jpg"
+
+description: >
+  The Thermopile Shield gives your OpenMV Cam the ability to see heat. It features a 16x4
+  pixel sensor array with a 60\u00B0 x 16\u00B0 field of view, capable of measuring object temperatures
+  between -50\u00B0C and 300\u00B0C while measuring ambient room temperature (-40\u00B0C to 85\u00B0C). Your
+  OpenMV Cam's firmware has built-in support for controlling the Thermopile Shield using
+  the fir module.
+
+target_areas: >
+  Thermal imaging, temperature measurement, heat detection, HVAC diagnostics,
+  industrial inspection, presence detection.
+
+features:
+  - label: "16x4 thermal array"
+    detail: "16x4 pixel thermopile sensor array."
+  - label: "60\u00B0 x 16\u00B0 FOV"
+    detail: "60-degree horizontal by 16-degree vertical field of view."
+  - label: "-50\u00B0C to 300\u00B0C object range"
+    detail: "Measures object temperatures from -50\u00B0C to 300\u00B0C."
+  - label: "Ambient sensing"
+    detail: "Room temperature measurement from -40\u00B0C to 85\u00B0C."
+  - label: "Built-in firmware support"
+    detail: "Controlled via the fir module in MicroPython."
+
+system_components_title: "Specifications"
+system_components:
+  - title: "Thermal Sensor"
+    components:
+      - name: "Array"
+        details: "16x4 pixel thermopile sensor array."
+      - name: "Field of View"
+        details: "60\u00B0 x 16\u00B0 (horizontal x vertical)."
+      - name: "Object Temperature"
+        details: "-50\u00B0C to 300\u00B0C."
+      - name: "Ambient Temperature"
+        details: "-40\u00B0C to 85\u00B0C."
+
+  - title: "Software"
+    components:
+      - name: "API"
+        details: "Built-in fir module in MicroPython firmware."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "All OpenMV Cam models."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "7 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/thermopile-shield"
+  - name: "FIR Module Docs"
+    link: "http://docs.openmv.io/library/omv.fir.html"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

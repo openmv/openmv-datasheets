@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:cdn.shopify.com)",
+      "WebFetch(domain:openmv.io)",
+      "Bash(gh api:*)"
+    ]
+  }
+}

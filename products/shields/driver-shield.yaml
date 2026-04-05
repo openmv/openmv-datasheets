@@ -1,0 +1,85 @@
+meta:
+  product_name: "Driver Shield"
+  sku: "OMV-SHIELD-DRIVER"
+  filename: "OpenMV-Driver-Shield-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/driver-shield/Driver Shield - FRONT CAM.jpg"
+
+description: >
+  The Driver Shield gives your OpenMV Cam the ability to drive two 3 A motors or four 1.5 A
+  independent channels at 6\u201336 V. It can drive 12 V or 24 V motors, solenoids, or relays.
+  P7/P8 controls PWM for the two motor channels, while P0 and P2 control direction (or P1 via
+  solder bridge). In independent mode, P0/P2/P7/P8/(P1) each control a high-power digital
+  output. Includes 6\u201336 V wide-range input, robust ADC, and robust trigger I/O.
+
+target_areas: >
+  Motor control, robotics, solenoid actuation, relay driving, conveyor systems,
+  industrial automation, actuator control.
+
+features:
+  - label: "Dual motor driver"
+    detail: "Two 3 A motor channels or four 1.5 A independent channels at 6\u201336 V."
+  - label: "12/24 V capable"
+    detail: "Drive 12 V or 24 V motors, solenoids, or relays directly."
+  - label: "Independent mode"
+    detail: "Solder bridge configurable for 4 independent high-power digital outputs."
+  - label: "6\u201336 V wide-range input"
+    detail: "Reverse voltage and transient surge protection. Outputs 5.4 V on VIN via OR'ing diode."
+  - label: "Robust ADC input"
+    detail: "0\u20135 V on P6 with \u00B136 V overvoltage protection. Optional 4\u201320 mA mode."
+  - label: "Robust trigger I/O"
+    detail: "0\u20135 V on P10 via SYN pin."
+
+system_components_title: "Features"
+system_components:
+  - title: "Motor Driver"
+    components:
+      - name: "Motor Mode"
+        details: "Two motor channels at up to 3 A each. P7/P8 for PWM speed control, P0/P2 for direction (P1 optional via solder bridge). Operating voltage 6\u201336 V."
+      - name: "Independent Mode"
+        details: "Four independent channels at up to 1.5 A each. P0/P2/P7/P8/(P1) each act as high-power digital outputs. Configurable via solder bridge."
+      - name: "Disconnectable"
+        details: "All pins can be disconnected from the OpenMV Cam."
+
+  - title: "Power Input"
+    components:
+      - name: "Wide-Range Input"
+        details: "6\u201336 V with reverse voltage and transient surge protection. Powers motors and outputs 5.4 V on VIN via OR'ing diode."
+
+  - title: "ADC Input"
+    components:
+      - name: "AIN"
+        details: "Robust 0\u20135 V ADC input on P6. Overvoltage protection to \u00B136 V. Optional 4\u201320 mA mode. Disconnectable."
+
+  - title: "Digital I/O"
+    components:
+      - name: "SYN / P10"
+        details: "Robust 0\u20135 V digital I/O. Tolerant to -12 V, shorts to GND and 12 V. Configurable input/output. Disconnectable."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "All OpenMV Cam models."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "10 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/driver-shield"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

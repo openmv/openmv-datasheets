@@ -1,0 +1,142 @@
+meta:
+  product_name: "Super Telephoto Lens"
+  sku: "Super-Telephoto-Lens-with-IR-Cut-Filter / Super-Telephoto-Lens"
+  filename: "OpenMV-Super-Telephoto-Lens-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/super-telephoto-lens/new-super-telephoto-angle-quarter.jpg"
+
+description: >
+  This lens gives your OpenMV Cam the ability to see longer distances with extreme zoom. The
+  standard lens has about a 70-degree FOV which allows your camera to see more things, but
+  with less detail. This lens has about a 10-degree FOV, providing about a 9x zoom on any
+  particular object. Available with or without a 650 nm IR cut filter.
+
+target_areas: >
+  Extreme long-range detection, eye tracking with IR, surveillance corridors,
+  wildlife monitoring, traffic monitoring, industrial inspection at distance.
+
+features:
+  - label: "~10-degree FOV (9x zoom)"
+    detail: "Up to 8.93x optical zoom with OV7725. Highest zoom in M12 lineup."
+  - label: "25 mm focal length"
+    detail: "F2.0 aperture, 1/3\" image format."
+  - label: "M12 x 0.5 mount"
+    detail: "Standard M12 threaded mount compatible with all OpenMV Cam models."
+  - label: "Multi-sensor compatible"
+    detail: "FOV data for PS5520, PAG7936, MT9M114, MT9V024/034, OV7725, OV5640, and OV2640."
+  - label: "IR cut filter option"
+    detail: "Available with 650 nm IR cut filter or without."
+  - label: "3D model available"
+    detail: "STEP file available on GrabCAD."
+
+system_components_title: "Specifications"
+system_components:
+  - title: "Optical Specifications"
+    components:
+      - name: "Focal Length"
+        details: "25 mm"
+      - name: "Aperture"
+        details: "F2.0"
+      - name: "Image Format"
+        details: "1/3\""
+      - name: "Mount"
+        details: "M12 x 0.5 threaded"
+      - name: "IR Cut Filter"
+        details: "650 nm (variant with IR cut filter)"
+
+  - title: "FOV with PS5520 Sensor"
+    components:
+      - name: "Diagonal / Horizontal / Vertical"
+        details: "16.2\u00B0 / 13.0\u00B0 / 9.8\u00B0"
+      - name: "Optical Zoom"
+        details: "6.94x (vs. 3.6 mm lens)"
+
+  - title: "FOV with PAG7936 Sensor"
+    components:
+      - name: "Diagonal / Horizontal / Vertical"
+        details: "10.3\u00B0 / 8.8\u00B0 / 5.5\u00B0"
+      - name: "Optical Zoom"
+        details: "8.93x (vs. 2.8 mm lens)"
+
+  - title: "FOV with OV7725 Sensor"
+    components:
+      - name: "Diagonal / Horizontal / Vertical"
+        details: "11.0\u00B0 / 8.8\u00B0 / 6.6\u00B0"
+      - name: "Optical Zoom"
+        details: "8.93x (vs. 2.8 mm lens)"
+
+  - title: "FOV with OV5640 Sensor"
+    components:
+      - name: "Diagonal / Horizontal / Vertical"
+        details: "10.4\u00B0 / 8.3\u00B0 / 6.2\u00B0"
+      - name: "Optical Zoom"
+        details: "8.93x (vs. 2.8 mm lens)"
+
+  - title: "FOV with OV2640 Sensor"
+    components:
+      - name: "Diagonal / Horizontal / Vertical"
+        details: "10.1\u00B0 / 8.1\u00B0 / 6.0\u00B0"
+      - name: "Optical Zoom"
+        details: "8.93x (vs. 2.8 mm lens)"
+
+  - title: "FOV with MT9V024/034 Sensor"
+    components:
+      - name: "Diagonal / Horizontal / Vertical"
+        details: "12.2\u00B0 / 10.3\u00B0 / 6.6\u00B0"
+      - name: "Optical Zoom"
+        details: "8.93x (vs. 2.8 mm lens)"
+
+  - title: "FOV with MT9M114 Sensor"
+    components:
+      - name: "Diagonal / Horizontal / Vertical"
+        details: "7.1\u00B0 / 5.6\u00B0 / 4.2\u00B0"
+      - name: "Optical Zoom"
+        details: "8.93x (vs. 2.8 mm lens)"
+
+  - title: "Applications"
+    text: >
+      The Super Telephoto Lens is great for any application where you need your OpenMV Cam to
+      really zoom in on some subject. For example, the super telephoto lens makes it easy to
+      do eye-tracking with IR light by zooming in on someone's eye, making it easier to
+      determine the direction their pupil is pointing.
+
+mechanical:
+  specs:
+    - dimension: "Length"
+      value: "14 mm"
+    - dimension: "Width"
+      value: "14 mm"
+    - dimension: "Height"
+      value: "20 mm"
+    - dimension: "Weight"
+      value: "5 g"
+    - dimension: "Operating Temperature"
+      value: "-20\u00B0C to +80\u00B0C"
+    - dimension: "Storage Temperature"
+      value: "-20\u00B0C to +80\u00B0C"
+    - dimension: "Country of Origin"
+      value: "China"
+    - dimension: "HS Code"
+      value: "8473.30.2000"
+    - dimension: "ECCN"
+      value: "EAR99"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/super-telephoto-lens"
+  - name: "3D Model (STEP)"
+    link: "https://grabcad.com/library/super-telephoto-lens-1"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

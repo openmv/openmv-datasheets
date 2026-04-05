@@ -1,0 +1,195 @@
+meta:
+  product_name: "AE3"
+  sku: "OMV-AE3-V1"
+  filename: "OpenMV-AE3-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/openmv-cam/openmv-ae3/ae3-hero.jpg"
+
+description: >
+  The OpenMV AE3 is a next-generation machine vision board built around the Alif Ensemble E3
+  system-on-chip, featuring dual ARM Cortex-M55 cores with Helium vector acceleration and a
+  dedicated neural processing unit (NPU) delivering up to 250 GOPS of AI/ML compute. This
+  enables real-time YOLO object detection at ~30 FPS entirely on-device. The board integrates
+  a 1 MP global shutter camera, WiFi 802.11 a/b/g/n, Bluetooth 5.1, an 8x8 time-of-flight
+  sensor, IMU, and microphone in a compact 8 g package. Programmable in MicroPython via the
+  OpenMV IDE.
+
+target_areas: >
+  Edge AI, object detection, person counting, gesture recognition, industrial inspection,
+  security, smart retail, autonomous systems, robotics.
+
+features:
+  - label: "Alif Ensemble E3 SoC"
+    detail: "Dual ARM Cortex-M55 cores (400 MHz + 160 MHz) with Helium/MVE vector acceleration. Up to 3.2 GOPS per core."
+  - label: "On-device AI"
+    detail: "Dedicated NPU with 250 GOPS total (204 + 46 GOPS). Real-time YOLO object detection at ~30 FPS."
+  - label: "Global shutter camera"
+    detail: "1 MP color global shutter sensor at up to 120 FPS. No rolling shutter distortion."
+  - label: "Integrated sensors"
+    detail: "8x8 time-of-flight array (4 m range), accelerometer, gyroscope, and microphone built in."
+  - label: "WiFi + Bluetooth"
+    detail: "802.11 a/b/g/n WiFi with chip antenna (U.FL alternative). Bluetooth 5.1 (BR/EDR and BLE)."
+  - label: "USB-C High-Speed"
+    detail: "USB 2.0 High-Speed (480 Mbps) with EMI filtering and TVS protection."
+  - label: "Rich I/O"
+    detail: "10 GPIO pins with SPI, I2C, I3C, CAN, 4x UART, and 2x 12-bit ADC. QWIIC connector."
+  - label: "Ultra-compact"
+    detail: "Only 8 g with four M1.6 mounting holes."
+
+system_components:
+  - title: "System-on-Chip"
+    components:
+      - name: "Alif Ensemble E3"
+        details: >
+          Dual ARM Cortex-M55 cores with Helium/MVE vector acceleration. Core 0 runs at 400 MHz
+          (3.2 GOPS, 8 ops/clock), Core 1 runs at 160 MHz (1.28 GOPS). Integrated NPU with
+          204 GOPS + 46 GOPS of AI/ML compute.
+
+  - title: "Memory"
+    components:
+      - name: "On-chip SRAM"
+        details: "13.5 MB SRAM."
+      - name: "On-chip MRAM"
+        details: "5.5 MB magnetoresistive RAM (non-volatile, byte-addressable)."
+      - name: "Storage Flash"
+        details: "32 MB flash, 100 MHz 8-bit DDR mode (200 MB/s read bandwidth)."
+
+  - title: "Connectivity"
+    components:
+      - name: "USB-C"
+        details: "USB 2.0 High-Speed (480 Mbps). EMI filtering and TVS protection on-board."
+      - name: "WiFi"
+        details: "802.11 a/b/g/n (up to 65 Mb/s). On-board chip antenna with U.FL connector as alternative."
+      - name: "Bluetooth"
+        details: "Bluetooth 5.1, BR/EDR and BLE."
+      - name: "SPI"
+        details: "SPI bus, up to 50 Mb/s."
+      - name: "I2C"
+        details: "2 I2C buses, up to 1 Mb/s each."
+      - name: "I3C"
+        details: "I3C bus, up to 10 Mb/s."
+      - name: "CAN"
+        details: "CAN bus, up to 8 Mb/s."
+      - name: "UART"
+        details: "4 asynchronous serial TX/RX interfaces."
+      - name: "QWIIC"
+        details: "Standard QWIIC connector for I2C peripherals. Compatible with Seeed Grove and Adafruit STEMMA."
+
+  - title: "Camera System"
+    components:
+      - name: "Image Sensor"
+        details: "1 MP color global shutter sensor. Up to 120 FPS."
+      - name: "Image Performance"
+        details: "~60 FPS at VGA (640x480) and below. Global shutter eliminates rolling shutter distortion for fast-moving objects."
+
+  - title: "Sensors"
+    components:
+      - name: "Time-of-Flight"
+        details: "8x8 ToF sensor array with 4-meter range for distance measurement and depth sensing."
+      - name: "IMU"
+        details: "Integrated accelerometer and gyroscope for motion sensing and orientation."
+      - name: "Microphone"
+        details: "Integrated on-board microphone for audio input."
+
+  - title: "User Interface"
+    components:
+      - name: "RGB LED"
+        details: "User-controllable and dimmable RGB LED."
+      - name: "User Button"
+        details: "1 user-programmable button."
+      - name: "Debug Switch"
+        details: "Recovery/debug mode switch."
+
+  - title: "Debug"
+    components:
+      - name: "SWD"
+        details: "6-pin SWD edge-connect header. Compatible with SEGGER J-Link debuggers."
+
+  - title: "Power Management"
+    components:
+      - name: "USB-C"
+        details: "Powered via USB-C connector."
+      - name: "RTC"
+        details: "On-board real-time clock with 4 KB backup RAM."
+
+ratings:
+  - title: "Electrical Characteristics"
+    headers: ["Parameter", "Description", "Value", "Unit"]
+    rows:
+      - ["VIO", "I/O voltage", "3.3", "V"]
+      - ["VADC", "ADC input voltage (max)", "1.8", "V"]
+      - ["ADC", "ADC resolution", "12", "bits"]
+      - ["GPIO", "GPIO count", "10", "pins"]
+
+connectors:
+  pinout_image: "boards/openmv-cam/openmv-ae3/openmv-ae3-pinout.png"
+
+functional_overview:
+  board_topology:
+    image: "boards/openmv-cam/openmv-ae3/ae3-front.jpg"
+    components:
+      - ref: "U1"
+        description: "Alif Ensemble E3 SoC (dual Cortex-M55 + NPU)"
+      - ref: "CAM"
+        description: "1 MP global shutter camera module"
+      - ref: "ToF"
+        description: "8x8 time-of-flight sensor array"
+      - ref: "IMU"
+        description: "Accelerometer and gyroscope"
+      - ref: "MIC"
+        description: "On-board microphone"
+      - ref: "ANT"
+        description: "WiFi/Bluetooth chip antenna"
+      - ref: "USB"
+        description: "USB-C connector (High-Speed 480 Mbps)"
+      - ref: "QWIIC"
+        description: "QWIIC I2C connector"
+      - ref: "B2B"
+        description: "Board-to-board header"
+      - ref: "LED"
+        description: "Dimmable RGB LED"
+
+  power_tree:
+    text: >
+      The OpenMV AE3 is powered via USB-C.
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "8 g"
+    - dimension: "Mounting"
+      value: "Four M1.6 mounting holes"
+    - dimension: "Operating Temperature"
+      value: "-40\u00B0C to +85\u00B0C"
+
+certifications:
+  headers: ["Certification", "Region", "Details"]
+  table:
+    - ["RoHS", "EU", "Compliant with EU Directive 2011/65/EU (RoHS 2). All components and solder are lead-free."]
+    - ["REACH", "EU", "Compliant with EU Regulation (EC) No 1907/2006."]
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+  - field: "Documentation"
+    value: "https://docs.openmv.io"
+  - field: "Support"
+    value: "https://forums.openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/openmv-ae3"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+  - name: "Community Forum"
+    link: "https://forums.openmv.io"
+  - name: "Alif Ensemble E3"
+    link: "https://alifsemi.com/ensemble/"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

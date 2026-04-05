@@ -1,0 +1,70 @@
+meta:
+  product_name: "Servo Shield (V1)"
+  sku: "OMV-SHIELD-SERVO-V1"
+  filename: "OpenMV-Servo-Shield-V1-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/servo-shield/new-servo-angle.jpg"
+
+description: >
+  The Servo Shield V1 enables the OpenMV Cam to control up to 8 servos simultaneously using
+  the PCA9685 servo controller, which also supports general-purpose PWM functionality. Two
+  example scripts are provided for controlling servos and general-purpose PWM. This is the
+  retired V1 version \u2014 see the current Servo Shield V2/V3 for the latest design.
+
+target_areas: >
+  Robotics, servo control, PWM generation, multi-servo systems, pan-tilt mechanisms.
+
+features:
+  - label: "8-channel servo control"
+    detail: "Control up to 8 servos simultaneously via PCA9685 servo controller."
+  - label: "General-purpose PWM"
+    detail: "PCA9685 also supports general-purpose PWM output."
+  - label: "Example scripts"
+    detail: "PCA9685.py for PWM control and Servo.py for servo control included."
+  - label: "Shield stacking"
+    detail: "Compatible with Motor Shield and Pan and Tilt Shield (different pins)."
+
+system_components_title: "Features"
+system_components:
+  - title: "Servo Controller"
+    components:
+      - name: "Chip"
+        details: "PCA9685 \u2014 16-channel, 12-bit PWM controller via I2C."
+      - name: "Servo Channels"
+        details: "Up to 8 servos simultaneously."
+      - name: "PWM"
+        details: "Also supports general-purpose PWM output."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "All OpenMV Cam models."
+      - name: "Shield Stacking"
+        details: "Compatible with Motor Shield and Pan and Tilt Shield (different pins)."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "30 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/servo-shield"
+  - name: "PCA9685.py Example"
+    link: "https://github.com/openmv/openmv/blob/master/scripts/examples/50-OpenMV-Boards/60-Shields/61-Servo-Shield/pca9685.py"
+  - name: "Servo.py Example"
+    link: "https://github.com/openmv/openmv/blob/master/scripts/examples/50-OpenMV-Boards/60-Shields/61-Servo-Shield/servo.py"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

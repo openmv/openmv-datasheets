@@ -1,0 +1,65 @@
+meta:
+  product_name: "WiFi Shield"
+  sku: "OMV-SHIELD-WIFI-V2"
+  filename: "OpenMV-WiFi-Shield-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/wifi-shield/new-wifi-angle.jpg"
+
+description: >
+  The WiFi Shield gives your OpenMV Cam the ability to connect to the internet. It features
+  an ATWINC1500 FCC Certified WiFi module which can transmit data at up to 48 Mbps, making
+  it perfect for streaming video. Your OpenMV Cam's firmware has built-in support for
+  controlling the WiFi Shield using the network module.
+
+target_areas: >
+  Internet connectivity, video streaming, IoT, remote monitoring, cloud integration,
+  wireless data transfer.
+
+features:
+  - label: "ATWINC1500 WiFi"
+    detail: "FCC Certified WiFi module, up to 48 Mbps data rate."
+  - label: "Video streaming"
+    detail: "Fast enough for real-time video streaming from your OpenMV Cam."
+  - label: "Built-in firmware support"
+    detail: "Controlled via the network module in MicroPython."
+
+system_components_title: "Features"
+system_components:
+  - title: "WiFi Module"
+    components:
+      - name: "Chip"
+        details: "Microchip ATWINC1500 WiFi module."
+      - name: "Certification"
+        details: "FCC Certified."
+      - name: "Data Rate"
+        details: "Up to 48 Mbps."
+      - name: "Interface"
+        details: "SPI connection to OpenMV Cam. Controlled via the MicroPython network module."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "All OpenMV Cam models. Primarily useful for older models without built-in WiFi (M4, M7, H7). Newer models (RT1062, AE3, N6) have integrated WiFi."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "25 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/wifi-shield"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

@@ -1,0 +1,103 @@
+meta:
+  product_name: "AE3 OLED Breakout"
+  sku: "OMV-AE3-OLED-BREAKOUT"
+  filename: "OpenMV-AE3-OLED-Breakout-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/openmv-cam/openmv-ae3/breakout/ae3-oled-breakout-hero.jpg"
+
+description: >
+  The AE3 OLED Breakout is an expansion board providing full access to the OpenMV AE3's
+  capabilities. It features a 128x128 RGB OLED display with a software-controllable on/off
+  switch, a 5-direction joystick with center button for user interaction, two QWIIC connectors
+  for I2C peripheral daisy-chaining, and all 10 AE3 GPIO pins broken out to 3.3 V headers.
+  For development and debugging, the board includes an ARM 10-pin JTAG header for SWD
+  debugging (SEGGER J-Link compatible), four ground hooks for oscilloscope probing, a hardware
+  reset button, and a recovery switch for secure enclave UART access.
+
+target_areas: >
+  Development, prototyping, debugging, HMI, IoT dashboards, sensor integration,
+  interactive demos, field testing.
+
+features:
+  - label: "128x128 RGB OLED"
+    detail: "On-board color OLED display with software-controllable on/off switch to save power when not needed."
+  - label: "Joystick + button"
+    detail: "5-direction joystick (up/down/left/right) with center press button for menu navigation and user input."
+  - label: "Full GPIO breakout"
+    detail: "All 10 AE3 GPIO pins broken out to 3.3 V pin headers for easy prototyping and wiring."
+  - label: "Dual QWIIC"
+    detail: "Two QWIIC I2C connectors for daisy-chaining peripherals. Compatible with Seeed Grove and Adafruit STEMMA."
+  - label: "JTAG debug"
+    detail: "ARM 10-pin JTAG header for SWD debugging with SEGGER J-Link and compatible debuggers."
+  - label: "Ground hooks"
+    detail: "Four ground hooks for oscilloscope probing and test equipment attachment."
+  - label: "Recovery mode"
+    detail: "On-board recovery switch for secure enclave UART access and firmware recovery."
+
+system_components:
+  - title: "Display"
+    components:
+      - name: "OLED Screen"
+        details: "128x128 pixel RGB OLED display. Full-color graphics and text rendering. Can be disabled via on-board switch to save power or free up SPI bandwidth."
+
+  - title: "User Input"
+    components:
+      - name: "Joystick"
+        details: "5-direction joystick (up, down, left, right) with center press button. Directly readable from MicroPython for menu navigation and interactive applications."
+      - name: "Reset Button"
+        details: "Hardware reset button for the AE3 module."
+      - name: "Recovery Switch"
+        details: "Dedicated switch for secure enclave UART access. Enables firmware recovery and secure boot configuration."
+
+  - title: "Connectors"
+    components:
+      - name: "GPIO Headers"
+        details: "All 10 AE3 GPIO pins broken out to 0.1-inch pin headers at 3.3 V logic levels."
+      - name: "QWIIC / I2C"
+        details: "2 QWIIC I2C connectors for daisy-chaining peripherals. Compatible with SparkFun QWIIC, Seeed Grove, and Adafruit STEMMA ecosystems."
+      - name: "JTAG"
+        details: "ARM 10-pin JTAG header for SWD debugging. SEGGER J-Link compatible. Enables full source-level debugging of AE3 firmware."
+      - name: "Ground Hooks"
+        details: "4 ground hooks for oscilloscope probing, logic analyzer attachment, and general test equipment."
+
+  - title: "Compatibility"
+    components:
+      - name: "OpenMV AE3"
+        details: "Designed exclusively for the OpenMV AE3 camera module. The AE3 plugs directly into the breakout board via its board-to-board connector."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "43 g"
+
+certifications:
+  headers: ["Certification", "Region", "Details"]
+  table:
+    - ["RoHS", "EU", "Compliant with EU Directive 2011/65/EU (RoHS 2). All components and solder are lead-free."]
+    - ["REACH", "EU", "Compliant with EU Regulation (EC) No 1907/2006."]
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+  - field: "Documentation"
+    value: "https://docs.openmv.io"
+  - field: "Support"
+    value: "https://forums.openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/ae3-oled-breakout"
+  - name: "OpenMV AE3"
+    link: "https://openmv.io/products/openmv-ae3"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+  - name: "Community Forum"
+    link: "https://forums.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

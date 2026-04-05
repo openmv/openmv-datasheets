@@ -1,0 +1,80 @@
+meta:
+  product_name: "PS5520 5MP HDR Camera Module"
+  sku: "OMV-MOD-HDR-V1"
+  filename: "OpenMV-PS5520-5MP-HDR-Camera-Module-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/openmv-cam/openmv-n6/ps5520/ps5520-lens-hero.jpg"
+
+description: >
+  The PS5520 is a highly integrated CMOS image sensor that outputs 2592x1944 (5 MP) pixels
+  with a rolling shutter readout. It features FinePixel and HDR sensor technology for excellent
+  image quality and single-shot high dynamic range synthesized image output. VGA (640x480),
+  HD (1280x720), and FHD (1920x1080) are operational at 30 FPS with HDR support.
+
+target_areas: >
+  High-resolution imaging, HDR applications, outdoor vision, security,
+  industrial inspection, quality control.
+
+features:
+  - label: "5 MP resolution"
+    detail: "2592x1944 pixel output with rolling shutter."
+  - label: "HDR imaging"
+    detail: "FinePixel + HDR technology for single-shot high dynamic range."
+  - label: "30 FPS at FHD"
+    detail: "VGA, HD, and FHD modes at 30 FPS with HDR."
+  - label: "N6 compatible"
+    detail: "Designed for the OpenMV N6."
+
+system_components_title: "Specifications"
+system_components:
+  - title: "Sensor Specifications"
+    components:
+      - name: "Sensor"
+        details: "PS5520 CMOS image sensor."
+      - name: "Resolution"
+        details: "2592x1944 (5 MP)."
+      - name: "Shutter"
+        details: "Rolling shutter."
+      - name: "Technology"
+        details: "FinePixel + HDR for single-shot high dynamic range."
+
+  - title: "Operating Modes"
+    components:
+      - name: "VGA"
+        details: "640x480 at 30 FPS with HDR."
+      - name: "HD"
+        details: "1280x720 at 30 FPS with HDR."
+      - name: "FHD"
+        details: "1920x1080 at 30 FPS with HDR."
+      - name: "QWXGA2 (planned)"
+        details: "2952x1944 \u2014 in development, expected by end of summer 2026."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "OpenMV N6 only."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "30 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/ps5520-5mp-hdr-camera-module"
+  - name: "OpenMV N6"
+    link: "https://openmv.io/products/openmv-n6"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

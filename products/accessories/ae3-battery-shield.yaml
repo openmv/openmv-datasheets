@@ -1,0 +1,112 @@
+meta:
+  product_name: "AE3 Battery Shield"
+  sku: "OMV-AE3-BATTERY-SHIELD-V4"
+  filename: "OpenMV-AE3-Battery-Shield-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/openmv-cam/openmv-ae3/battery-shield/ae3-battery-shield-hero.jpg"
+
+description: >
+  The AE3 Battery Shield is a power and storage expansion board for the OpenMV AE3 camera.
+  It provides flexible power input options including a 2.1 mm DC barrel jack accepting
+  1.8 V to 5.5 V (suitable for three alkaline batteries in series), a wide-range 6 V to
+  36 V input with reverse voltage protection for industrial and automotive applications, and
+  a 3.7 V LiPo battery charger with 500 mA charging from either the wide-range input or
+  5 V USB. The board also includes a SPI-attached microSD card socket for data logging and
+  storage, addressing the AE3's lack of on-board microSD.
+
+target_areas: >
+  Battery-powered deployments, remote sensing, field installations, data logging,
+  solar-powered systems, industrial monitoring, wildlife cameras, agricultural sensing.
+
+features:
+  - label: "Low-voltage input"
+    detail: "1.8\u20135.5 V via 2.1 mm DC barrel jack. Supports three alkaline batteries in series."
+  - label: "Wide-range input"
+    detail: "6\u201336 V input with reverse voltage protection for industrial, automotive, and solar applications."
+  - label: "LiPo charger"
+    detail: "3.7 V single-cell LiPo battery charger at 500 mA from wide-range input or 5 V USB."
+  - label: "microSD storage"
+    detail: "SPI-attached microSD card socket for data logging, image storage, and model files."
+  - label: "Ultra-lightweight"
+    detail: "Only 9 g, adding minimal weight to the AE3 system."
+
+system_components:
+  - title: "Power Input"
+    components:
+      - name: "DC Barrel Jack"
+        details: "2.1 mm DC barrel jack. Accepts 1.8 V to 5.5 V input. Compatible with three alkaline batteries in series (3x 1.5 V = 4.5 V nominal)."
+      - name: "Wide-Range Input"
+        details: "6 V to 36 V input with reverse voltage protection. Suitable for 12 V automotive systems, 24 V industrial power, and solar panel direct connection."
+      - name: "LiPo Charger"
+        details: "Integrated 3.7 V single-cell LiPo battery charger. 500 mA charging current from wide-range input or 5 V USB power."
+
+  - title: "Storage"
+    components:
+      - name: "microSD Card"
+        details: "SPI-attached microSD card socket. Provides removable storage for data logging, captured images, trained models, and MicroPython scripts. Addresses the AE3's lack of on-board microSD slot."
+
+  - title: "Compatibility"
+    components:
+      - name: "OpenMV AE3"
+        details: "Designed for the OpenMV AE3 camera module. Connects via cable."
+
+ratings:
+  - title: "Power Input Specifications"
+    headers: ["Parameter", "Description", "Min", "Max", "Unit"]
+    rows:
+      - ["VDC", "DC barrel jack input", "1.8", "5.5", "V"]
+      - ["VWIDE", "Wide-range input", "6", "36", "V"]
+      - ["VBATT", "LiPo battery voltage", "3.0", "4.2", "V"]
+      - ["ICHG", "LiPo charge current", "\u2014", "500", "mA"]
+
+functional_overview:
+  board_topology:
+    image: "boards/openmv-cam/openmv-ae3/battery-shield/ae3-battery-shield-front.jpg"
+    components:
+      - ref: "J1"
+        description: "2.1 mm DC barrel jack (1.8\u20135.5 V)"
+      - ref: "J2"
+        description: "Wide-range power input (6\u201336 V)"
+      - ref: "BAT"
+        description: "LiPo battery connector"
+      - ref: "SD"
+        description: "microSD card socket (SPI-attached)"
+      - ref: "CABLE"
+        description: "AE3 connection cable header"
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "9 g"
+
+certifications:
+  headers: ["Certification", "Region", "Details"]
+  table:
+    - ["RoHS", "EU", "Compliant with EU Directive 2011/65/EU (RoHS 2). All components and solder are lead-free."]
+    - ["REACH", "EU", "Compliant with EU Regulation (EC) No 1907/2006."]
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+  - field: "Documentation"
+    value: "https://docs.openmv.io"
+  - field: "Support"
+    value: "https://forums.openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/openmv-ae3-battery-shield"
+  - name: "OpenMV AE3"
+    link: "https://openmv.io/products/openmv-ae3"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+  - name: "Community Forum"
+    link: "https://forums.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

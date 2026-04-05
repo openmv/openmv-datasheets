@@ -1,0 +1,56 @@
+meta:
+  product_name: "Light Shield"
+  sku: "OMV-SHIELD-LIGHT-V1"
+  filename: "OpenMV-Light-Shield-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/light-shield/light-shield-angle-quarter-web.jpg"
+
+description: >
+  The Light Shield gives your OpenMV Cam the ability to illuminate what it's looking at.
+  It features nine high-power white LEDs for bright, even illumination of the camera's
+  field of view.
+
+target_areas: >
+  Low-light imaging, illumination, inspection lighting, barcode reading,
+  close-range illumination, industrial vision.
+
+features:
+  - label: "9 high-power white LEDs"
+    detail: "Bright, even illumination for the camera's field of view."
+  - label: "Lightweight"
+    detail: "Only 5 g."
+
+system_components_title: "Features"
+system_components:
+  - title: "Illumination"
+    components:
+      - name: "LEDs"
+        details: "9 high-power white LEDs for illuminating the camera's field of view."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "All OpenMV Cam models."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "5 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/light-shield"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

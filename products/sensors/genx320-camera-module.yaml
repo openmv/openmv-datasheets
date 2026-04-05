@@ -1,0 +1,102 @@
+meta:
+  product_name: "GENX320 Event Camera Module"
+  sku: "OMV-MOD-GENX320-V2 / OMV-MOD-GENX320-V1"
+  filename: "OpenMV-GENX320-Event-Camera-Module-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/genx320-camera/genx320-cam-hero.jpg"
+
+description: >
+  The GENX320 Event Camera Module brings Prophesee's event-based vision sensing to the OpenMV
+  Cam platform. Inspired by the human retina, each sensor pixel responds independently and
+  asynchronously to relative changes in illumination, enabling efficient, high-speed, and
+  low-power vision sensing. The sensor outputs 320x320 8-bit frames where pixel value 128
+  means no motion, values above 128 indicate increasing charge, and below 128 indicate
+  decreasing charge. Also supports raw event mode for processing individual events with
+  microsecond timestamps at 1\u20132 million events per second.
+
+target_areas: >
+  Event-based vision, high-speed motion detection, vibration analysis, gesture recognition,
+  autonomous navigation, industrial inspection, low-power surveillance.
+
+features:
+  - label: "375 Hz+ event histograms"
+    detail: "No exposure time, no motion blur. Configurable frame rate via sensor.set_framerate()."
+  - label: "3 mW sensor power"
+    detail: "Ultra-low power \u2014 only scene changes are sensed."
+  - label: "140 dB dynamic range"
+    detail: "Sees changes in both dark and bright zones simultaneously."
+  - label: "<5 lux low-light"
+    detail: "Senses into twilight with 0.05 lux sensor cutoff."
+  - label: "320x320 output"
+    detail: "8-bit grayscale event histogram frames or raw event stream at 1\u20132M events/sec."
+  - label: "Color palettes"
+    detail: "Software color palettes (EVT_DARK, EVT_LIGHT) for visualization."
+
+system_components_title: "Specifications"
+system_components:
+  - title: "Sensor Specifications"
+    components:
+      - name: "Sensor"
+        details: "Prophesee GENX320 event vision sensor."
+      - name: "Resolution"
+        details: "320x320 pixels."
+      - name: "Event Rate"
+        details: "Event histograms at 375 Hz+. Configurable via sensor.set_framerate()."
+      - name: "Power"
+        details: "Starting at 3 mW streaming data."
+      - name: "Dynamic Range"
+        details: "Up to 140 dB."
+      - name: "Low-Light"
+        details: "Senses below 5 lux; sensor cutoff at 0.05 lux."
+
+  - title: "Output Modes"
+    components:
+      - name: "Histogram Mode"
+        details: "320x320 8-bit frames. Pixel value 128 = no motion, >128 = charge increase, <128 = charge decrease. Events multiplied by 16 (default contrast). Adjustable via sensor.set_contrast() and sensor.set_brightness()."
+      - name: "Event Mode"
+        details: "Raw event stream of 1024\u201365536 events per buffer. Each event contains type (PIX_ON, PIX_OFF, TRIGGER_HIGH, TRIGGER_LOW), microsecond timestamp, and x/y position. 1\u20132 million events per second throughput."
+      - name: "Color Palettes"
+        details: "image.PALETTE_EVT_DARK and image.PALETTE_EVT_LIGHT for visualization. Note: adds CPU overhead."
+
+  - title: "Programming"
+    components:
+      - name: "Pixel Format"
+        details: "sensor.set_pixformat(sensor.GRAYSCALE)"
+      - name: "Frame Size"
+        details: "sensor.set_framesize(sensor.B320X320)"
+      - name: "Examples"
+        details: "File > Examples > Cameras > Event Cameras > GenX320 in OpenMV IDE."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "OpenMV Cam H7 Plus, OpenMV Cam RT1062, and OpenMV N6."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "3 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/genx320-camera-module"
+  - name: "Prophesee GENX320"
+    link: "https://www.prophesee.ai/event-based-sensor-genx320/"
+  - name: "Prophesee Documentation"
+    link: "https://docs.prophesee.ai/stable/hw/partners/openmv.html"
+  - name: "Focus Tool 3D Model"
+    link: "https://grabcad.com/library/genx320-module-cover-1"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

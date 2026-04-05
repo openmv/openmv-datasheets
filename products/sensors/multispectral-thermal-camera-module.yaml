@@ -1,0 +1,72 @@
+meta:
+  product_name: "Multispectral Thermal Camera Module"
+  sku: "Multispetral-Thermal-Camera-Module / Multispetral-Thermal-Camera-Module-OV5640"
+  filename: "OpenMV-Multispectral-Thermal-Camera-Module-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/openmv-cam/openmv-n6/multispectral-thermal-camera-module/mtcm-populated-hero.jpg"
+
+description: >
+  The Multispectral Thermal Camera Module allows your OpenMV Cam to interface with the FLIR
+  Lepton 1/2/3 thermal imaging sensors for thermal vision applications and interface with a
+  color camera sensor at the same time. Now you can process thermal images mixed with color
+  simultaneously. Available in two variants: PAG7936 1 MP 120 FPS color global shutter (N6 only)
+  or OV5640 5 MP color rolling shutter (RT1062). The FLIR Lepton sensor is sold separately
+  via GroupGets.
+
+target_areas: >
+  Thermal imaging, multispectral vision, temperature measurement, HVAC diagnostics,
+  industrial inspection, security, firefighting, predictive maintenance.
+
+features:
+  - label: "Dual imaging"
+    detail: "Simultaneous FLIR Lepton thermal + color camera (PAG7936 or OV5640)."
+  - label: "FLIR Lepton 1/2/3"
+    detail: "Supports Lepton 1, 2, and 3 thermal modules (sold separately via GroupGets)."
+  - label: "Two color sensor options"
+    detail: "PAG7936 1 MP 120 FPS global shutter (N6) or OV5640 5 MP rolling shutter (RT1062)."
+
+system_components_title: "Specifications"
+system_components:
+  - title: "Thermal Sensor"
+    components:
+      - name: "FLIR Lepton Socket"
+        details: "Supports FLIR Lepton 1, 2, and 3 thermal imaging sensors. Sensor sold separately via GroupGets."
+
+  - title: "Color Camera \u2014 PAG7936 Variant"
+    components:
+      - name: "Sensor"
+        details: "PAG7936 1 MP color global shutter sensor at 120 FPS."
+      - name: "Compatibility"
+        details: "OpenMV N6 only."
+
+  - title: "Color Camera \u2014 OV5640 Variant"
+    components:
+      - name: "Sensor"
+        details: "OV5640 5 MP color rolling shutter sensor."
+      - name: "Compatibility"
+        details: "OpenMV Cam RT1062."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "3 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/multispectral-thermal-camera-module"
+  - name: "FLIR Lepton (GroupGets)"
+    link: "https://store.groupgets.com/collections/flir-lepton-accessories"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

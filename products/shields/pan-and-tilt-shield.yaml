@@ -1,0 +1,65 @@
+meta:
+  product_name: "Pan and Tilt Shield"
+  sku: "OMV-SHIELD-PANDT-V1"
+  filename: "OpenMV-Pan-and-Tilt-Shield-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/pan-and-tilt-shield/new-pt-angle.jpg"
+
+description: >
+  The Pan and Tilt Shield gives your OpenMV Cam the ability to control three servo motors
+  (or ESCs) directly along with providing flexible power options. You can power your OpenMV
+  Cam via an unregulated battery (regulated down to 5 V) while also providing 5 V to all
+  four servo headers, or power via the servo headers from an ESC supplying 5\u20136 V. If you
+  are building a pan and tilt setup or making a DIY robocar to race, this shield is all you
+  need to get everything wired up.
+
+target_areas: >
+  Pan-tilt systems, gimbal control, RC vehicles, robocars, DIY racing,
+  camera positioning, servo-driven mechanisms.
+
+features:
+  - label: "3 servo outputs"
+    detail: "Control three servo motors or ESCs directly."
+  - label: "Flexible power"
+    detail: "Battery-regulated 5 V or ESC-powered 5\u20136 V options. All four servo headers powered."
+  - label: "Compatible with Servo Shield"
+    detail: "Can be used simultaneously with the Servo Shield (different pins)."
+
+system_components_title: "Features"
+system_components:
+  - title: "Servo Control"
+    components:
+      - name: "Outputs"
+        details: "3 servo motor or ESC outputs with 4 servo headers."
+      - name: "Power Options"
+        details: "Option 1: Unregulated battery regulated to 5 V for camera and servos. Option 2: ESC providing 5\u20136 V to camera and servos via servo headers."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "All OpenMV Cam models."
+      - name: "Shield Stacking"
+        details: "Compatible with Servo Shield (different pins). NOT compatible with Motor Shield."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "30 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/pan-and-tilt-shield"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

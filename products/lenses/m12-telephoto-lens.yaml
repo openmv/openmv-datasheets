@@ -1,0 +1,142 @@
+meta:
+  product_name: "Telephoto Lens"
+  sku: "Telephoto-Lens / IR-Telephoto-Lens"
+  filename: "OpenMV-Telephoto-Lens-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/telephoto-lens/new-telephoto-angle-quarter.jpg"
+
+description: >
+  This lens gives your OpenMV Cam the ability to see longer distances (zoom in). The standard
+  lens that ships with your OpenMV Cam has about a 70-degree FOV which allows your camera to
+  see more things, but with less detail. This lens has about a 20-degree FOV, providing about
+  a 4x zoom on any particular object. Available with or without a 650 nm IR cut filter.
+
+target_areas: >
+  Long-range detection, eye tracking, zoom applications, quality inspection,
+  wildlife monitoring, perimeter security.
+
+features:
+  - label: "~20-degree FOV (4x zoom)"
+    detail: "Up to 4.29x optical zoom with OV7725. Enables long-range detail resolution."
+  - label: "12 mm focal length"
+    detail: "F2.0 aperture, 1/3\" image format."
+  - label: "M12 x 0.5 mount"
+    detail: "Standard M12 threaded mount compatible with all OpenMV Cam models."
+  - label: "Multi-sensor compatible"
+    detail: "FOV data for PS5520, PAG7936, MT9M114, MT9V024/034, OV7725, OV5640, and OV2640."
+  - label: "IR cut filter option"
+    detail: "Available with 650 nm IR cut filter or without."
+  - label: "3D model available"
+    detail: "STEP file available on GrabCAD."
+
+system_components_title: "Specifications"
+system_components:
+  - title: "Optical Specifications"
+    components:
+      - name: "Focal Length"
+        details: "12 mm"
+      - name: "Aperture"
+        details: "F2.0"
+      - name: "Image Format"
+        details: "1/3\""
+      - name: "Mount"
+        details: "M12 x 0.5 threaded"
+      - name: "IR Cut Filter"
+        details: "650 nm (variant with IR cut filter)"
+
+  - title: "FOV with PS5520 Sensor"
+    components:
+      - name: "Diagonal / Horizontal / Vertical"
+        details: "33.1\u00B0 / 26.7\u00B0 / 20.2\u00B0"
+      - name: "Optical Zoom"
+        details: "3.33x (vs. 3.6 mm lens)"
+
+  - title: "FOV with PAG7936 Sensor"
+    components:
+      - name: "Diagonal / Horizontal / Vertical"
+        details: "21.4\u00B0 / 18.2\u00B0 / 11.4\u00B0"
+      - name: "Optical Zoom"
+        details: "4.29x (vs. 2.8 mm lens)"
+
+  - title: "FOV with OV7725 Sensor"
+    components:
+      - name: "Diagonal / Horizontal / Vertical"
+        details: "22.6\u00B0 / 18.2\u00B0 / 13.7\u00B0"
+      - name: "Optical Zoom"
+        details: "4.29x (vs. 2.8 mm lens)"
+
+  - title: "FOV with OV5640 Sensor"
+    components:
+      - name: "Diagonal / Horizontal / Vertical"
+        details: "21.4\u00B0 / 17.2\u00B0 / 12.9\u00B0"
+      - name: "Optical Zoom"
+        details: "4.29x (vs. 2.8 mm lens)"
+
+  - title: "FOV with OV2640 Sensor"
+    components:
+      - name: "Diagonal / Horizontal / Vertical"
+        details: "20.8\u00B0 / 16.7\u00B0 / 12.6\u00B0"
+      - name: "Optical Zoom"
+        details: "4.29x (vs. 2.8 mm lens)"
+
+  - title: "FOV with MT9V024/034 Sensor"
+    components:
+      - name: "Diagonal / Horizontal / Vertical"
+        details: "25.1\u00B0 / 21.3\u00B0 / 13.7\u00B0"
+      - name: "Optical Zoom"
+        details: "4.29x (vs. 2.8 mm lens)"
+
+  - title: "FOV with MT9M114 Sensor"
+    components:
+      - name: "Diagonal / Horizontal / Vertical"
+        details: "14.6\u00B0 / 11.7\u00B0 / 8.8\u00B0"
+      - name: "Optical Zoom"
+        details: "4.29x (vs. 2.8 mm lens)"
+
+  - title: "Applications"
+    text: >
+      The Telephoto Lens is great for any application where you need your OpenMV Cam to zoom
+      in on some subject. For example, the telephoto lens makes it easy to do eye-tracking
+      without IR light by zooming in on someone's eye, making it easier to determine the
+      direction their pupil is pointing.
+
+mechanical:
+  specs:
+    - dimension: "Length"
+      value: "14 mm"
+    - dimension: "Width"
+      value: "14 mm"
+    - dimension: "Height"
+      value: "15 mm"
+    - dimension: "Weight"
+      value: "4 g"
+    - dimension: "Operating Temperature"
+      value: "-20\u00B0C to +80\u00B0C"
+    - dimension: "Storage Temperature"
+      value: "-20\u00B0C to +80\u00B0C"
+    - dimension: "Country of Origin"
+      value: "China"
+    - dimension: "HS Code"
+      value: "8473.30.2000"
+    - dimension: "ECCN"
+      value: "EAR99"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/telephoto-lens"
+  - name: "3D Model (STEP)"
+    link: "https://grabcad.com/library/telephoto-lens-1"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

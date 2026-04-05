@@ -1,0 +1,140 @@
+meta:
+  product_name: "Ultra Wide Angle Lens"
+  sku: "Ultra-Wide-Angle-Lens / IR-Ultra-Wide-Angle-Lens"
+  filename: "OpenMV-Ultra-Wide-Angle-Lens-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/ultra-wide-angle-lens/new-ultra-wide-angle-angle-quarter.jpg"
+
+description: >
+  This lens gives your OpenMV Cam the ability to see a wider field of view. The standard lens
+  that ships with your OpenMV Cam has about a 70-degree FOV which is good, but not great for
+  security applications. This lens has about a 100-degree FOV, so your OpenMV Cam can see
+  much more around itself. Available with or without a 650 nm IR cut filter.
+
+target_areas: >
+  Security, motion detection, room monitoring, wide-area surveillance, robotics, navigation.
+
+features:
+  - label: "~100-degree FOV"
+    detail: "Up to 129\u00B0 diagonal depending on sensor. 0.47\u20130.60x optical zoom vs. standard lens."
+  - label: "M12 x 0.5 mount"
+    detail: "Standard M12 threaded mount compatible with all OpenMV Cam models."
+  - label: "Multi-sensor compatible"
+    detail: "FOV data for PS5520, PAG7936, MT9M114, MT9V024/034, OV7725, OV5640, and OV2640."
+  - label: "IR cut filter option"
+    detail: "Available with 650 nm IR cut filter or without."
+  - label: "3D model available"
+    detail: "STEP file available on GrabCAD."
+
+system_components_title: "Specifications"
+system_components:
+  - title: "Optical Specifications"
+    components:
+      - name: "Focal Length"
+        details: "1.7 mm"
+      - name: "Aperture"
+        details: "F2.0"
+      - name: "Image Format"
+        details: "1/2.5\""
+      - name: "Mount"
+        details: "M12 x 0.5 threaded"
+      - name: "IR Cut Filter"
+        details: "650 nm (variant with IR cut filter)"
+      - name: "Focus / Iris / Zoom"
+        details: "Manual focus, fixed iris, fixed zoom"
+
+  - title: "FOV with PS5520 Sensor"
+    components:
+      - name: "Diagonal / Horizontal / Vertical"
+        details: "129.0\u00B0 / 118.4\u00B0 / 103.0\u00B0"
+      - name: "Optical Zoom"
+        details: "0.47x (vs. 3.6 mm lens)"
+
+  - title: "FOV with PAG7936 Sensor"
+    components:
+      - name: "Diagonal / Horizontal / Vertical"
+        details: "106.2\u00B0 / 97.0\u00B0 / 70.4\u00B0"
+      - name: "Optical Zoom"
+        details: "0.60x (vs. 2.8 mm lens)"
+
+  - title: "FOV with OV7725 Sensor"
+    components:
+      - name: "Diagonal / Horizontal / Vertical"
+        details: "109.4\u00B0 / 97.0\u00B0 / 80.5\u00B0"
+      - name: "Optical Zoom"
+        details: "0.60x (vs. 2.8 mm lens)"
+
+  - title: "FOV with OV5640 Sensor"
+    components:
+      - name: "Diagonal / Horizontal / Vertical"
+        details: "106.3\u00B0 / 93.7\u00B0 / 77.4\u00B0"
+      - name: "Optical Zoom"
+        details: "0.60x (vs. 2.8 mm lens)"
+
+  - title: "FOV with OV2640 Sensor"
+    components:
+      - name: "Diagonal / Horizontal / Vertical"
+        details: "104.6\u00B0 / 92.0\u00B0 / 75.7\u00B0"
+      - name: "Optical Zoom"
+        details: "0.60x (vs. 2.8 mm lens)"
+
+  - title: "FOV with MT9V024/034 Sensor"
+    components:
+      - name: "Diagonal / Horizontal / Vertical"
+        details: "115.2\u00B0 / 106.0\u00B0 / 80.5\u00B0"
+      - name: "Optical Zoom"
+        details: "0.60x (vs. 2.8 mm lens)"
+
+  - title: "FOV with MT9M114 Sensor"
+    components:
+      - name: "Diagonal / Horizontal / Vertical"
+        details: "84.4\u00B0 / 71.8\u00B0 / 57.2\u00B0"
+      - name: "Optical Zoom"
+        details: "0.60x (vs. 2.8 mm lens)"
+
+  - title: "Applications"
+    text: >
+      The Ultra Wide Angle Lens is great for security applications where you want to see a wide
+      field of view. By using this lens, your OpenMV Cam can easily detect motion in an entire
+      room using frame differencing without having to be mounted far away.
+
+mechanical:
+  specs:
+    - dimension: "Length"
+      value: "20 mm"
+    - dimension: "Width"
+      value: "20 mm"
+    - dimension: "Height"
+      value: "19 mm"
+    - dimension: "Weight"
+      value: "7 g"
+    - dimension: "Operating Temperature"
+      value: "-20\u00B0C to +80\u00B0C"
+    - dimension: "Storage Temperature"
+      value: "-20\u00B0C to +80\u00B0C"
+    - dimension: "Country of Origin"
+      value: "China"
+    - dimension: "HS Code"
+      value: "8473.30.2000"
+    - dimension: "ECCN"
+      value: "EAR99"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/ultra-wide-angle-lens"
+  - name: "3D Model (STEP)"
+    link: "https://grabcad.com/library/ultra-wide-angle-lens-1"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

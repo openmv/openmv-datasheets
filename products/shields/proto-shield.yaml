@@ -1,0 +1,62 @@
+meta:
+  product_name: "Proto Shield"
+  sku: "OMV-SHIELD-PROTO-V1"
+  filename: "OpenMV-Proto-Shield-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/prototyping-shield/new-proto-angle.jpg"
+
+description: >
+  The Proto Shield gives you the ability to easily extend your OpenMV Cam's functionality. It
+  features a 10x10 through-hole prototyping area with a 3.3 V rail and a GND rail connected
+  to your OpenMV Cam's 3.3 V and GND rails. The rest of the I/O pins are left unconnected
+  to let you build what you want.
+
+target_areas: >
+  Prototyping, custom circuits, sensor integration, one-off builds, education.
+
+features:
+  - label: "10x10 prototyping area"
+    detail: "Through-hole prototyping grid for custom circuits."
+  - label: "Power rails"
+    detail: "3.3 V and GND rails connected to your OpenMV Cam."
+  - label: "Open I/O"
+    detail: "I/O pins left unconnected for maximum flexibility."
+
+system_components_title: "Features"
+system_components:
+  - title: "Prototyping Area"
+    components:
+      - name: "Grid"
+        details: "10x10 through-hole prototyping area."
+      - name: "Power"
+        details: "3.3 V rail and GND rail connected to OpenMV Cam."
+      - name: "I/O"
+        details: "All I/O pins left unconnected for custom wiring."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "All OpenMV Cam models."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "20 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/proto-shield"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

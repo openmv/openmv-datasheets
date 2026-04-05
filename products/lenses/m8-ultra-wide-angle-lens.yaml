@@ -1,0 +1,151 @@
+meta:
+  product_name: "M8 Ultra Wide Angle Lens"
+  sku: "IR-M8-Ultra-Wide-Angle-Lens / M8-Ultra-Wide-Angle-Lens"
+  filename: "OpenMV-M8-Ultra-Wide-Angle-Lens-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/ultra-wide-angle-lens/m8/ultra-wide-angle-m8-hero.jpg"
+
+description: >
+  The M8 Ultra Wide Angle Lens gives your OpenMV AE3 the ability to see a wider field of view.
+  The standard lens has about a 70-degree FOV which is good, but not great for security
+  applications. This lens has about a 90-degree FOV, so your OpenMV AE3 can see much more
+  without significant image distortion. The lens comes with damping grease to help hold it
+  in place; gluing is recommended for vibration environments. Available with or without a
+  650 nm IR cut filter.
+
+target_areas: >
+  Security, surveillance, wide-area monitoring, room coverage, robotics, navigation,
+  indoor monitoring, people counting.
+
+features:
+  - label: "90-degree FOV"
+    detail: "Approximately 90-degree diagonal FOV (79.6\u00B0H x 55.2\u00B0V with PAG7936). 0.74x optical zoom."
+  - label: "Low distortion"
+    detail: "Only -2% TV distortion \u2014 wide angle with minimal barrel distortion."
+  - label: "2 MP resolution"
+    detail: "Supports up to 2 MP sensor resolution."
+  - label: "M8 x P0.35 mount"
+    detail: "Standard M8 threaded mount for OpenMV AE3 and PAG7936 dual-camera modules."
+  - label: "IR cut filter option"
+    detail: "Available with 650 nm IR cut filter or without for night vision use."
+  - label: "3D model available"
+    detail: "STEP file available on GrabCAD for mechanical integration."
+
+system_components_title: "Specifications"
+system_components:
+  - title: "Optical Specifications"
+    components:
+      - name: "Model"
+        details: "M8-2030-S"
+      - name: "Mount"
+        details: "M8 x P0.35 threaded"
+      - name: "F-Number"
+        details: "F2.0"
+      - name: "Effective Focal Length"
+        details: "2.3 mm"
+      - name: "Back Focal Length"
+        details: "2.29 mm"
+      - name: "Total Track Length"
+        details: "10.47 mm"
+      - name: "Image Circle"
+        details: "\u00D85.3 mm"
+      - name: "Image Format"
+        details: "1/4\""
+      - name: "Resolution"
+        details: "2 MP"
+      - name: "Construction"
+        details: "4E + IR (4 elements plus IR filter)"
+      - name: "Focus / Iris / Zoom"
+        details: "Manual focus, fixed iris, fixed zoom"
+      - name: "IR Coating Filter"
+        details: "650 nm (variant with IR cut filter)"
+      - name: "Min. Object Distance"
+        details: "0.2 m"
+
+  - title: "Field of View (1/4\" format)"
+    components:
+      - name: "Diagonal"
+        details: "90\u00B0"
+      - name: "Horizontal"
+        details: "72\u00B0"
+      - name: "Vertical"
+        details: "60\u00B0"
+      - name: "TV Distortion"
+        details: "-2%"
+      - name: "Relative Illumination"
+        details: ">67%"
+      - name: "Chief Ray Angle"
+        details: "<18\u00B0"
+    notes:
+      - "All specifications \u00B15% tolerance."
+
+  - title: "Actual FOV with PAG7936 Sensor"
+    components:
+      - name: "Diagonal"
+        details: "89.2\u00B0"
+      - name: "Horizontal"
+        details: "79.6\u00B0"
+      - name: "Vertical"
+        details: "55.2\u00B0"
+      - name: "Optical Zoom"
+        details: "0.74x"
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "OpenMV AE3, dual-camera modules using PAG7936 sensors."
+      - name: "Installation"
+        details: "Includes damping grease. Gluing recommended for vibration environments. M8 lock ring solution in development."
+
+  - title: "Applications"
+    text: >
+      The M8 Ultra Wide Angle Lens is great for security applications where you want to see a
+      wider field of view. By using this lens, your OpenMV AE3 can easily detect things in an
+      entire room without having to be mounted far away.
+
+mechanical:
+  specs:
+    - dimension: "Length"
+      value: "11 mm"
+    - dimension: "Width"
+      value: "11 mm"
+    - dimension: "Height"
+      value: "8 mm"
+    - dimension: "Weight"
+      value: "0.5 g"
+    - dimension: "Operating Temperature"
+      value: "-20\u00B0C to +65\u00B0C"
+    - dimension: "Storage Temperature"
+      value: "-20\u00B0C to +65\u00B0C"
+    - dimension: "Country of Origin"
+      value: "China"
+    - dimension: "HS Code"
+      value: "8473.30.2000"
+    - dimension: "ECCN"
+      value: "EAR99"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+  - field: "Documentation"
+    value: "https://docs.openmv.io"
+  - field: "Support"
+    value: "https://forums.openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/m8-ultra-wide-angle-lens"
+  - name: "3D Model (STEP)"
+    link: "https://grabcad.com/library/m8-ultra-wide-angle-lens-1"
+  - name: "OpenMV AE3"
+    link: "https://openmv.io/products/openmv-ae3"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

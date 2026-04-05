@@ -1,0 +1,76 @@
+meta:
+  product_name: "OV5640 FPC Camera Module"
+  sku: "OMV-MOD-OV5640-V1"
+  filename: "OpenMV-OV5640-FPC-Camera-Module-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/openmv-cam/v4/OV5640 FPC/OV5640-FPC-module-angle-web.jpg"
+
+description: >
+  The OV5640 FPC Camera Module gives you the same high-resolution JPEG-taking capabilities as
+  the OpenMV Cam H7 Plus and RT1062's OV5640 camera module in a low-profile form factor with
+  autofocus support. The OV5640 image sensor can capture 2592x1944 (5 MP) images. The sensor
+  supports Grayscale, RGB565, JPEG, YUV422, and Bayer image formats. Depending on the
+  resolution, you can achieve up to 120 FPS frame rates.
+
+target_areas: >
+  High-resolution imaging, JPEG capture, autofocus applications, low-profile installations,
+  barcode scanning, document capture, quality inspection.
+
+features:
+  - label: "5 MP resolution"
+    detail: "2592x1944 pixel capture with the OV5640 sensor."
+  - label: "Autofocus"
+    detail: "Built-in autofocus support."
+  - label: "Multiple formats"
+    detail: "Grayscale, RGB565, JPEG, YUV422, and Bayer output."
+  - label: "Up to 120 FPS"
+    detail: "Frame rate depends on resolution."
+  - label: "Low-profile FPC"
+    detail: "Flexible printed circuit form factor for thin installations."
+  - label: "Universal compatibility"
+    detail: "Works with all modular OpenMV Cam base boards."
+
+system_components_title: "Specifications"
+system_components:
+  - title: "Sensor Specifications"
+    components:
+      - name: "Sensor"
+        details: "OmniVision OV5640 CMOS image sensor."
+      - name: "Resolution"
+        details: "2592x1944 (5 MP)."
+      - name: "Autofocus"
+        details: "Yes \u2014 built-in autofocus support."
+      - name: "Output Formats"
+        details: "Grayscale, RGB565, JPEG, YUV422, Bayer."
+      - name: "Max Frame Rate"
+        details: "Up to 120 FPS (resolution-dependent)."
+      - name: "Form Factor"
+        details: "Low-profile flexible printed circuit (FPC)."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "All modular OpenMV Cam base boards."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "10 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/ov5640-fpc-camera-module"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

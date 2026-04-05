@@ -1,0 +1,254 @@
+meta:
+  product_name: "N6"
+  sku: "OMV-N6-V1"
+  filename: "OpenMV-N6-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/openmv-cam/openmv-n6/final/n6-hero-v6.jpg"
+
+description: >
+  The OpenMV N6 is the latest generation of the OpenMV Cam product line, built around the
+  STM32N657A0 ARM Cortex-M55 running at 800 MHz with a 600 GOPS neural processing unit (NPU).
+  It delivers real-time YOLO object detection at 30+ FPS entirely on-device. With 64 MB RAM,
+  32 MB flash, a 5 MP HDR camera (default), integrated WiFi/BLE, Gigabit Ethernet, IMU,
+  microphone, and GPU with H.264/JPEG video recording, it is the most capable OpenMV Cam ever
+  built. Supports interchangeable camera modules including global shutter, FLIR thermal, and
+  Prophesee event cameras. Programmable in MicroPython via the OpenMV IDE with Edge Impulse
+  integration.
+
+target_areas: >
+  Edge AI, machine vision, object detection, thermal imaging, multispectral imaging,
+  video streaming, industrial automation, robotics, security, smart agriculture.
+
+features:
+  - label: "800 MHz Cortex-M55"
+    detail: "STM32N657A0 with Helium vector acceleration and 600 GOPS NPU. Real-time YOLO at 30+ FPS."
+  - label: "Massive memory"
+    detail: "64 MB RAM (800 MB/s) and 32 MB flash (400 MB/s)."
+  - label: "5 MP HDR camera"
+    detail: "Default 5 MP 30 FPS HDR sensor. Swappable with 1 MP global shutter (up to 480 FPS), FLIR thermal, or event camera."
+  - label: "GPU + video"
+    detail: "On-board GPU with H.264/JPEG video recording."
+  - label: "Gigabit Ethernet"
+    detail: "Built-in Gigabit Ethernet with differential pairs on header."
+  - label: "WiFi + BLE"
+    detail: "2.4 GHz WiFi and Bluetooth Low Energy 5.2 integrated."
+  - label: "Rich I/O"
+    detail: "18 GPIO pins with SPI, I2C, I3C, CAN, 2x UART, ADC, 4x PWM. USB-C High-Speed."
+  - label: "Ultra-low power"
+    detail: "Less than 50 \u00B5A deepsleep. 4+ year battery life possible."
+
+system_components:
+  - title: "Microcontroller"
+    components:
+      - name: "STM32N657A0"
+        details: >
+          ARM Cortex-M55 core running at 800 MHz with Helium/MVE vector acceleration and ARM
+          Helium Accelerated CV Library. Integrated 600 GOPS neural processing unit (NPU) for
+          on-device AI inference. On-board GPU with H.264/JPEG video encoding.
+
+  - title: "Memory"
+    components:
+      - name: "RAM"
+        details: "64 MB at 800 MB/s bandwidth."
+      - name: "Flash"
+        details: "32 MB at 400 MB/s bandwidth."
+      - name: "microSD Card"
+        details: "Supports SD (up to 2 GB), SDHC (up to 32 GB), SDXC (up to 2 TB). UHS-I interface."
+
+  - title: "Connectivity"
+    components:
+      - name: "USB-C"
+        details: "USB 2.0 High-Speed (480 Mbps)."
+      - name: "Gigabit Ethernet"
+        details: "Gigabit Ethernet with differential pairs (TXP/TXN, RXP/RXN, DCP/DCN, DDP/DDN) exposed on left header."
+      - name: "WiFi"
+        details: "2.4 GHz WiFi."
+      - name: "Bluetooth"
+        details: "Bluetooth Low Energy 5.2."
+      - name: "SPI"
+        details: "SPI bus on P0 (MOSI) / P1 (MISO) / P2 (SCLK) / P3 (SS)."
+      - name: "I2C"
+        details: "I2C bus on P4 (SCL) / P5 (SDA)."
+      - name: "I3C"
+        details: "I3C bus supported."
+      - name: "CAN"
+        details: "CAN bus on P2 (CTX) / P3 (CRX)."
+      - name: "UART"
+        details: "2 UART ports: P4 (TX) / P5 (RX) and P14 (TX) / P13 (RX)."
+
+  - title: "Camera System"
+    components:
+      - name: "Default Sensor"
+        details: "5 MP 30 FPS HDR camera."
+      - name: "Alternative Sensors"
+        details: "1 MP 120/240/480 FPS color global shutter camera, FLIR Boson/Lepton thermal camera, Prophesee GENX320 event camera."
+      - name: "Lens"
+        details: "M12 (S-mount) interchangeable lens mount."
+
+  - title: "Sensors"
+    components:
+      - name: "IMU"
+        details: "On-board inertial measurement unit (accelerometer and gyroscope)."
+      - name: "Microphone"
+        details: "On-board microphone for audio input."
+
+  - title: "User Interface"
+    components:
+      - name: "RGB LED"
+        details: "User-programmable RGB LED."
+      - name: "Buttons"
+        details: "Main button (SW) and wakeup button (SW2) for deepsleep wakeup."
+
+  - title: "Power Management"
+    components:
+      - name: "RAW"
+        details: "Always-on unregulated 3.6\u20135 V power input. Active in on, off, and deepsleep modes."
+      - name: "VIN"
+        details: "5 V regulated power input on right header."
+      - name: "3.3 V Rail"
+        details: "Regulated 3.3 V output, 1 A supply max."
+      - name: "LiPo Battery"
+        details: "3.7 V LiPo battery charger integrated."
+      - name: "Deepsleep"
+        details: "Less than 50 \u00B5A deepsleep current. Greater than 4 year battery life possible. PWR-WKUP pin for wakeup."
+
+ratings:
+  - title: "Recommended Operating Conditions"
+    headers: ["Symbol", "Description", "Min", "Typ", "Max", "Unit"]
+    rows:
+      - ["VRAW", "RAW supply voltage", "3.6", "\u2014", "5.0", "V"]
+      - ["VIN", "VIN supply voltage", "\u2014", "5.0", "5.0", "V"]
+      - ["VIO", "I/O voltage", "\u2014", "3.3", "3.3", "V"]
+      - ["IIO", "Per-pin current (sink/source)", "\u2014", "\u2014", "20", "mA"]
+      - ["IOUT", "3.3 V rail max current", "\u2014", "\u2014", "1000", "mA"]
+      - ["ISLEEP", "Deepsleep current", "\u2014", "\u2014", "50", "\u00B5A"]
+      - ["TOP", "Operating temperature", "-40", "25", "85", "\u00B0C"]
+
+connectors:
+  pinout_image: "boards/openmv-cam/openmv-n6/openmv-n6-pinout.png"
+
+  groups:
+    - title: "Left Header \u2014 Inside (Top)"
+      headers: ["Pin", "Label", "Type", "Alternate Functions"]
+      rows:
+        - ["1", "P0", "I/O", "SPI MOSI"]
+        - ["2", "P1", "I/O", "SPI MISO"]
+        - ["3", "P2", "I/O", "SPI SCLK / CAN TX"]
+        - ["4", "P3", "I/O", "SPI SS / CAN RX"]
+        - ["5", "P4", "I/O", "UART TX / I2C SCL"]
+        - ["6", "P5", "I/O", "UART RX / I2C SDA"]
+        - ["7", "P6", "I/O", "ADC"]
+        - ["8", "3V3", "Power", "3.3 V regulated output (1 A max)"]
+
+    - title: "Left Header \u2014 Outside (Bottom)"
+      headers: ["Pin", "Label", "Type", "Function"]
+      rows:
+        - ["1", "GND", "Power", "Ground"]
+        - ["2", "RAW", "Power", "Always-on 3.6\u20135 V (on/off/deepsleep)"]
+        - ["3", "PWR-WKUP", "Input", "Wakeup from deepsleep"]
+        - ["4", "ETH-TXP", "Ethernet", "Ethernet TX positive"]
+        - ["5", "ETH-TXN", "Ethernet", "Ethernet TX negative"]
+        - ["6", "ETH-RXP", "Ethernet", "Ethernet RX positive"]
+        - ["7", "ETH-RXN", "Ethernet", "Ethernet RX negative"]
+        - ["8", "ETH-LED", "Output", "Ethernet status LED"]
+
+    - title: "Right Header \u2014 Inside (Top)"
+      headers: ["Pin", "Label", "Type", "Function"]
+      rows:
+        - ["1", "ETH-DCP", "Ethernet", "Ethernet DC pair positive"]
+        - ["2", "ETH-DCN", "Ethernet", "Ethernet DC pair negative"]
+        - ["3", "ETH-DDP", "Ethernet", "Ethernet DD pair positive"]
+        - ["4", "ETH-DDN", "Ethernet", "Ethernet DD pair negative"]
+        - ["5", "P14", "I/O", "UART TX (secondary)"]
+        - ["6", "P13", "I/O", "UART RX (secondary)"]
+        - ["7", "BOOT0", "Input", "3.3 V for recovery mode"]
+        - ["8", "3V3", "Power", "3.3 V regulated output"]
+
+    - title: "Right Header \u2014 Outside (Bottom)"
+      headers: ["Pin", "Label", "Type", "Function"]
+      rows:
+        - ["1", "GND", "Power", "Ground"]
+        - ["2", "VIN", "Power", "5 V input"]
+        - ["3", "P7", "I/O", "PWM"]
+        - ["4", "P8", "I/O", "PWM"]
+        - ["5", "P9", "I/O", "PWM"]
+        - ["6", "P10", "I/O", "PWM"]
+        - ["7", "P11", "I/O", "WAKEUP (deepsleep wakeup, pull low)"]
+        - ["8", "RST", "Input", "Connect to GND to reset"]
+
+functional_overview:
+  board_topology:
+    image: "boards/openmv-cam/openmv-n6/final/n6-front-v4.jpg"
+    components:
+      - ref: "U1"
+        description: "STM32N657A0 (Cortex-M55 800 MHz + 600 GOPS NPU + GPU)"
+      - ref: "CAM"
+        description: "Camera module connector (M12 lens mount)"
+      - ref: "USB"
+        description: "USB-C connector (High-Speed 480 Mbps)"
+      - ref: "SD"
+        description: "microSD card slot (UHS-I)"
+      - ref: "ANT"
+        description: "WiFi/BLE antenna"
+      - ref: "IMU"
+        description: "On-board accelerometer and gyroscope"
+      - ref: "MIC"
+        description: "On-board microphone"
+      - ref: "LED"
+        description: "RGB LED"
+      - ref: "SW"
+        description: "Main button"
+      - ref: "SW2"
+        description: "Wakeup button"
+
+  power_tree:
+    text: >
+      The OpenMV N6 can be powered from RAW (3.6\u20135 V, always-on), VIN (5 V), USB-C,
+      or a 3.7 V LiPo battery with integrated charging. The RAW pin remains active in all
+      power modes including off and deepsleep. Deepsleep current is less than 50 \u00B5A,
+      enabling battery life of 4+ years in sleep-heavy applications.
+
+mechanical:
+  specs:
+    - dimension: "Lens Mount"
+      value: "M12 (S-mount), interchangeable"
+    - dimension: "Mounting"
+      value: "2 mounting holes"
+    - dimension: "Operating Temperature"
+      value: "-40\u00B0C to +85\u00B0C"
+
+certifications:
+  headers: ["Certification", "Region", "Details"]
+  table:
+    - ["RoHS", "EU", "Compliant with EU Directive 2011/65/EU (RoHS 2) and amendment 2015/863 (RoHS 3). All components and solder are lead-free."]
+    - ["REACH", "EU", "Compliant with EU Regulation (EC) No 1907/2006."]
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+  - field: "Documentation"
+    value: "https://docs.openmv.io"
+  - field: "Support"
+    value: "https://forums.openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/openmv-n6"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+  - name: "Community Forum"
+    link: "https://forums.openmv.io"
+  - name: "STM32N657A0"
+    link: "https://www.st.com/en/microcontrollers-microprocessors/stm32n6.html"
+  - name: "Edge Impulse"
+    link: "https://edgeimpulse.com"
+  - name: "OpenMV IDE"
+    link: "https://openmv.io/pages/download"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

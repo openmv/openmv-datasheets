@@ -1,0 +1,198 @@
+meta:
+  product_name: "Cam M4 V1"
+  sku: "OMV-CAM-M4-V1 (PCB V2)"
+  filename: "OpenMV-Cam-M4-V1-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/openmv-cam/v2/web-new-cam-v1-angle.jpg"
+
+description: >
+  The OpenMV Cam M4 V1 (OV2640) is the first generation of the OpenMV Cam product line. It is a small,
+  low-power microcontroller board which allows you to easily implement applications using machine
+  vision. Built around the STM32F427VG ARM Cortex-M4 processor and paired with the OV2640 camera
+  sensor, it was the original platform for MicroPython-based machine vision development.
+
+target_areas: >
+  Machine vision, robotics, education, rapid prototyping, color detection.
+
+features:
+  - label: "ARM Cortex-M4 MCU"
+    detail: "STM32F427VG running at 180 MHz with hardware FPU and 1 MB flash."
+  - label: "Machine vision"
+    detail: "OV2640 camera module with up to 2 MP resolution. M12 interchangeable lens mount."
+  - label: "MicroPython powered"
+    detail: "Program vision algorithms in Python."
+  - label: "I/O"
+    detail: "9 I/O pins with SPI, I2C, UART, CAN, ADC, DAC, PWM, and 2 servo pins. All 5V tolerant."
+  - label: "Connectivity"
+    detail: "Full-speed USB with virtual COM port and mass storage. microSD card slot."
+  - label: "Compact"
+    detail: "35.6 mm x 44.5 mm board size."
+
+system_components:
+  - title: "Microcontroller"
+    components:
+      - name: "STM32F427VG"
+        details: >
+          ARM Cortex-M4 core running at 180 MHz. Features single-precision floating-point unit (FPU)
+          and DSP instructions. Includes 1 MB on-chip flash and 256 KB SRAM.
+
+  - title: "Memory"
+    components:
+      - name: "On-chip Flash"
+        details: "1 MB program/storage flash memory."
+      - name: "On-chip SRAM"
+        details: "256 KB SRAM."
+      - name: "microSD Card"
+        details: "Supports microSD/microSDHC up to 32 GB."
+
+  - title: "Connectivity"
+    components:
+      - name: "USB"
+        details: "Full-speed USB 2.0 (12 Mbps) via Micro-USB connector."
+      - name: "SPI"
+        details: "1 SPI bus available on header."
+      - name: "I2C"
+        details: "1 I2C bus available (I2C2 on P4/P5)."
+      - name: "UART"
+        details: "1 UART port (P0 TX / P1 RX). Up to 7.5 Mb/s."
+      - name: "CAN"
+        details: "1 CAN bus (P2 TX / P3 RX). Up to 1 Mb/s."
+
+  - title: "Camera System"
+    components:
+      - name: "Image Sensor"
+        details: "OV2640 1/4-inch CMOS image sensor with up to 1600x1200 (2 MP) resolution."
+      - name: "Image Performance"
+        details: "320x240 Grayscale (8-bit) or RGB565 (16-bit). 20 FPS at QVGA. Algorithms run at 20\u201340 FPS at QQVGA and below. JPEG capture up to 2 MP."
+      - name: "Lens"
+        details: "2.8 mm focal length lens on standard M12 lens mount. User-replaceable."
+      - name: "Camera Interface"
+        details: "8-bit parallel DCMI interface. Removable camera module system."
+
+  - title: "LEDs"
+    components:
+      - name: "RGB LED"
+        details: "1 user-programmable RGB LED for status indication."
+      - name: "IR LEDs"
+        details: "2 high-power 850 nm infrared LEDs."
+
+  - title: "Power Management"
+    components:
+      - name: "VIN"
+        details: "External power input, 3.6 V to 5.0 V."
+      - name: "3.3 V Rail"
+        details: "Regulated 3.3 V output. Maximum 250 mA for external loads."
+      - name: "LiPo Battery"
+        details: "JST-SH connector for single-cell 3.7 V LiPo batteries."
+      - name: "USB Power"
+        details: "Can be powered via Micro-USB."
+
+ratings:
+  - title: "Recommended Operating Conditions"
+    headers: ["Symbol", "Description", "Min", "Typ", "Max", "Unit"]
+    rows:
+      - ["VIN", "External supply voltage", "3.6", "5.0", "5.0", "V"]
+      - ["VOUT", "3.3 V rail output", "\u2014", "3.3", "3.3", "V"]
+      - ["VIO", "I/O pin input (digital)", "-0.3", "\u2014", "5.0", "V"]
+      - ["IOUT", "3.3 V output current", "\u2014", "\u2014", "250", "mA"]
+      - ["TOP", "Operating temperature", "-40", "25", "105", "\u00B0C"]
+
+connectors:
+  pinout_image: "boards/openmv-cam/pinout-openmv-cam-m4-ov2640.png"
+
+  groups:
+    - title: "J1 Header (Main I/O)"
+      headers: ["Pin", "Label", "Type", "Alternate Functions"]
+      rows:
+        - ["1", "P0", "I/O", "UART TX / TIM1 CH3N / SPI2 MOSI (PB15)"]
+        - ["2", "P1", "I/O", "UART RX / TIM1 CH2N / SPI2 MISO (PB14)"]
+        - ["3", "P2", "I/O", "CAN TX / TIM1 CH1N / SPI2 SCLK (PB13)"]
+        - ["4", "P3", "I/O", "CAN RX / SPI2 SS (PB12)"]
+        - ["5", "P4", "I/O", "I2C2 SCL / TIM2 CH3 (PB10)"]
+        - ["6", "P5", "I/O", "I2C2 SDA / TIM2 CH4 (PB11)"]
+        - ["7", "P6", "I/O", "DAC / ADC / TIM2 CH1 (PA5) \u2014 3.3V only in analog mode"]
+        - ["8", "3V3", "Power", "3.3 V regulated output (250 mA max)"]
+
+    - title: "J2 Header (Control / Debug)"
+      headers: ["Pin", "Label", "Type", "Alternate Functions"]
+      rows:
+        - ["1", "SWC", "Debug", "Serial Wire Clock"]
+        - ["2", "SWD", "Debug", "Serial Wire Data"]
+        - ["3", "BOOT", "Input", "Connect to 3.3 V for DFU boot mode"]
+        - ["4", "RST", "Input", "Connect to GND to reset"]
+        - ["5", "P8", "I/O", "Servo2 / TIM4 CH2 (PD13)"]
+        - ["6", "P7", "I/O", "Servo1 / TIM4 CH1 (PD12)"]
+        - ["7", "VIN", "Power", "3.6\u20135.0 V input"]
+        - ["8", "GND", "Power", "Ground"]
+
+functional_overview:
+  board_topology:
+    image: "boards/openmv-cam/v2/new-cam-v1-front.jpg"
+    components:
+      - ref: "U1"
+        description: "STM32F427VG microcontroller (ARM Cortex-M4, 180 MHz)"
+      - ref: "U2"
+        description: "Camera module connector (8-bit parallel DCMI)"
+      - ref: "U3"
+        description: "Micro-USB connector"
+      - ref: "U4"
+        description: "microSD card slot"
+      - ref: "LED1"
+        description: "User-programmable RGB LED"
+      - ref: "LED2/3"
+        description: "850 nm infrared LEDs (x2)"
+      - ref: "J1"
+        description: "Main I/O header (8 pins)"
+      - ref: "J2"
+        description: "Control / debug header (8 pins, includes SWD)"
+      - ref: "BAT"
+        description: "LiPo battery connector (JST-SH)"
+
+  power_tree:
+    text: >
+      The OpenMV Cam M4 V1 can be powered from VIN (3.6\u20135.0 V), Micro-USB (5 V bus power),
+      or a single-cell LiPo battery (3.7 V) via the JST-SH connector.
+
+mechanical:
+  dimensions_image: "boards/openmv-cam/cam-dimensions.png"
+  specs:
+    - dimension: "Board Size"
+      value: "35.6 mm x 44.5 mm (1.4 in x 1.75 in)"
+    - dimension: "Weight"
+      value: "16 g (with camera module and lens)"
+    - dimension: "Lens Mount"
+      value: "M12 (S-mount), interchangeable"
+    - dimension: "Operating Temperature"
+      value: "-40\u00B0C to +85\u00B0C"
+
+certifications:
+  headers: ["Certification", "Region", "Details"]
+  table:
+    - ["RoHS", "EU", "Compliant with EU Directive 2011/65/EU (RoHS 2). All components and solder are lead-free."]
+    - ["REACH", "EU", "Compliant with EU Regulation (EC) No 1907/2006."]
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+  - field: "Documentation"
+    value: "https://docs.openmv.io"
+  - field: "Support"
+    value: "https://forums.openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/openmv-cam-m4-v1"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+  - name: "STM32F427VG Datasheet"
+    link: "https://www.st.com/en/microcontrollers/stm32f427vg.html"
+  - name: "OV2640 Image Sensor"
+    link: "https://www.ovt.com/products/sensor.php?id=36"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

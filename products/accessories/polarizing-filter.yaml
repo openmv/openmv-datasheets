@@ -1,0 +1,61 @@
+meta:
+  product_name: "Polarizing Filter"
+  sku: "OMV-POLARIZING-FILTER"
+  filename: "OpenMV-Polarizing-Filter-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/polarizing-filter/new-filter-angle.jpg"
+
+description: >
+  Custom-made polarizing filters designed to fit inside your OpenMV Cam's M12 lens mount,
+  manufactured by Edmund Optics. Mount the polarizing filter inside of your OpenMV Cam's lens
+  mount (make sure to remove the protective film from both sides). Depending on the orientation
+  you mount the filter, it will filter out horizontally or vertically polarized light.
+
+target_areas: >
+  Glare reduction, reflection elimination, surface inspection, LCD screen reading,
+  underwater imaging, outdoor vision.
+
+features:
+  - label: "Custom M12 fit"
+    detail: "Precision-made by Edmund Optics to fit inside OpenMV Cam M12 lens mounts."
+  - label: "Linear polarizer"
+    detail: "Filters horizontally or vertically polarized light depending on orientation."
+  - label: "Protective film"
+    detail: "Remove protective film from both front and back before use."
+
+system_components_title: "Specifications"
+system_components:
+  - title: "Optical Specifications"
+    components:
+      - name: "Type"
+        details: "Linear polarizing filter."
+      - name: "Mount"
+        details: "Fits inside M12 lens mount of all OpenMV Cam models."
+      - name: "Manufacturer"
+        details: "Edmund Optics (custom-made for OpenMV)."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "All OpenMV Cam models with M12 lens mount."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "0.1 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/polarizing-filter"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

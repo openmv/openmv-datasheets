@@ -1,0 +1,80 @@
+meta:
+  product_name: "Global Shutter Camera Module"
+  sku: "OMV-MOD-GS-V1"
+  filename: "OpenMV-Global-Shutter-Camera-Module-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/openmv-cam/v4/MT9V034/MT9V034-module-angle-web.jpg"
+
+description: >
+  The Global Shutter Camera Module enables your OpenMV Cam to capture high-quality grayscale
+  images without motion blur. The module features the MT9V034 (or MT9V024) global shutter
+  camera, capable of taking snapshot pictures on demand and running at 80 FPS in QVGA mode,
+  200 FPS in QQVGA mode, and 400 FPS in QQQVGA mode. The Global Shutter Camera Module is
+  the ultimate sensor for machine vision enthusiasts who want to use their OpenMV Cam in
+  professional products.
+
+target_areas: >
+  High-speed capture, motion-blur-free imaging, barcode scanning, industrial inspection,
+  professional machine vision, robotics, conveyor tracking.
+
+features:
+  - label: "Global shutter"
+    detail: "Captures entire frame simultaneously \u2014 no rolling shutter distortion or motion blur."
+  - label: "Up to 400 FPS"
+    detail: "80 FPS (QVGA), 200 FPS (QQVGA), 400 FPS (QQQVGA)."
+  - label: "Grayscale output"
+    detail: "High-quality grayscale imaging optimized for machine vision."
+  - label: "Two chip variants"
+    detail: "Available with MT9V034 or MT9V024 sensor."
+  - label: "Universal compatibility"
+    detail: "Works with all modular OpenMV Cam base boards."
+
+system_components_title: "Specifications"
+system_components:
+  - title: "Sensor Specifications"
+    components:
+      - name: "Sensor"
+        details: "ON Semiconductor MT9V034 or MT9V024 global shutter CMOS."
+      - name: "Shutter Type"
+        details: "Global shutter \u2014 captures entire frame simultaneously."
+      - name: "Output"
+        details: "Grayscale."
+
+  - title: "Frame Rates"
+    components:
+      - name: "QVGA (320x240)"
+        details: "80 FPS."
+      - name: "QQVGA (160x120)"
+        details: "200 FPS."
+      - name: "QQQVGA (80x60)"
+        details: "400 FPS."
+      - name: "Snapshot"
+        details: "On-demand single-frame capture."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "All modular OpenMV Cam base boards."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "30 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/global-shutter-camera-module"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

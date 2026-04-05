@@ -1,0 +1,151 @@
+meta:
+  product_name: "M8 Fish Eye Lens"
+  sku: "IR-M8-Fish-Eye-Lens / M8-Fish-Eye-Lens"
+  filename: "OpenMV-M8-Fish-Eye-Lens-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/fish-eye-lens/m8/fish-eye-m8-hero.jpg"
+
+description: >
+  The M8 Fish Eye Lens gives your OpenMV AE3 the ability to see with nearly a fish-eye field
+  of view. The standard lens has about a 70-degree FOV which is good, but not great for
+  security applications. This lens has about a 120-degree FOV, so your OpenMV AE3 can see
+  much more. The fish-eye barrel distortion can be corrected in software using OpenMV's lens
+  correction algorithms. The lens comes with damping grease; gluing is recommended for
+  vibration environments. Available with or without a 650 nm IR cut filter.
+
+target_areas: >
+  Wide-area surveillance, panoramic monitoring, robotics, drone navigation,
+  indoor mapping, 360-degree coverage.
+
+features:
+  - label: "120-degree FOV"
+    detail: "Approximately 120-degree diagonal FOV (108.1\u00B0H x 82.3\u00B0V with PAG7936). 0.44x optical zoom. Widest in M8 lineup."
+  - label: "Software distortion correction"
+    detail: "-18% TV distortion correctable via OpenMV's lens undistortion algorithms."
+  - label: "VGA resolution"
+    detail: "Optimized for VGA-class sensor resolution."
+  - label: "M8 x P0.35 mount"
+    detail: "Standard M8 threaded mount for OpenMV AE3 and PAG7936 dual-camera modules."
+  - label: "IR cut filter option"
+    detail: "Available with 650 nm IR cut filter or without for night vision use."
+  - label: "3D model available"
+    detail: "STEP file available on GrabCAD for mechanical integration."
+
+system_components_title: "Specifications"
+system_components:
+  - title: "Optical Specifications"
+    components:
+      - name: "Model"
+        details: "M8-1038-S1"
+      - name: "Mount"
+        details: "M8 x P0.35 threaded"
+      - name: "F-Number"
+        details: "F2.2"
+      - name: "Effective Focal Length"
+        details: "1.38 mm"
+      - name: "Mechanical Back Focus"
+        details: "1.73 mm"
+      - name: "Total Track Length"
+        details: "9.9 mm"
+      - name: "Image Circle"
+        details: "\u00D85.3 mm"
+      - name: "Image Format"
+        details: "1/4\""
+      - name: "Resolution"
+        details: "VGA"
+      - name: "Construction"
+        details: "2G2P + IR (2 glass, 2 plastic elements plus IR filter)"
+      - name: "Focus / Iris / Zoom"
+        details: "Manual focus, fixed iris, fixed zoom"
+      - name: "IR Coating Filter"
+        details: "650 nm (variant with IR cut filter)"
+      - name: "Min. Object Distance"
+        details: "10 cm"
+
+  - title: "Field of View (1/4\" format)"
+    components:
+      - name: "Diagonal"
+        details: "142\u00B0"
+      - name: "Horizontal"
+        details: "129\u00B0"
+      - name: "Vertical"
+        details: "83\u00B0"
+      - name: "TV Distortion"
+        details: "-18%"
+      - name: "Relative Illumination"
+        details: ">48%"
+      - name: "Chief Ray Angle"
+        details: "<28\u00B0"
+    notes:
+      - "All specifications \u00B15% tolerance."
+
+  - title: "Actual FOV with PAG7936 Sensor"
+    components:
+      - name: "Diagonal"
+        details: "117.3\u00B0"
+      - name: "Horizontal"
+        details: "108.1\u00B0"
+      - name: "Vertical"
+        details: "82.3\u00B0"
+      - name: "Optical Zoom"
+        details: "0.44x"
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "OpenMV AE3, dual-camera modules using PAG7936 sensors."
+      - name: "Installation"
+        details: "Includes damping grease. Gluing recommended for vibration environments. M8 lock ring solution in development."
+
+  - title: "Applications"
+    text: >
+      The M8 Fish Eye Lens is great for security applications where you want to see nearly a
+      fish-eye field of view. By using this lens, your OpenMV AE3 can easily detect things to
+      the left and right of what the camera is looking at.
+
+mechanical:
+  specs:
+    - dimension: "Length"
+      value: "12 mm"
+    - dimension: "Width"
+      value: "12 mm"
+    - dimension: "Height"
+      value: "8 mm"
+    - dimension: "Weight"
+      value: "0.5 g"
+    - dimension: "Operating Temperature"
+      value: "-20\u00B0C to +60\u00B0C"
+    - dimension: "Storage Temperature"
+      value: "-20\u00B0C to +60\u00B0C"
+    - dimension: "Country of Origin"
+      value: "China"
+    - dimension: "HS Code"
+      value: "8473.30.2000"
+    - dimension: "ECCN"
+      value: "EAR99"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+  - field: "Documentation"
+    value: "https://docs.openmv.io"
+  - field: "Support"
+    value: "https://forums.openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/m8-fish-eye-lens"
+  - name: "3D Model (STEP)"
+    link: "https://grabcad.com/library/m8-fish-eye-lens-1"
+  - name: "OpenMV AE3"
+    link: "https://openmv.io/products/openmv-ae3"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

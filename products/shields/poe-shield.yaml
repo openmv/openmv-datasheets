@@ -1,0 +1,77 @@
+meta:
+  product_name: "PoE Shield"
+  sku: "OMV-SHIELD-POE"
+  filename: "OpenMV-PoE-Shield-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/poe-shield/PoE Shield - FRONT CAM.jpg"
+
+description: >
+  The PoE Shield lets you connect your OpenMV Cam to PoE Ethernet, providing a one-cable
+  solution for power and connectivity. It features a 10/100 Mb/s capable Ethernet jack with
+  IEEE 802.3af PoE support providing up to ~6 W of power. The shield supplies 5.4 V via VIN
+  through an OR'ing diode, allowing it to be combined with other dual header column shields.
+  Peak UDP transmit performance exceeds 90 Mb/s using Python sockets with the RT1062.
+  Headers do not come pre-soldered.
+
+target_areas: >
+  Network-connected vision, IP camera, remote monitoring, industrial Ethernet,
+  PoE-powered deployments, one-cable installations.
+
+features:
+  - label: "10/100 Mb/s Ethernet"
+    detail: "10/100 Mb/s capable Ethernet jack."
+  - label: "IEEE 802.3af PoE"
+    detail: "Power over Ethernet providing up to ~6 W to your OpenMV Cam."
+  - label: "One-cable solution"
+    detail: "Single Ethernet cable provides both power and data connectivity."
+  - label: "90+ Mb/s throughput"
+    detail: "Peak UDP transmit performance exceeds 90 Mb/s with RT1062."
+  - label: "Shield stacking"
+    detail: "Supplies 5.4 V on VIN via OR'ing diode for multi-shield combinations."
+
+system_components_title: "Features"
+system_components:
+  - title: "Ethernet"
+    components:
+      - name: "Speed"
+        details: "10/100 Mb/s Ethernet."
+      - name: "PoE"
+        details: "IEEE 802.3af compliant. Provides up to ~6 W of power."
+      - name: "Performance"
+        details: "Peak UDP transmit exceeds 90 Mb/s using Python sockets (tested with RT1062)."
+
+  - title: "Power Output"
+    components:
+      - name: "VIN"
+        details: "Supplies 5.4 V via VIN through OR'ing diode. Compatible with other dual header column shields that supply VIN via OR'ing diode."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "Only OpenMV Cams with onboard Ethernet: OpenMV Cam N6 and OpenMV Cam RT1062."
+    notes:
+      - "Headers do not come pre-soldered."
+      - "Comes with mounting hardware and screws."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "23 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/poe-shield"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

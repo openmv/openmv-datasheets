@@ -1,0 +1,77 @@
+meta:
+  product_name: "Touch LCD Shield"
+  sku: "OMV-TOUCH-LCD-SHIELD-V3"
+  filename: "OpenMV-Touch-LCD-Shield-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/touch-lcd-shield/touch-lcd-front-quarter.jpg"
+
+description: >
+  The Touch LCD Shield gives your OpenMV Cam the ability to display what it sees on the go
+  while not connected to your computer. It features a 2.3-inch 320x240 16-bpp (RGB565)
+  capacitive multi-touch TFT LCD display with a controllable backlight. The shield also
+  includes dual QWIIC headers connected to P4 (SCL) and P5 (SDA) for daisy-chaining I2C
+  peripherals from SparkFun's QWIIC ecosystem. Controlled via the SPI Display Class.
+
+target_areas: >
+  Touch interface, portable display, interactive demos, HMI, field debugging,
+  sensor integration via QWIIC.
+
+features:
+  - label: "2.3\" touch display"
+    detail: "320x240 pixel, 16-bit color (RGB565), capacitive multi-touch."
+  - label: "Controllable backlight"
+    detail: "Software-controllable backlight brightness."
+  - label: "Dual QWIIC"
+    detail: "Two QWIIC I2C connectors on P4/P5 for daisy-chaining SparkFun QWIIC peripherals."
+  - label: "Built-in firmware support"
+    detail: "Controlled via the SPI Display Class in MicroPython."
+
+system_components_title: "Features"
+system_components:
+  - title: "Display"
+    components:
+      - name: "Screen"
+        details: "2.3-inch TFT LCD, 320x240 pixels, 16-bit color (RGB565)."
+      - name: "Touch"
+        details: "Capacitive multi-touch input."
+      - name: "Backlight"
+        details: "Software-controllable backlight brightness."
+      - name: "Interface"
+        details: "SPI connection to OpenMV Cam. Controlled via the SPI Display Class."
+
+  - title: "Connectors"
+    components:
+      - name: "QWIIC"
+        details: "Dual QWIIC I2C connectors. Connected to P4 (SCL) and P5 (SDA). Compatible with SparkFun QWIIC ecosystem for daisy-chaining I2C peripherals."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "All OpenMV Cam models."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "25 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/touch-lcd-shield"
+  - name: "SPI Display Class"
+    link: "https://docs.openmv.io/library/omv.display.spidisplay.html"
+  - name: "SparkFun QWIIC"
+    link: "https://www.sparkfun.com/qwiic"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

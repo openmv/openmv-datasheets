@@ -1,0 +1,226 @@
+meta:
+  product_name: "Cam H7 Plus"
+  sku: "OMV-CAM-H7-PLUS-V1 (PCB V4.1)"
+  filename: "OpenMV-Cam-H7-Plus-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/openmv-cam/v4.1/new-cam-v5-angle-web.jpg"
+
+description: >
+  The OpenMV Cam H7 Plus is an enhanced version of the OpenMV Cam H7, featuring significantly
+  more memory with 32 MB external SDRAM and 32 MB external QUADSPI flash. This allows for
+  larger frame buffers, more complex MicroPython scripts, and higher-resolution image processing.
+  It ships with the OV5640 5 MP autofocus camera module, enabling higher-resolution capture than
+  the standard H7. Built around the same STM32H743II ARM Cortex-M7 processor at 480 MHz.
+
+target_areas: >
+  Machine vision, robotics, industrial automation, IoT, edge AI, TensorFlow Lite,
+  high-resolution imaging, video streaming, barcode/QR scanning.
+
+features:
+  - label: "High-performance MCU"
+    detail: "STM32H743II ARM Cortex-M7 processor running at 480 MHz with hardware FPU, DSP, and JPEG acceleration."
+  - label: "Extended memory"
+    detail: "32 MB external SDRAM and 32 MB QUADSPI flash for large frame buffers and complex scripts."
+  - label: "5 MP camera"
+    detail: "OV5640 autofocus camera module with up to 2592x1944 resolution. M12 lens mount."
+  - label: "MicroPython + TensorFlow"
+    detail: "Program vision algorithms in Python with TensorFlow Lite support for neural networks."
+  - label: "Rich I/O"
+    detail: "10 I/O pins with SPI, I2C, UART, CAN, ADC, DAC, PWM, and servo control. All pins are 5V tolerant."
+  - label: "Connectivity"
+    detail: "Full-speed USB with virtual COM port and mass storage. microSD card slot for data logging."
+  - label: "Compact form factor"
+    detail: "35.6 mm x 44.5 mm board size with integrated power management and LiPo battery support."
+
+system_components:
+  - title: "Microcontroller"
+    components:
+      - name: "STM32H743II"
+        details: >
+          ARM Cortex-M7 core running at 480 MHz. Features double-precision floating-point unit (FPU),
+          DSP instructions, and hardware JPEG codec. Includes 2 MB on-chip flash and 1 MB SRAM.
+
+  - title: "Memory"
+    components:
+      - name: "On-chip Flash"
+        details: "2 MB program/storage flash memory."
+      - name: "On-chip SRAM"
+        details: "1 MB SRAM."
+      - name: "External SDRAM"
+        details: "32 MB SDRAM (32-bit bus, 100 MHz clock, 400 MB/s bandwidth) for large frame buffers and extended heap."
+      - name: "External QUADSPI Flash"
+        details: "32 MB QUADSPI flash (100 MHz, 4-bit DDR mode, 100 MB/s read) for additional program and data storage."
+      - name: "microSD Card"
+        details: "Supports microSD/microSDHC/microSDXC up to 64 GB. 4-bit SDMMC interface at up to 100 Mb/s."
+
+  - title: "Connectivity"
+    components:
+      - name: "USB"
+        details: "Full-speed USB 2.0 (12 Mbps) via Micro-USB connector. Enumerates as virtual COM port (CDC) and USB mass storage device (MSC) simultaneously."
+      - name: "SPI"
+        details: "1 SPI bus available on header, up to 80 Mb/s."
+      - name: "I2C"
+        details: "2 I2C buses available (I2C2 on P4/P5, I2C4 on P7/P8). Standard/Fast mode up to 1 Mb/s."
+      - name: "UART"
+        details: "2 UART ports (UART1 on P0/P1, UART3 on P4/P5). Up to 7.5 Mb/s."
+      - name: "CAN"
+        details: "1 CAN bus (CAN2 on P2/P3). Up to 1 Mb/s. Compatible with CAN FD."
+
+  - title: "Camera System"
+    components:
+      - name: "Image Sensor"
+        details: "OV5640 1/4-inch 5 MP CMOS image sensor with autofocus. Up to 2592x1944 resolution."
+      - name: "Image Performance"
+        details: "Full 5 MP JPEG capture. For machine vision: up to VGA (640x480) RGB565 or grayscale at high frame rates. TensorFlow Lite inference on captured frames."
+      - name: "Lens"
+        details: "2.8 mm focal length lens on standard M12 lens mount. User-replaceable with any M12 lens."
+      - name: "Camera Interface"
+        details: "8-bit parallel DCMI interface. Removable camera module system \u2014 compatible with OV7725, OV2640, MT9V024, MT9V034, and FLIR Lepton modules."
+
+  - title: "LEDs"
+    components:
+      - name: "RGB LED"
+        details: "1 user-programmable RGB LED for status indication."
+      - name: "IR LEDs"
+        details: "2 high-power 850 nm infrared LEDs for night vision and IR illumination applications."
+
+  - title: "Power Management"
+    components:
+      - name: "VIN"
+        details: "External power input, 3.6 V to 5.0 V. High-efficiency switching regulator with up to 1 A output."
+      - name: "3.3 V Rail"
+        details: "Regulated 3.3 V output available on header pin. Maximum 250 mA for external loads."
+      - name: "LiPo Battery"
+        details: "JST-SH connector for single-cell 3.7 V LiPo batteries. Integrated charging when USB is connected."
+      - name: "USB Power"
+        details: "Can be powered via Micro-USB."
+
+ratings:
+  - title: "Recommended Operating Conditions"
+    headers: ["Symbol", "Description", "Min", "Typ", "Max", "Unit"]
+    rows:
+      - ["VIN", "External supply voltage", "3.6", "5.0", "5.0", "V"]
+      - ["VIO", "I/O pin input (digital)", "-0.3", "\u2014", "5.0", "V"]
+      - ["VIO_A", "I/O pin input (ADC/DAC)", "-0.3", "\u2014", "3.6", "V"]
+      - ["TOP", "Operating temperature", "-40", "25", "125", "\u00B0C"]
+
+connectors:
+  pinout_image: "boards/openmv-cam/pinout-openmv-cam-h7-plus-ov5640.png"
+
+  groups:
+    - title: "J1 Header (Main I/O)"
+      headers: ["Pin", "Label", "Type", "Alternate Functions"]
+      rows:
+        - ["1", "P0", "I/O", "UART1 RX / TIM1 CH3N / SPI2 MOSI (PB15)"]
+        - ["2", "P1", "I/O", "UART1 TX / TIM1 CH2N / SPI2 MISO (PB14)"]
+        - ["3", "P2", "I/O", "CAN2 TX / TIM1 CH1N / SPI2 SCLK (PB13)"]
+        - ["4", "P3", "I/O", "CAN2 RX / SPI2 SS (PB12)"]
+        - ["5", "P4", "I/O", "TIM2 CH3 / I2C2 SCL / UART3 TX (PB10)"]
+        - ["6", "P5", "I/O", "TIM2 CH4 / I2C2 SDA / UART3 RX (PB11)"]
+        - ["7", "P6", "I/O", "TIM2 CH1 / DAC / ADC8 (PA5) \u2014 3.3V tolerant only in ADC/DAC mode"]
+        - ["8", "3V3", "Power", "3.3 V regulated output (250 mA max)"]
+
+    - title: "J2 Header (Servo / Control)"
+      headers: ["Pin", "Label", "Type", "Alternate Functions"]
+      rows:
+        - ["1", "RST", "Input", "Active-low reset"]
+        - ["2", "BOOT", "Input", "Connect to 3.3 V for DFU boot mode"]
+        - ["3", "SYN", "I/O", "Frame sync (camera synchronization)"]
+        - ["4", "P9", "I/O", "Servo3 / TIM4 CH3 (PD14)"]
+        - ["5", "P8", "I/O", "Servo2 / TIM4 CH2 / I2C4 SDA (PD12)"]
+        - ["6", "P7", "I/O", "Servo1 / TIM4 CH1 / I2C4 SCL (PD13)"]
+        - ["7", "VIN", "Power", "3.6\u20135.0 V input"]
+        - ["8", "GND", "Power", "Ground"]
+
+    - title: "J3 Header (SWD Debug)"
+      headers: ["Pin", "Label", "Type", "Notes"]
+      rows:
+        - ["1", "SWC", "Debug", "Serial Wire Clock"]
+        - ["2", "SWD", "Debug", "Serial Wire Data"]
+        - ["3", "RST", "Input", "Reset (active low)"]
+        - ["4", "3V3", "Power", "3.3 V (500 mA max supply)"]
+        - ["5", "GND", "Power", "Ground"]
+
+functional_overview:
+  board_topology:
+    image: "boards/openmv-cam/v4.1/new-cam-v5-front-web.jpg"
+    components:
+      - ref: "U1"
+        description: "STM32H743II microcontroller (ARM Cortex-M7, 480 MHz)"
+      - ref: "U2"
+        description: "Camera module connector (8-bit parallel DCMI)"
+      - ref: "U3"
+        description: "Micro-USB connector (Full-Speed USB 2.0)"
+      - ref: "U4"
+        description: "microSD card slot (4-bit SDMMC)"
+      - ref: "U5"
+        description: "High-efficiency switching voltage regulator (3.3 V, 1 A)"
+      - ref: "U6"
+        description: "32 MB SDRAM"
+      - ref: "U7"
+        description: "32 MB QUADSPI flash"
+      - ref: "LED1"
+        description: "User-programmable RGB LED"
+      - ref: "LED2/3"
+        description: "850 nm infrared LEDs (x2)"
+      - ref: "J1"
+        description: "Main I/O header (8 pins)"
+      - ref: "J2"
+        description: "Servo / control header (8 pins)"
+      - ref: "J3"
+        description: "SWD debug header (5 pins)"
+      - ref: "BAT"
+        description: "LiPo battery connector (JST-SH)"
+
+  power_tree:
+    text: >
+      The OpenMV Cam H7 Plus can be powered from three sources: the VIN pin (3.6\u20135.0 V), the Micro-USB
+      connector (5 V bus power), or a single-cell LiPo battery (3.7 V nominal) via the JST-SH connector.
+
+mechanical:
+  dimensions_image: "boards/openmv-cam/cam-dimensions.png"
+  specs:
+    - dimension: "Board Size"
+      value: "35.6 mm x 44.5 mm (1.4 in x 1.75 in)"
+    - dimension: "Weight"
+      value: "~50 g (with camera module and lens)"
+    - dimension: "Lens Mount"
+      value: "M12 (S-mount), interchangeable"
+    - dimension: "Operating Temperature"
+      value: "-40\u00B0C to +85\u00B0C"
+    - dimension: "Storage Temperature"
+      value: "-65\u00B0C to +150\u00B0C"
+
+certifications:
+  headers: ["Certification", "Region", "Details"]
+  table:
+    - ["RoHS", "EU", "Compliant with EU Directive 2011/65/EU (RoHS 2) and amendment 2015/863 (RoHS 3). All components and solder are lead-free."]
+    - ["REACH", "EU", "Compliant with EU Regulation (EC) No 1907/2006."]
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+  - field: "Documentation"
+    value: "https://docs.openmv.io"
+  - field: "Support"
+    value: "https://forums.openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/openmv-cam-h7-plus"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+  - name: "Community Forum"
+    link: "https://forums.openmv.io"
+  - name: "STM32H743II Datasheet"
+    link: "https://www.st.com/en/microcontrollers/stm32h743ii.html"
+  - name: "OV5640 Image Sensor"
+    link: "https://www.ovt.com/products/sensor.php?id=101"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

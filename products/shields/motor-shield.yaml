@@ -1,0 +1,68 @@
+meta:
+  product_name: "Motor Shield"
+  sku: "OMV-SHIELD-MOTOR"
+  filename: "OpenMV-Motor-Shield-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/motor-shield/new-motor-angle.jpg"
+
+description: >
+  The Motor Shield provides a convenient way of powering your OpenMV Cam and controlling
+  low-power motors in one package. It features a 5 V linear regulator to power your OpenMV
+  Cam from a battery along with a motor driver chip to power two sub-2 A low-power motors
+  from the same battery. The motor driver has 2 pins per motor to set H-Bridge direction
+  and an additional pin per motor for PWM speed control.
+
+target_areas: >
+  Robotics, mobile platforms, RC vehicles, conveyor control, small actuators.
+
+features:
+  - label: "Dual motor driver"
+    detail: "Drive two low-power motors at up to 2 A each with H-Bridge direction control and PWM speed."
+  - label: "5 V regulator"
+    detail: "Powers your OpenMV Cam from the same battery as the motors."
+  - label: "Compatible with Servo Shield"
+    detail: "Can be used simultaneously with the Servo Shield (different pins)."
+
+system_components_title: "Features"
+system_components:
+  - title: "Motor Driver"
+    components:
+      - name: "Channels"
+        details: "2 motor channels, each up to 2 A."
+      - name: "Control"
+        details: "2 direction pins + 1 PWM pin per motor for H-Bridge direction and speed control."
+
+  - title: "Power"
+    components:
+      - name: "Regulator"
+        details: "5 V linear regulator powers OpenMV Cam from the motor battery."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "All OpenMV Cam models."
+      - name: "Shield Stacking"
+        details: "Compatible with Servo Shield (different pins). NOT compatible with Pan and Tilt Shield."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "30 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/motor-shield"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

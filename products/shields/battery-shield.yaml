@@ -1,0 +1,81 @@
+meta:
+  product_name: "Battery Shield"
+  sku: "OMV-BATTERY-SHIELD-V3"
+  filename: "OpenMV-Battery-Shield-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/battery-shield/battery-shield-front-quarter.jpg"
+
+description: >
+  The Battery Shield powers your OpenMV Cam from a 1.8 V to 5.5 V source connected via a
+  standard 2.1 mm DC barrel jack \u2014 perfect for three alkaline batteries in series. It also
+  features a wide voltage range 6\u201336 V input with reverse voltage and transient surge
+  protection for industrial and automotive power. Includes a robust 0\u20136 V ADC input on P6
+  for measuring battery voltage. The shield powers your camera via the RAW pin, bypassing the
+  onboard battery charger, and draws only microamps in operation \u2014 enabling years of battery
+  life with cameras like the RT1062 in deep sleep (~30 \u00B5A).
+
+target_areas: >
+  Battery-powered deployments, remote sensing, field installations, alkaline battery operation,
+  solar-powered systems, industrial monitoring, long-duration deployments.
+
+features:
+  - label: "1.8\u20135.5 V DC input"
+    detail: "2.1 mm DC barrel jack. Supports 2\u20133 alkaline batteries in series."
+  - label: "6\u201336 V wide-range input"
+    detail: "Reverse voltage and transient surge protection. Outputs 5.6 V on VIN via ideal OR'ing diode. Can be used simultaneously with DC input."
+  - label: "Battery voltage ADC"
+    detail: "Robust 0\u20136 V ADC input on P6 outputs 0\u20132.8 V for measuring battery voltage. Reverse voltage protected. Disconnectable."
+  - label: "Ultra-low quiescent"
+    detail: "Draws microamps in operation. Years of battery life possible in deep sleep."
+  - label: "RAW power path"
+    detail: "Powers camera via RAW pin, bypassing onboard battery charger."
+
+system_components_title: "Features"
+system_components:
+  - title: "Low-Voltage Input"
+    components:
+      - name: "DC Barrel Jack"
+        details: "2.1 mm DC barrel jack. Accepts 1.8 V to 5.5 V. Perfect for 3 alkaline batteries in series (4.5 V nominal). 2 batteries also work but capacity is not fully usable. 4 batteries may exceed max voltage \u2014 proceed with caution."
+
+  - title: "Wide-Range Input"
+    components:
+      - name: "6\u201336 V Input"
+        details: "Robust to reverse voltage with transient surge protection. Outputs 5.6 V on VIN via ideal OR'ing diode for multi-shield stacking. Can be used simultaneously with the low-voltage input."
+
+  - title: "Battery Monitoring"
+    components:
+      - name: "ADC Input"
+        details: "Robust 0\u20136 V ADC input connected to DC barrel jack. Outputs 0\u20132.8 V on P6 for battery voltage measurement. Reverse voltage protected. Disconnectable."
+
+  - title: "Power Path"
+    components:
+      - name: "RAW Pin"
+        details: "1.8\u20135.5 V input directly powers camera via RAW pin, bypassing the onboard battery charger. Enables ultra-low quiescent current for deep sleep deployments."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "All OpenMV Cam models. Optimized for cameras with deep sleep capability (e.g., OpenMV Cam RT1062 at ~30 \u00B5A deep sleep)."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "9 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/battery-shield"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

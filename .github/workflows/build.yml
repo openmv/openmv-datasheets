@@ -1,0 +1,92 @@
+name: Build Datasheets
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*.*.*"]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build all datasheets
+        run: python build.py
+
+      - name: Upload artifacts
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: datasheets
+          path: output/
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
+    permissions:
+      contents: write
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: datasheets
+          path: output
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: output/**/*.pdf
+          draft: false
+          generate_release_notes: true
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: datasheets
+          path: output
+
+      - name: Deploy to datasheets branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan datasheets-build
+          git rm -rf .
+          # Preserve directory structure
+          find output -name "*.pdf" | while read f; do
+            dir=$(dirname "${f#output/}")
+            mkdir -p "$dir"
+            cp "$f" "$dir/"
+          done
+          git add cameras/ shields/ sensors/ lenses/ accessories/ *.pdf 2>/dev/null || true
+          git commit -m "Build datasheets from ${GITHUB_SHA::8}"
+          git push origin datasheets-build --force

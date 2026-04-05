@@ -1,0 +1,63 @@
+meta:
+  product_name: "FLIR Lepton Adapter Module"
+  sku: "OMV-MOD-LEPTON-V1 / OMV-MOD-LEPTON-V2"
+  filename: "OpenMV-FLIR-Lepton-Adapter-Module-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/openmv-cam/v4/LEPTON/LEPTON-module-angle-web.jpg"
+
+description: >
+  The FLIR Lepton Adapter Module allows your OpenMV Cam to interface with the FLIR Lepton
+  1/2/3 thermal imaging sensors for thermal vision applications. The actual FLIR Lepton
+  camera sensor is sold separately via the GroupGets Store. FLIR Lepton camera sensors are
+  export controlled. The module is compatible with all modular OpenMV Cam base boards.
+
+target_areas: >
+  Thermal imaging, temperature measurement, night vision, HVAC diagnostics,
+  industrial inspection, security, predictive maintenance.
+
+features:
+  - label: "FLIR Lepton 1/2/3"
+    detail: "Supports FLIR Lepton 1, 2, and 3 thermal imaging sensors (sold separately)."
+  - label: "Universal compatibility"
+    detail: "Works with all modular OpenMV Cam base boards."
+  - label: "Two versions"
+    detail: "V1 and V2 adapter boards available."
+
+system_components_title: "Specifications"
+system_components:
+  - title: "Thermal Sensor Interface"
+    components:
+      - name: "Supported Sensors"
+        details: "FLIR Lepton 1, 2, and 3 thermal imaging sensors (sold separately via GroupGets)."
+      - name: "Export Control"
+        details: "FLIR Lepton sensors are export controlled."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "All modular OpenMV Cam base boards."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "10 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/flir-lepton-adapter-module"
+  - name: "FLIR Lepton (GroupGets)"
+    link: "https://store.groupgets.com/collections/flir-lepton-accessories"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

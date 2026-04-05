@@ -1,0 +1,62 @@
+meta:
+  product_name: "TV Shield"
+  sku: "OMV-TV-SHIELD-V1"
+  filename: "OpenMV-TV-Shield-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/tv-shield/new-tv-shield-angle-web.jpg"
+
+description: >
+  The TV Shield gives your OpenMV Cam a way to display video on a portable screen. It works
+  using a SPI to NTSC chip. The TV Shield is as easy to use as the LCD Shield and only
+  requires you to call init() followed by display() to set the frame buffer in the NTSC
+  generator chip. Built-in firmware support and example code are included in OpenMV IDE.
+
+target_areas: >
+  Video output, portable display, NTSC monitor, field demos, FPV preview.
+
+features:
+  - label: "NTSC video output"
+    detail: "SPI to NTSC conversion for standard video monitors."
+  - label: "Simple API"
+    detail: "init() + display() \u2014 as easy as the LCD Shield."
+  - label: "Built-in support"
+    detail: "Firmware support and example code included in OpenMV IDE."
+
+system_components_title: "Features"
+system_components:
+  - title: "Video Output"
+    components:
+      - name: "Standard"
+        details: "NTSC composite video output via SPI-to-NTSC converter chip."
+      - name: "API"
+        details: "tv.init() and tv.display() in MicroPython. See TV Module documentation."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "All OpenMV Cam models."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "20 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/tv-shield"
+  - name: "TV Module Docs"
+    link: "http://docs.openmv.io/library/omv.tv.html"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

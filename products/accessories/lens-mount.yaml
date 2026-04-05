@@ -1,0 +1,48 @@
+meta:
+  product_name: "Lens Mount"
+  sku: "OMV-LENS-MOUNT"
+  filename: "OpenMV-Lens-Mount-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/lens-mount/new-lens-mount-angle.jpg"
+
+description: >
+  A replacement M12 lens mount for your OpenMV Cam.
+
+target_areas: >
+  Replacement parts, custom builds, repair.
+
+features:
+  - label: "M12 mount"
+    detail: "Standard M12 x 0.5 threaded lens mount."
+  - label: "Direct replacement"
+    detail: "Compatible with all OpenMV Cam models using M12 lenses."
+
+system_components_title: "Specifications"
+system_components:
+  - title: "Specifications"
+    components:
+      - name: "Mount Type"
+        details: "M12 x 0.5 threaded (S-mount)."
+      - name: "Compatibility"
+        details: "All OpenMV Cam models with M12 lens mount."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "2 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/lens-mount"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

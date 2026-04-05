@@ -1,0 +1,196 @@
+meta:
+  product_name: "Pure Thermal"
+  sku: "PURETHERMAL-OPENMV"
+  filename: "OpenMV-Pure-Thermal-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/openmv-cam/purethermal/purethermal-pinout.png"
+
+description: >
+  The PureThermal OpenMV is a co-designed collaboration between GetLab and OpenMV to produce
+  a high-end mixed color and thermal camera for professional applications. Based on the OpenMV
+  Cam H7 Plus platform, it combines a 5 MP color camera with a FLIR Lepton thermal sensor, a
+  4.3-inch touchscreen LCD, HDMI output, WiFi connectivity, and a laser rangefinder for
+  thermal-to-color image alignment. Programmable in MicroPython via the OpenMV IDE with
+  TensorFlow support for neural networks.
+
+target_areas: >
+  Thermal imaging, temperature measurement, industrial inspection, HVAC diagnostics,
+  security, firefighting, wildlife monitoring, person detection, predictive maintenance.
+
+features:
+  - label: "Dual imaging"
+    detail: "5 MP OV5640 color camera with autofocus plus FLIR Lepton thermal sensor (supports Lepton 1/2/2.5/3/3.5). Per-pixel temperature measurement."
+  - label: "High-performance MCU"
+    detail: "STM32H743XI ARM Cortex-M7 at 480 MHz with 64 MB SDRAM and 32 MB QUADSPI flash."
+  - label: "Touchscreen display"
+    detail: "4.3-inch 800x480 IPS TFT with 5-point capacitive touch and gesture support."
+  - label: "HDMI output"
+    detail: "Up to 1280x720 @ 60 Hz or 1920x1080 @ 30 Hz."
+  - label: "WiFi"
+    detail: "WINC1500 SoC for MJPEG streaming via RTSP at up to 12 Mb/s or general internet connectivity."
+  - label: "Laser rangefinder"
+    detail: "VL53L0X time-of-flight sensor, measures up to 2 m for thermal-to-color alignment."
+  - label: "MicroPython + TensorFlow"
+    detail: "Program in Python via OpenMV IDE with TensorFlow support for neural networks."
+  - label: "Rich I/O"
+    detail: "10 GPIO pins with SPI, I2C, UART, CAN, ADC, DAC, PWM, and 2 servo channels. USB-C and Qwiic connector."
+
+system_components:
+  - title: "Microcontroller"
+    components:
+      - name: "STM32H743XI"
+        details: >
+          ARM Cortex-M7 core running at 480 MHz. Features double-precision floating-point unit (FPU),
+          DSP instructions, and hardware JPEG codec.
+
+  - title: "Memory"
+    components:
+      - name: "External SDRAM"
+        details: "64 MB SDRAM at 400 MB/s bandwidth."
+      - name: "QUADSPI Flash"
+        details: "32 MB QUADSPI flash at 50 MB/s for program and data storage."
+      - name: "microSD Card"
+        details: "Supports SD/SDHC/SDXC cards. FAT12/FAT16/FAT32/exFAT file systems."
+      - name: "RTC"
+        details: "Battery-backed real-time clock for date/time stamping."
+
+  - title: "Connectivity"
+    components:
+      - name: "USB-C"
+        details: "USB 2.0 Full-Speed (12 Mbps). Power input, battery charging, and PC data connection. Virtual COM port and mass storage access to QUADSPI flash and microSD."
+      - name: "WiFi"
+        details: "WINC1500 SoC (FCC certified). MJPEG streaming via RTSP at up to 12 Mb/s or general internet connectivity."
+      - name: "HDMI"
+        details: "HDMI output up to 1280x720 @ 60 Hz or 1920x1080 @ 30 Hz (dynamic) / 60 Hz (static)."
+      - name: "Qwiic / I2C"
+        details: "SparkFun Qwiic connector (I2C). Compatible with Seeed Grove and Adafruit STEMMA."
+      - name: "SPI"
+        details: "1 SPI bus on GPIO header, up to 80 Mb/s."
+      - name: "UART"
+        details: "2 asynchronous serial (UART) ports on GPIO header. Up to 7.5 Mb/s."
+      - name: "CAN"
+        details: "1 CAN bus on GPIO header. Up to 1 Mb/s."
+
+  - title: "Color Camera"
+    components:
+      - name: "Image Sensor"
+        details: "OV5640 5 MP CMOS image sensor (2592x1944) with autofocus support."
+      - name: "Lens"
+        details: "Integrated lens with autofocus."
+
+  - title: "Thermal Sensor"
+    components:
+      - name: "FLIR Lepton Socket"
+        details: "Supports FLIR Lepton 1, 2, 2.5, 3, and 3.5 modules (both radiometric and non-radiometric). 80x60 or 160x120 pixel thermal resolution depending on Lepton version."
+      - name: "Thermal Performance"
+        details: "Long-wave infrared (LWIR) imaging, 8\u201314 \u00B5m spectral range. Per-pixel temperature measurement in Celsius (radiometric Lepton models). NETD < 50 mK."
+      - name: "Frame Rate"
+        details: "Up to 8.7 Hz thermal frame rate."
+
+  - title: "Laser Rangefinder"
+    components:
+      - name: "VL53L0X"
+        details: "Time-of-flight laser rangefinder. Measures up to 2 m distance. Used for thermal-to-color image alignment offset and scaling."
+
+  - title: "Display"
+    components:
+      - name: "LCD"
+        details: "4.3-inch 800x480 IPS TFT display. 24-bit color, 60 Hz refresh rate. Backlight dimming."
+      - name: "Touch"
+        details: "Capacitive touch with up to 5-point multi-touch. Gesture detection: pinch zoom in/out, swipe left/right/up/down."
+
+  - title: "Other Components"
+    components:
+      - name: "RGB LED"
+        details: "User-programmable RGB LED indicator."
+      - name: "White LED"
+        details: "High-brightness white LED illuminator."
+      - name: "Buzzer"
+        details: "Programmable buzzer with volume and frequency control."
+      - name: "Debug"
+        details: "Standard ARM SWD-JTAG debug connector."
+
+  - title: "Power Management"
+    components:
+      - name: "USB-C"
+        details: "Power input and LiPo battery charging via USB-C connector."
+      - name: "LiPo Battery"
+        details: "1S LiPo battery connector. Battery charges automatically when USB-C is connected."
+
+ratings:
+  - title: "Recommended Operating Conditions"
+    headers: ["Symbol", "Description", "Min", "Typ", "Max", "Unit"]
+    rows:
+      - ["VUSB", "USB-C supply voltage", "4.5", "5.0", "5.5", "V"]
+      - ["VBATT", "LiPo battery voltage", "3.0", "3.7", "4.2", "V"]
+      - ["TOP", "Operating temperature", "-10", "25", "65", "\u00B0C"]
+
+connectors:
+  pinout_image: "boards/openmv-cam/purethermal/purethermal-pinout.png"
+
+  groups:
+    - title: "GPIO Header (10 pins)"
+      headers: ["Pin", "Label", "Type", "Alternate Functions"]
+      rows:
+        - ["1", "P0", "I/O", "UART RX / SPI MOSI"]
+        - ["2", "P1", "I/O", "UART TX / SPI MISO"]
+        - ["3", "P2", "I/O", "CAN TX / SPI SCLK"]
+        - ["4", "P3", "I/O", "CAN RX / SPI SS"]
+        - ["5", "P4", "I/O", "I2C SCL / UART TX"]
+        - ["6", "P5", "I/O", "I2C SDA / UART RX"]
+        - ["7", "P6", "I/O", "DAC / ADC \u2014 3.3V tolerant"]
+        - ["8", "P7", "I/O", "Servo1 / PWM"]
+        - ["9", "P8", "I/O", "Servo2 / PWM"]
+        - ["10", "3V3", "Power", "3.3 V regulated output"]
+
+functional_overview:
+  power_tree:
+    text: >
+      The PureThermal OpenMV is powered via USB-C or a 1S LiPo battery. The USB-C port provides
+      both power and data connectivity. When USB is connected, the integrated charger charges the
+      LiPo battery automatically.
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "121 g"
+    - dimension: "Operating Temperature"
+      value: "-10\u00B0C to +65\u00B0C"
+    - dimension: "Storage Temperature"
+      value: "-40\u00B0C to +80\u00B0C"
+
+certifications:
+  headers: ["Certification", "Region", "Details"]
+  table:
+    - ["RoHS", "EU", "Compliant with EU Directive 2011/65/EU (RoHS 2). All components and solder are lead-free."]
+    - ["REACH", "EU", "Compliant with EU Regulation (EC) No 1907/2006."]
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Co-designed by"
+    value: "GetLab / GroupGets"
+  - field: "Website"
+    value: "https://openmv.io"
+  - field: "Documentation"
+    value: "https://docs.openmv.io"
+  - field: "Support"
+    value: "https://forums.openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/openmv-pure-thermal"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+  - name: "Community Forum"
+    link: "https://forums.openmv.io"
+  - name: "FLIR Lepton"
+    link: "https://www.flir.com/products/lepton/"
+  - name: "OpenMV IDE"
+    link: "https://openmv.io/pages/download"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

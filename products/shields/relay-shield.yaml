@@ -1,0 +1,83 @@
+meta:
+  product_name: "Relay Shield"
+  sku: "OMV-SHIELD-RELAY"
+  filename: "OpenMV-Relay-Shield-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/relay-shield/Relay Shield - FRONT CAM.jpg"
+
+description: >
+  The Relay Shield allows your OpenMV Cam to directly control two high-power DC and AC loads
+  up to 60 W each. It features two independent relays controlled by P0 and P2 (or P1). This
+  allows combining the Relay Shield with CAN/RS232 or RS422/RS485 shields which use P1 (or P2)
+  and P3. Relays can be set to normally closed or normally open (default) independently via
+  solder-bridge jumpers. Includes 6\u201336 V wide-range input, robust ADC, and trigger I/O.
+
+target_areas: >
+  High-power load switching, AC/DC control, lighting control, HVAC actuation,
+  industrial automation, solenoid control.
+
+features:
+  - label: "Two 60 W relays"
+    detail: "Two independent relays for high-power DC and AC loads up to 60 W each."
+  - label: "NO/NC configurable"
+    detail: "Each relay independently configurable as normally open (default) or normally closed via solder bridge."
+  - label: "Shield stacking"
+    detail: "Compatible with CAN/RS232 or RS422/RS485 shields via pin selection (P0/P1/P2)."
+  - label: "6\u201336 V wide-range input"
+    detail: "Reverse voltage and transient surge protection. Outputs 5.4 V on VIN via OR'ing diode."
+  - label: "Robust ADC input"
+    detail: "0\u20135 V on P6 with \u00B136 V overvoltage protection. Optional 4\u201320 mA mode."
+  - label: "Robust trigger I/O"
+    detail: "0\u20135 V on P10 via SYN pin."
+
+system_components_title: "Features"
+system_components:
+  - title: "Relay Outputs"
+    components:
+      - name: "Relay 1"
+        details: "Controlled by P0. Up to 60 W DC or AC load. Configurable as normally open (default) or normally closed via solder-bridge jumper. Disconnectable."
+      - name: "Relay 2"
+        details: "Controlled by P2 (or P1 via solder bridge). Up to 60 W DC or AC load. Same NO/NC configuration. Disconnectable."
+
+  - title: "Power Input"
+    components:
+      - name: "Wide-Range Input"
+        details: "6\u201336 V with reverse voltage and transient surge protection. Outputs 5.4 V on VIN via OR'ing diode."
+
+  - title: "ADC Input"
+    components:
+      - name: "AIN"
+        details: "Robust 0\u20135 V ADC input on P6. Overvoltage protection to \u00B136 V. Optional 4\u201320 mA mode. Disconnectable."
+
+  - title: "Digital I/O"
+    components:
+      - name: "SYN / P10"
+        details: "Robust 0\u20135 V digital I/O. Tolerant to -12 V, shorts to GND and 12 V. Configurable input/output. Disconnectable."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "All OpenMV Cam models."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "11 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/relay-shield"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

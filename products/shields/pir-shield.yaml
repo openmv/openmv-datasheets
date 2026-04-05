@@ -1,0 +1,78 @@
+meta:
+  product_name: "PIR Shield"
+  sku: "OMV-SHIELD-PIR"
+  filename: "OpenMV-PIR-Shield-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/pir-shield/PIR Shield - FRONT CAM.jpg"
+
+description: >
+  The PIR Shield gives your OpenMV Cam the ability to wake up from deep sleep on movement by
+  pulling P10 low. It features eight PWM-dimmable high-power white LEDs (controlled by P7)
+  and eight PWM-dimmable high-power IR LEDs at 850 nm (controlled by P8). The PIR sensor was
+  specially chosen for its ultra-low current consumption of 6 \u00B5A (compared to >100 \u00B5A for
+  most PIR sensors), enabling years of battery operation in deep sleep with cameras like the
+  RT1062.
+
+target_areas: >
+  Motion-triggered capture, security cameras, wildlife monitoring,
+  battery-powered surveillance, deep-sleep wakeup applications.
+
+features:
+  - label: "Ultra-low-power PIR"
+    detail: "6 \u00B5A PIR sensor \u2014 enables years of battery life in deep sleep."
+  - label: "Deep sleep wakeup"
+    detail: "Wakes OpenMV Cam from deep sleep on motion by pulling P10 low."
+  - label: "8 white LEDs"
+    detail: "PWM-dimmable high-power white LEDs on P7."
+  - label: "8 IR LEDs"
+    detail: "PWM-dimmable high-power 850 nm IR LEDs on P8."
+  - label: "Flexible wakeup pin"
+    detail: "PIR wakeup pin changeable to P9 via solder bridge jumpers."
+  - label: "Works without deep sleep"
+    detail: "PIR signal usable as standard GPIO interrupt on cameras without low-power wakeup."
+
+system_components_title: "Features"
+system_components:
+  - title: "PIR Motion Sensor"
+    components:
+      - name: "Current Consumption"
+        details: "6 \u00B5A \u2014 ultra-low-power, suitable for multi-year battery operation."
+      - name: "Wakeup"
+        details: "Pulls P10 low on motion detection. Wakes camera from deep sleep. Pin changeable to P9 via solder bridge."
+      - name: "Power"
+        details: "For non-dual-row OpenMV Cams, connect the RAW power input pin on the module to 3.3 V to power the PIR sensor."
+
+  - title: "LED Illumination"
+    components:
+      - name: "White LEDs"
+        details: "8 high-power white LEDs. PWM-dimmable via P7. Disconnectable."
+      - name: "IR LEDs"
+        details: "8 high-power 850 nm IR LEDs. PWM-dimmable via P8. Disconnectable."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "All OpenMV Cam models. Optimized for cameras with deep sleep capability (e.g., OpenMV Cam RT1062). Also works as GPIO interrupt on cameras without low-power wakeup."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "8 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/pir-shield"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

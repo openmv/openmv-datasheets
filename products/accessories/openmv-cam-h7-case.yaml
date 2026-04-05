@@ -1,0 +1,53 @@
+meta:
+  product_name: "Cam H7 Case"
+  sku: "OMV-CAM-CASE-V2"
+  filename: "OpenMV-Cam-H7-Case-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/case/new-case-back.jpg"
+
+description: >
+  Protect your OpenMV Cam H7 with the OpenMV Cam H7 Case. Made of clear plastic so you can
+  see onboard LEDs, with ports for the camera, microSD card, USB connector, and shield headers.
+  To remove the case, use a flat-head screwdriver to pop open the case from the two slotted
+  holes on the left side.
+
+target_areas: >
+  Board protection, field deployment, handling safety.
+
+features:
+  - label: "Clear plastic"
+    detail: "Transparent so onboard LEDs are visible."
+  - label: "Full port access"
+    detail: "Ports for camera, microSD, USB, and shield headers."
+  - label: "Tool-removable"
+    detail: "Remove with flat-head screwdriver via slotted holes."
+
+system_components_title: "Specifications"
+system_components:
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "OpenMV Cam H7, H7 R2."
+      - name: "Material"
+        details: "Clear plastic."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "14 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/openmv-cam-h7-case"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."

@@ -1,0 +1,66 @@
+meta:
+  product_name: "FLIR Boson Adapter Module"
+  sku: "OMV-MOD-BOSON-V2"
+  filename: "OpenMV-FLIR-Boson-Adapter-Module-Datasheet.pdf"
+  modified_date: "2026-04-04"
+  version: "Rev 1"
+  cover_image: "boards/boson-adapter/boson-cam-hero.jpg"
+
+description: >
+  The FLIR Boson Adapter Module allows your OpenMV Cam to interface with the FLIR Boson and
+  Boson+ thermal imaging sensors for thermal vision applications. The actual FLIR Boson/Boson+
+  camera sensor is sold separately via the GroupGets Store. FLIR Boson camera sensors are
+  export controlled. The adapter board comes with 4x M1.6 5 mm Philips head screws for
+  attaching to the FLIR Boson camera module.
+
+target_areas: >
+  Thermal imaging, long-range thermal detection, industrial thermography,
+  search and rescue, security, predictive maintenance.
+
+features:
+  - label: "FLIR Boson/Boson+ compatible"
+    detail: "Interfaces with FLIR Boson and Boson+ thermal imaging sensors."
+  - label: "Includes mounting hardware"
+    detail: "4x M1.6 5 mm Philips head screws for Boson attachment."
+  - label: "Multiple camera support"
+    detail: "Works with OpenMV N6, RT1062, and H7 Plus."
+
+system_components_title: "Specifications"
+system_components:
+  - title: "Thermal Sensor Interface"
+    components:
+      - name: "Supported Sensors"
+        details: "FLIR Boson and FLIR Boson+ thermal imaging sensors (sold separately via GroupGets)."
+      - name: "Mounting"
+        details: "Includes 4x M1.6 5 mm Philips head screws for attaching adapter to FLIR Boson module."
+      - name: "Export Control"
+        details: "FLIR Boson/Boson+ sensors are export controlled."
+
+  - title: "Compatibility"
+    components:
+      - name: "Supported Cameras"
+        details: "OpenMV N6, OpenMV Cam RT1062, and OpenMV Cam H7 Plus."
+
+mechanical:
+  specs:
+    - dimension: "Weight"
+      value: "2 g"
+
+company:
+  - field: "Company Name"
+    value: "OpenMV, LLC"
+  - field: "Website"
+    value: "https://openmv.io"
+
+references:
+  - name: "Product Page"
+    link: "https://openmv.io/products/flir-boson-adapter-module"
+  - name: "FLIR Boson (GroupGets)"
+    link: "https://groupgets.com/collections/boson"
+  - name: "Documentation"
+    link: "https://docs.openmv.io"
+
+revision_history:
+  - date: "2026-04-04"
+    revision: "Rev 1"
+    changes: "Initial public release."
