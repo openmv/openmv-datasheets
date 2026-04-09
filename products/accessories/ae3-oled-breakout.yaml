@@ -4,7 +4,7 @@ meta:
   filename: "OpenMV-AE3-OLED-Breakout-Datasheet.pdf"
   modified_date: "2026-04-04"
   version: "Rev 1"
-  cover_image: "boards/openmv-cam/openmv-ae3/breakout/ae3-oled-breakout-hero.jpg"
+  cover_image: "boards/openmv-cam/openmv-ae3/breakout/final/ae3-oled-breakout-hero.jpg"
 
 description: >
   The AE3 OLED Breakout is an expansion board providing full access to the OpenMV AE3's

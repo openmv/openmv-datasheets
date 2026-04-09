@@ -95,12 +95,13 @@ class DatasheetBuilder:
     """Builds a complete datasheet PDF from structured product data."""
 
     def __init__(self, product_data, media_dir="media", output_dir="output", slug=None,
-                 generated_dir="generated"):
+                 generated_dir="generated", category=None):
         self.data = product_data
         self.media_dir = media_dir
         self.output_dir = output_dir
         self.slug = slug
         self.generated_dir = generated_dir
+        self.category = category
         self.elements = []
         self.toc_entries = []
         self.section_counter = 0
@@ -282,7 +283,10 @@ class DatasheetBuilder:
         # Prefer generated image, fall back to original cover_image
         img_path = None
         if self.slug:
-            generated = os.path.join(self.generated_dir, f"{self.slug}.png")
+            if self.category:
+                generated = os.path.join(self.generated_dir, self.category, f"{self.slug}.png")
+            else:
+                generated = os.path.join(self.generated_dir, f"{self.slug}.png")
             if os.path.exists(generated):
                 img_path = generated
         if img_path is None and "cover_image" in meta:

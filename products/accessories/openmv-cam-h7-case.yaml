@@ -4,7 +4,7 @@ meta:
   filename: "OpenMV-Cam-H7-Case-Datasheet.pdf"
   modified_date: "2026-04-04"
   version: "Rev 1"
-  cover_image: "boards/case/new-case-back.jpg"
+  cover_image: "boards/openmv-cam/v4/case/case-front.jpg"
 
 description: >
   Protect your OpenMV Cam H7 with the OpenMV Cam H7 Case. Made of clear plastic so you can

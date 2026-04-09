@@ -42,8 +42,10 @@ def find_products():
     return dict(sorted(seen.items()))
 
 
-def generated_image_path(slug):
+def generated_image_path(slug, category):
     """Return the expected path for a generated image."""
+    if category:
+        return os.path.join(GENERATED_DIR, category, f"{slug}.png")
     return os.path.join(GENERATED_DIR, f"{slug}.png")
 
 
@@ -110,9 +112,14 @@ def main():
 
     products = find_products()
 
+    def get_category(yaml_path):
+        rel = os.path.relpath(os.path.dirname(yaml_path), PRODUCTS_DIR)
+        return rel if rel and rel != "." else None
+
     if args.list:
-        for slug in products:
-            img_path = generated_image_path(slug)
+        for slug, yaml_path in products.items():
+            category = get_category(yaml_path)
+            img_path = generated_image_path(slug, category)
             status = "exists" if os.path.exists(img_path) else "missing"
             print(f"  {slug:45s} [{status}]")
         return
@@ -133,13 +140,13 @@ def main():
             errors.append(slug)
             continue
 
-        img_path = generated_image_path(slug)
+        yaml_path = products[slug]
+        category = get_category(yaml_path)
+        img_path = generated_image_path(slug, category)
 
         if os.path.exists(img_path) and not args.force:
             skipped += 1
             continue
-
-        yaml_path = products[slug]
         with open(yaml_path, "r", encoding="utf-8") as f:
             data = yaml.safe_load(f)
 

@@ -55,8 +55,9 @@ def build_product(name, yaml_path, output_dir=OUTPUT_DIR):
     else:
         product_output_dir = output_dir
 
+    category = rel if rel and rel != "." else None
     builder = DatasheetBuilder(data, media_dir=MEDIA_DIR, output_dir=product_output_dir,
-                               slug=name, generated_dir=GENERATED_DIR)
+                               slug=name, generated_dir=GENERATED_DIR, category=category)
     output_path = builder.build()
 
     print(f"  -> {output_path}")
