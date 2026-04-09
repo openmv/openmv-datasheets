@@ -48,7 +48,7 @@ system_components:
       - name: "FHD"
         details: "1920x1080 at 30 FPS with HDR."
       - name: "QWXGA2 (planned)"
-        details: "2952x1944 \u2014 in development, expected by end of summer 2026."
+        details: "2952x1944 — in development, expected by end of summer 2026."
 
   - title: "Compatibility"
     components:
@@ -61,8 +61,6 @@ mechanical:
       value: "30 g"
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
 

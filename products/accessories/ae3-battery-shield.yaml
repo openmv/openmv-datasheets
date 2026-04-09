@@ -58,7 +58,7 @@ ratings:
       - ["VDC", "DC barrel jack input", "1.8", "5.5", "V"]
       - ["VWIDE", "Wide-range input", "6", "36", "V"]
       - ["VBATT", "LiPo battery voltage", "3.0", "4.2", "V"]
-      - ["ICHG", "LiPo charge current", "\u2014", "500", "mA"]
+      - ["ICHG", "LiPo charge current", "—", "500", "mA"]
 
 functional_overview:
   board_topology:
@@ -87,8 +87,6 @@ certifications:
     - ["REACH", "EU", "Compliant with EU Regulation (EC) No 1907/2006."]
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
   - field: "Documentation"

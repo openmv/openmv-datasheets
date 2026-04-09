@@ -40,7 +40,7 @@ system_components:
       - name: "Resolution"
         details: "2592x1944 (5 MP)."
       - name: "Autofocus"
-        details: "Yes \u2014 built-in autofocus support."
+        details: "Yes — built-in autofocus support."
       - name: "Output Formats"
         details: "Grayscale, RGB565, JPEG, YUV422, Bayer."
       - name: "Max Frame Rate"
@@ -59,8 +59,6 @@ mechanical:
       value: "10 g"
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
 

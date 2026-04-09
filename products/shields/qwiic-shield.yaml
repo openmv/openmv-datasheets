@@ -10,7 +10,7 @@ description: >
   The QWIIC Shield allows your OpenMV Cam to easily connect to SparkFun's plethora of QWIIC
   devices. It connects P4 (SCL) and P5 (SDA) on your OpenMV Cam to the dual QWIIC headers
   onboard, which can be used to daisy-chain your OpenMV Cam into a QWIIC (I2C) bus. The
-  shield does not feature pull-up resistors \u2014 you need to enable these via software on your
+  shield does not feature pull-up resistors — you need to enable these via software on your
   OpenMV Cam or provide them externally.
 
 target_areas: >
@@ -46,8 +46,6 @@ mechanical:
       value: "5 g"
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
 

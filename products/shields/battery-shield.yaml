@@ -8,11 +8,11 @@ meta:
 
 description: >
   The Battery Shield powers your OpenMV Cam from a 1.8 V to 5.5 V source connected via a
-  standard 2.1 mm DC barrel jack \u2014 perfect for three alkaline batteries in series. It also
+  standard 2.1 mm DC barrel jack — perfect for three alkaline batteries in series. It also
   features a wide voltage range 6\u201336 V input with reverse voltage and transient surge
   protection for industrial and automotive power. Includes a robust 0\u20136 V ADC input on P6
   for measuring battery voltage. The shield powers your camera via the RAW pin, bypassing the
-  onboard battery charger, and draws only microamps in operation \u2014 enabling years of battery
+  onboard battery charger, and draws only microamps in operation — enabling years of battery
   life with cameras like the RT1062 in deep sleep (~30 \u00B5A).
 
 target_areas: >
@@ -36,7 +36,7 @@ system_components:
   - title: "Low-Voltage Input"
     components:
       - name: "DC Barrel Jack"
-        details: "2.1 mm DC barrel jack. Accepts 1.8 V to 5.5 V. Perfect for 3 alkaline batteries in series (4.5 V nominal). 2 batteries also work but capacity is not fully usable. 4 batteries may exceed max voltage \u2014 proceed with caution."
+        details: "2.1 mm DC barrel jack. Accepts 1.8 V to 5.5 V. Perfect for 3 alkaline batteries in series (4.5 V nominal). 2 batteries also work but capacity is not fully usable. 4 batteries may exceed max voltage — proceed with caution."
 
   - title: "Wide-Range Input"
     components:
@@ -64,8 +64,6 @@ mechanical:
       value: "9 g"
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
 

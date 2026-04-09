@@ -128,10 +128,10 @@ ratings:
     rows:
       - ["VUSB", "USB-C supply voltage", "4.5", "5.0", "5.5", "V"]
       - ["VIN", "VIN supply voltage", "3.6", "5.0", "5.0", "V"]
-      - ["VIO", "I/O voltage", "\u2014", "3.3", "3.3", "V"]
-      - ["IIO", "Per-pin current (sink/source)", "\u2014", "\u2014", "4", "mA"]
-      - ["IOUT", "3.3 V rail max current", "\u2014", "\u2014", "1000", "mA"]
-      - ["ISLEEP", "Deepsleep current", "\u2014", "\u2014", "30", "\u00B5A"]
+      - ["VIO", "I/O voltage", "—", "3.3", "3.3", "V"]
+      - ["IIO", "Per-pin current (sink/source)", "—", "—", "4", "mA"]
+      - ["IOUT", "3.3 V rail max current", "—", "—", "1000", "mA"]
+      - ["ISLEEP", "Deepsleep current", "—", "—", "30", "\u00B5A"]
       - ["TOP", "Operating temperature", "-40", "25", "105", "\u00B0C"]
 
 connectors:
@@ -199,8 +199,6 @@ certifications:
     - ["REACH", "EU", "Compliant with EU Regulation (EC) No 1907/2006."]
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
   - field: "Documentation"

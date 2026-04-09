@@ -10,7 +10,7 @@ description: >
   The Servo Shield V1 enables the OpenMV Cam to control up to 8 servos simultaneously using
   the PCA9685 servo controller, which also supports general-purpose PWM functionality. Two
   example scripts are provided for controlling servos and general-purpose PWM. This is the
-  retired V1 version \u2014 see the current Servo Shield V2/V3 for the latest design.
+  retired V1 version — see the current Servo Shield V2/V3 for the latest design.
 
 target_areas: >
   Robotics, servo control, PWM generation, multi-servo systems, pan-tilt mechanisms.
@@ -30,7 +30,7 @@ system_components:
   - title: "Servo Controller"
     components:
       - name: "Chip"
-        details: "PCA9685 \u2014 16-channel, 12-bit PWM controller via I2C."
+        details: "PCA9685 — 16-channel, 12-bit PWM controller via I2C."
       - name: "Servo Channels"
         details: "Up to 8 servos simultaneously."
       - name: "PWM"
@@ -49,8 +49,6 @@ mechanical:
       value: "30 g"
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
 

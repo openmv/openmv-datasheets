@@ -48,8 +48,6 @@ mechanical:
       value: "25 g"
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
 

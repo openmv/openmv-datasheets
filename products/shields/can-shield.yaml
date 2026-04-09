@@ -11,7 +11,7 @@ description: >
   baud rates up to 1 Mb/s. The DB9 connector connects to a normal DB9 CAN connector and also
   supports the OBDII bus layout, selectable via solder bridges on the bottom of the shield.
   The shield features an on-board voltage regulator so you can power your OpenMV Cam with
-  12 V. This is the retired standalone CAN Shield \u2014 see the current CAN/RS232 Shield for
+  12 V. This is the retired standalone CAN Shield — see the current CAN/RS232 Shield for
   the latest design with combined CAN and RS232.
 
 target_areas: >
@@ -50,8 +50,6 @@ mechanical:
       value: "35 g"
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
 

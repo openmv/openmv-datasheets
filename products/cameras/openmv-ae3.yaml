@@ -170,8 +170,6 @@ certifications:
     - ["REACH", "EU", "Compliant with EU Regulation (EC) No 1907/2006."]
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
   - field: "Documentation"

@@ -33,14 +33,14 @@ system_components:
       - name: "FLIR Lepton Socket"
         details: "Supports FLIR Lepton 1, 2, and 3 thermal imaging sensors. Sensor sold separately via GroupGets."
 
-  - title: "Color Camera \u2014 PAG7936 Variant"
+  - title: "Color Camera — PAG7936 Variant"
     components:
       - name: "Sensor"
         details: "PAG7936 1 MP color global shutter sensor at 120 FPS."
       - name: "Compatibility"
         details: "OpenMV N6 only."
 
-  - title: "Color Camera \u2014 OV5640 Variant"
+  - title: "Color Camera — OV5640 Variant"
     components:
       - name: "Sensor"
         details: "OV5640 5 MP color rolling shutter sensor."
@@ -53,8 +53,6 @@ mechanical:
       value: "3 g"
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
 

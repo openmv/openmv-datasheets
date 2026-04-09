@@ -20,7 +20,7 @@ target_areas: >
 
 features:
   - label: "Global shutter"
-    detail: "Captures entire frame simultaneously \u2014 no rolling shutter distortion or motion blur."
+    detail: "Captures entire frame simultaneously — no rolling shutter distortion or motion blur."
   - label: "Up to 400 FPS"
     detail: "80 FPS (QVGA), 200 FPS (QQVGA), 400 FPS (QQQVGA)."
   - label: "Grayscale output"
@@ -37,7 +37,7 @@ system_components:
       - name: "Sensor"
         details: "ON Semiconductor MT9V034 or MT9V024 global shutter CMOS."
       - name: "Shutter Type"
-        details: "Global shutter \u2014 captures entire frame simultaneously."
+        details: "Global shutter — captures entire frame simultaneously."
       - name: "Output"
         details: "Grayscale."
 
@@ -63,8 +63,6 @@ mechanical:
       value: "30 g"
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
 

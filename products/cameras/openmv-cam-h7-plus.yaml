@@ -76,7 +76,7 @@ system_components:
       - name: "Lens"
         details: "2.8 mm focal length lens on standard M12 lens mount. User-replaceable with any M12 lens."
       - name: "Camera Interface"
-        details: "8-bit parallel DCMI interface. Removable camera module system \u2014 compatible with OV7725, OV2640, MT9V024, MT9V034, and FLIR Lepton modules."
+        details: "8-bit parallel DCMI interface. Removable camera module system — compatible with OV7725, OV2640, MT9V024, MT9V034, and FLIR Lepton modules."
 
   - title: "LEDs"
     components:
@@ -101,8 +101,8 @@ ratings:
     headers: ["Symbol", "Description", "Min", "Typ", "Max", "Unit"]
     rows:
       - ["VIN", "External supply voltage", "3.6", "5.0", "5.0", "V"]
-      - ["VIO", "I/O pin input (digital)", "-0.3", "\u2014", "5.0", "V"]
-      - ["VIO_A", "I/O pin input (ADC/DAC)", "-0.3", "\u2014", "3.6", "V"]
+      - ["VIO", "I/O pin input (digital)", "-0.3", "—", "5.0", "V"]
+      - ["VIO_A", "I/O pin input (ADC/DAC)", "-0.3", "—", "3.6", "V"]
       - ["TOP", "Operating temperature", "-40", "25", "125", "\u00B0C"]
 
 connectors:
@@ -118,7 +118,7 @@ connectors:
         - ["4", "P3", "I/O", "CAN2 RX / SPI2 SS (PB12)"]
         - ["5", "P4", "I/O", "TIM2 CH3 / I2C2 SCL / UART3 TX (PB10)"]
         - ["6", "P5", "I/O", "TIM2 CH4 / I2C2 SDA / UART3 RX (PB11)"]
-        - ["7", "P6", "I/O", "TIM2 CH1 / DAC / ADC8 (PA5) \u2014 3.3V tolerant only in ADC/DAC mode"]
+        - ["7", "P6", "I/O", "TIM2 CH1 / DAC / ADC8 (PA5) — 3.3V tolerant only in ADC/DAC mode"]
         - ["8", "3V3", "Power", "3.3 V regulated output (250 mA max)"]
 
     - title: "J2 Header (Servo / Control)"
@@ -199,8 +199,6 @@ certifications:
     - ["REACH", "EU", "Compliant with EU Regulation (EC) No 1907/2006."]
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
   - field: "Documentation"

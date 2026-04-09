@@ -139,7 +139,7 @@ connectors:
         - ["4", "P3", "I/O", "CAN RX / SPI SS"]
         - ["5", "P4", "I/O", "I2C SCL / UART TX"]
         - ["6", "P5", "I/O", "I2C SDA / UART RX"]
-        - ["7", "P6", "I/O", "DAC / ADC \u2014 3.3V tolerant"]
+        - ["7", "P6", "I/O", "DAC / ADC — 3.3V tolerant"]
         - ["8", "P7", "I/O", "Servo1 / PWM"]
         - ["9", "P8", "I/O", "Servo2 / PWM"]
         - ["10", "3V3", "Power", "3.3 V regulated output"]
@@ -167,8 +167,6 @@ certifications:
     - ["REACH", "EU", "Compliant with EU Regulation (EC) No 1907/2006."]
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Co-designed by"
     value: "GetLab / GroupGets"
   - field: "Website"

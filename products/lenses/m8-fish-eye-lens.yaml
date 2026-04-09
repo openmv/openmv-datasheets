@@ -54,6 +54,8 @@ system_components:
         details: "1/4\""
       - name: "Resolution"
         details: "VGA"
+      - name: "Size"
+        details: "\u00D812.5 x 7.9 mm"
       - name: "Construction"
         details: "2G2P + IR (2 glass, 2 plastic elements plus IR filter)"
       - name: "Focus / Iris / Zoom"
@@ -122,12 +124,14 @@ mechanical:
       value: "China"
     - dimension: "HS Code"
       value: "8473.30.2000"
+    - dimension: "UPC"
+      value: "608275911252, 608275911245"
+    - dimension: "SKU"
+      value: "IR-M8-Fish-Eye-Lens, M8-Fish-Eye-Lens"
     - dimension: "ECCN"
       value: "EAR99"
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
   - field: "Documentation"
@@ -140,10 +144,6 @@ references:
     link: "https://openmv.io/products/m8-fish-eye-lens"
   - name: "3D Model (STEP)"
     link: "https://grabcad.com/library/m8-fish-eye-lens-1"
-  - name: "OpenMV AE3"
-    link: "https://openmv.io/products/openmv-ae3"
-  - name: "Documentation"
-    link: "https://docs.openmv.io"
 
 revision_history:
   - date: "2026-04-04"

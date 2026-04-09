@@ -53,6 +53,8 @@ system_components:
         details: "1/3\""
       - name: "Resolution"
         details: "2 MP"
+      - name: "Size"
+        details: "\u00D88.0 x 8.0 mm"
       - name: "Construction"
         details: "4E + IR (4 elements plus IR filter)"
       - name: "Focus / Iris / Zoom"
@@ -122,12 +124,14 @@ mechanical:
       value: "China"
     - dimension: "HS Code"
       value: "8473.30.2000"
+    - dimension: "UPC"
+      value: "608275911276, 608275911269"
+    - dimension: "SKU"
+      value: "IR-M8-Telephoto-Lens, M8-Telephoto-Lens"
     - dimension: "ECCN"
       value: "EAR99"
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
   - field: "Documentation"
@@ -140,10 +144,6 @@ references:
     link: "https://openmv.io/products/m8-telephoto-lens"
   - name: "3D Model (STEP)"
     link: "https://grabcad.com/library/m8-telephoto-lens-1"
-  - name: "OpenMV AE3"
-    link: "https://openmv.io/products/openmv-ae3"
-  - name: "Documentation"
-    link: "https://docs.openmv.io"
 
 revision_history:
   - date: "2026-04-04"

@@ -28,7 +28,7 @@ features:
   - label: "3 mW sensor power"
     detail: "Ultra-low power event sensing starting at 3 mW streaming."
   - label: "140 dB dynamic range"
-    detail: "Extended dynamic range \u2014 sees changes in both dark and bright zones simultaneously."
+    detail: "Extended dynamic range — sees changes in both dark and bright zones simultaneously."
   - label: "<5 lux low-light"
     detail: "Senses into twilight light levels with 0.05 lux sensor cutoff."
 
@@ -65,8 +65,6 @@ mechanical:
       value: "5 g"
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
 

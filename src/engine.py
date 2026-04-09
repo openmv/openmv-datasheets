@@ -9,10 +9,9 @@ from datetime import date
 from reportlab.lib.units import inch
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import (
-    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, Image,
-    PageBreak, KeepTogether, HRFlowable,
+    Paragraph, Spacer, Table, TableStyle, Image,
+    PageBreak, KeepTogether, HRFlowable, NextPageTemplate,
 )
-from reportlab.platypus.tableofcontents import TableOfContents
 from reportlab.lib.enums import TA_CENTER, TA_RIGHT, TA_LEFT
 from reportlab.lib.colors import white
 from reportlab.platypus.doctemplate import PageTemplate, BaseDocTemplate, Frame
@@ -47,7 +46,7 @@ class HeaderFooter:
         width, height = letter
 
         # Header: logo left, product name + "Datasheet" right, thin line below
-        header_y = height - 32
+        header_y = height - 42
         if self.logo_path and os.path.exists(self.logo_path):
             canvas.drawImage(self.logo_path, S.MARGIN_LEFT, header_y - 2,
                              width=72, height=24, preserveAspectRatio=True, mask="auto")
@@ -95,10 +94,13 @@ class TealLine(Flowable):
 class DatasheetBuilder:
     """Builds a complete datasheet PDF from structured product data."""
 
-    def __init__(self, product_data, media_dir="media", output_dir="output"):
+    def __init__(self, product_data, media_dir="media", output_dir="output", slug=None,
+                 generated_dir="generated"):
         self.data = product_data
         self.media_dir = media_dir
         self.output_dir = output_dir
+        self.slug = slug
+        self.generated_dir = generated_dir
         self.elements = []
         self.toc_entries = []
         self.section_counter = 0
@@ -276,22 +278,36 @@ class DatasheetBuilder:
                 desc_content.append(Paragraph(desc, S.STYLE_COVER_DESCRIPTION))
 
         img_cell = [Spacer(1, 1)]
-        if "cover_image" in meta:
-            img_path = self._resolve_image(meta["cover_image"])
-            if os.path.exists(img_path):
-                img_cell = [Image(img_path, width=2.4 * inch, height=2.4 * inch,
-                                  kind="proportional")]
+        img_w = 2.4 * inch
+        # Prefer generated image, fall back to original cover_image
+        img_path = None
+        if self.slug:
+            generated = os.path.join(self.generated_dir, f"{self.slug}.png")
+            if os.path.exists(generated):
+                img_path = generated
+        if img_path is None and "cover_image" in meta:
+            resolved = self._resolve_image(meta["cover_image"])
+            if os.path.exists(resolved):
+                img_path = resolved
+        if img_path:
+            img_cell = [Image(img_path, width=img_w, height=img_w,
+                              kind="proportional")]
+
+        gap = 10
+        img_col_w = img_w + gap
+        desc_col_w = S.CONTENT_WIDTH - img_col_w
 
         desc_table = Table(
             [[desc_content, img_cell]],
-            colWidths=[S.CONTENT_WIDTH * 0.58, S.CONTENT_WIDTH * 0.42],
+            colWidths=[desc_col_w, img_col_w],
         )
         desc_table.setStyle(TableStyle([
             ("VALIGN", (0, 0), (0, 0), "TOP"),
             ("VALIGN", (1, 0), (1, 0), "MIDDLE"),
             ("LEFTPADDING", (0, 0), (-1, -1), 0),
-            ("RIGHTPADDING", (0, 0), (0, 0), 8),
+            ("RIGHTPADDING", (0, 0), (0, 0), gap),
             ("RIGHTPADDING", (1, 0), (1, 0), 0),
+            ("ALIGN", (1, 0), (1, 0), "RIGHT"),
             ("TOPPADDING", (0, 0), (-1, -1), 0),
             ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
         ]))
@@ -320,6 +336,16 @@ class DatasheetBuilder:
                     Paragraph(text, S.STYLE_FEATURE_BULLET, bulletText="\u2022")
                 )
 
+        # Applications text on cover page
+        if "system_components" in self.data:
+            for sub in self.data["system_components"]:
+                if sub.get("title", "").lower() == "applications" and "text" in sub:
+                    self.elements.append(Spacer(1, 6))
+                    self.elements.append(Paragraph("<b>Applications</b>", S.STYLE_H2))
+                    self.elements.append(Spacer(1, 4))
+                    self.elements.append(Paragraph(sub["text"], S.STYLE_COVER_DESCRIPTION))
+                    break
+
     def build_toc_page(self):
         """Build the table of contents page (placeholder, filled after build)."""
         self.elements.append(PageBreak())
@@ -340,6 +366,8 @@ class DatasheetBuilder:
         sec_num = self._add_section(section_title)
 
         for subsection in self.data["system_components"]:
+            if subsection.get("title", "").lower() == "applications":
+                continue
             g = self._start_group()
             title = subsection["title"]
             self._add_subsection(title, sec_num)
@@ -496,7 +524,7 @@ class DatasheetBuilder:
             return
 
         g = self._start_group()
-        sec_num = self._add_section("Mechanical Information")
+        sec_num = self._add_section("General Info")
         mech = self.data["mechanical"]
 
         if "dimensions_image" in mech:
@@ -542,6 +570,13 @@ class DatasheetBuilder:
                 self.elements.append(Paragraph(note, S.STYLE_NOTE))
         self._end_group(g)
 
+    def _linkify(self, text):
+        """Wrap URLs in <a> tags to make them clickable in the PDF."""
+        text = str(text)
+        if text.startswith("http://") or text.startswith("https://"):
+            return f'<a href="{text}" color="#{S.LINK_COLOR.hexval()[2:]}">{text}</a>'
+        return text
+
     def build_company_section(self):
         """Build Section: Company Information."""
         if "company" not in self.data:
@@ -552,7 +587,7 @@ class DatasheetBuilder:
         company = self.data["company"]
 
         headers = ["Field", "Details"]
-        rows = [[item["field"], item["value"]] for item in company]
+        rows = [[item["field"], self._linkify(item["value"])] for item in company]
         elems = self._make_table(headers, rows,
                                  col_widths=[S.CONTENT_WIDTH * 0.30, S.CONTENT_WIDTH * 0.70])
         self.elements.extend(elems)
@@ -572,7 +607,7 @@ class DatasheetBuilder:
         rows = []
         for ref in refs:
             link_text = ref.get("link", ref.get("document", ""))
-            rows.append([ref["name"], link_text])
+            rows.append([ref["name"], self._linkify(link_text)])
 
         elems = self._make_table(headers, rows,
                                  col_widths=[S.CONTENT_WIDTH * 0.25, S.CONTENT_WIDTH * 0.75])
@@ -658,18 +693,6 @@ class DatasheetBuilder:
 
         os.makedirs(self.output_dir, exist_ok=True)
 
-        # Build document
-        doc = SimpleDocTemplate(
-            output_path,
-            pagesize=letter,
-            leftMargin=S.MARGIN_LEFT,
-            rightMargin=S.MARGIN_RIGHT,
-            topMargin=S.MARGIN_TOP,
-            bottomMargin=S.MARGIN_BOTTOM,
-            title=f"OpenMV {product_name} Datasheet",
-            author="OpenMV, LLC",
-        )
-
         # Build all sections
         self.build_cover_page()
         self.build_toc_page()
@@ -721,11 +744,21 @@ class DatasheetBuilder:
             onPage=header_footer,
         )
 
+        # Use BaseDocTemplate for proper multi-page template control
+        doc = BaseDocTemplate(
+            output_path,
+            pagesize=letter,
+            leftMargin=S.MARGIN_LEFT,
+            rightMargin=S.MARGIN_RIGHT,
+            topMargin=S.MARGIN_TOP,
+            bottomMargin=S.MARGIN_BOTTOM,
+            title=f"OpenMV {product_name} Datasheet",
+            author="OpenMV, LLC",
+        )
         doc.addPageTemplates([cover_template, standard_template])
 
         # Insert template switch after cover page content
         # Find the first PageBreak and insert NextPageTemplate before it
-        from reportlab.platypus import NextPageTemplate
         for i, elem in enumerate(self.elements):
             if isinstance(elem, PageBreak):
                 self.elements.insert(i, NextPageTemplate("standard"))

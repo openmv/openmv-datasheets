@@ -22,6 +22,7 @@ from src.engine import DatasheetBuilder
 
 PRODUCTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "products")
 MEDIA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "media")
+GENERATED_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "generated")
 OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output")
 
 
@@ -54,7 +55,8 @@ def build_product(name, yaml_path, output_dir=OUTPUT_DIR):
     else:
         product_output_dir = output_dir
 
-    builder = DatasheetBuilder(data, media_dir=MEDIA_DIR, output_dir=product_output_dir)
+    builder = DatasheetBuilder(data, media_dir=MEDIA_DIR, output_dir=product_output_dir,
+                               slug=name, generated_dir=GENERATED_DIR)
     output_path = builder.build()
 
     print(f"  -> {output_path}")

@@ -20,7 +20,7 @@ target_areas: >
 
 features:
   - label: "Ultra-low-power PIR"
-    detail: "6 \u00B5A PIR sensor \u2014 enables years of battery life in deep sleep."
+    detail: "6 \u00B5A PIR sensor — enables years of battery life in deep sleep."
   - label: "Deep sleep wakeup"
     detail: "Wakes OpenMV Cam from deep sleep on motion by pulling P10 low."
   - label: "8 white LEDs"
@@ -37,7 +37,7 @@ system_components:
   - title: "PIR Motion Sensor"
     components:
       - name: "Current Consumption"
-        details: "6 \u00B5A \u2014 ultra-low-power, suitable for multi-year battery operation."
+        details: "6 \u00B5A — ultra-low-power, suitable for multi-year battery operation."
       - name: "Wakeup"
         details: "Pulls P10 low on motion detection. Wakes camera from deep sleep. Pin changeable to P9 via solder bridge."
       - name: "Power"
@@ -61,8 +61,6 @@ mechanical:
       value: "8 g"
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
 

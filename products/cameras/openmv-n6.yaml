@@ -117,19 +117,19 @@ ratings:
   - title: "Recommended Operating Conditions"
     headers: ["Symbol", "Description", "Min", "Typ", "Max", "Unit"]
     rows:
-      - ["VRAW", "RAW supply voltage", "3.6", "\u2014", "5.0", "V"]
-      - ["VIN", "VIN supply voltage", "\u2014", "5.0", "5.0", "V"]
-      - ["VIO", "I/O voltage", "\u2014", "3.3", "3.3", "V"]
-      - ["IIO", "Per-pin current (sink/source)", "\u2014", "\u2014", "20", "mA"]
-      - ["IOUT", "3.3 V rail max current", "\u2014", "\u2014", "1000", "mA"]
-      - ["ISLEEP", "Deepsleep current", "\u2014", "\u2014", "50", "\u00B5A"]
+      - ["VRAW", "RAW supply voltage", "3.6", "—", "5.0", "V"]
+      - ["VIN", "VIN supply voltage", "—", "5.0", "5.0", "V"]
+      - ["VIO", "I/O voltage", "—", "3.3", "3.3", "V"]
+      - ["IIO", "Per-pin current (sink/source)", "—", "—", "20", "mA"]
+      - ["IOUT", "3.3 V rail max current", "—", "—", "1000", "mA"]
+      - ["ISLEEP", "Deepsleep current", "—", "—", "50", "\u00B5A"]
       - ["TOP", "Operating temperature", "-40", "25", "85", "\u00B0C"]
 
 connectors:
   pinout_image: "boards/openmv-cam/openmv-n6/openmv-n6-pinout.png"
 
   groups:
-    - title: "Left Header \u2014 Inside (Top)"
+    - title: "Left Header — Inside (Top)"
       headers: ["Pin", "Label", "Type", "Alternate Functions"]
       rows:
         - ["1", "P0", "I/O", "SPI MOSI"]
@@ -141,7 +141,7 @@ connectors:
         - ["7", "P6", "I/O", "ADC"]
         - ["8", "3V3", "Power", "3.3 V regulated output (1 A max)"]
 
-    - title: "Left Header \u2014 Outside (Bottom)"
+    - title: "Left Header — Outside (Bottom)"
       headers: ["Pin", "Label", "Type", "Function"]
       rows:
         - ["1", "GND", "Power", "Ground"]
@@ -153,7 +153,7 @@ connectors:
         - ["7", "ETH-RXN", "Ethernet", "Ethernet RX negative"]
         - ["8", "ETH-LED", "Output", "Ethernet status LED"]
 
-    - title: "Right Header \u2014 Inside (Top)"
+    - title: "Right Header — Inside (Top)"
       headers: ["Pin", "Label", "Type", "Function"]
       rows:
         - ["1", "ETH-DCP", "Ethernet", "Ethernet DC pair positive"]
@@ -165,7 +165,7 @@ connectors:
         - ["7", "BOOT0", "Input", "3.3 V for recovery mode"]
         - ["8", "3V3", "Power", "3.3 V regulated output"]
 
-    - title: "Right Header \u2014 Outside (Bottom)"
+    - title: "Right Header — Outside (Bottom)"
       headers: ["Pin", "Label", "Type", "Function"]
       rows:
         - ["1", "GND", "Power", "Ground"]
@@ -225,8 +225,6 @@ certifications:
     - ["REACH", "EU", "Compliant with EU Regulation (EC) No 1907/2006."]
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
   - field: "Documentation"

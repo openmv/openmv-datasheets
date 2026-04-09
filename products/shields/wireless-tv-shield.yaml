@@ -22,7 +22,7 @@ features:
   - label: "NTSC output"
     detail: "SPI to NTSC conversion, then 5.8 GHz broadcast."
   - label: "Simple API"
-    detail: "init() + display() \u2014 same as LCD and TV Shields."
+    detail: "init() + display() — same as LCD and TV Shields."
   - label: "Built-in support"
     detail: "Firmware support and example code included in OpenMV IDE."
 
@@ -48,8 +48,6 @@ mechanical:
       value: "20 g"
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
 

@@ -19,7 +19,7 @@ features:
   - label: "NTSC video output"
     detail: "SPI to NTSC conversion for standard video monitors."
   - label: "Simple API"
-    detail: "init() + display() \u2014 as easy as the LCD Shield."
+    detail: "init() + display() — as easy as the LCD Shield."
   - label: "Built-in support"
     detail: "Firmware support and example code included in OpenMV IDE."
 
@@ -43,8 +43,6 @@ mechanical:
       value: "20 g"
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
 

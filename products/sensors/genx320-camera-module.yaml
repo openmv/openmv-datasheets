@@ -23,7 +23,7 @@ features:
   - label: "375 Hz+ event histograms"
     detail: "No exposure time, no motion blur. Configurable frame rate via sensor.set_framerate()."
   - label: "3 mW sensor power"
-    detail: "Ultra-low power \u2014 only scene changes are sensed."
+    detail: "Ultra-low power — only scene changes are sensed."
   - label: "140 dB dynamic range"
     detail: "Sees changes in both dark and bright zones simultaneously."
   - label: "<5 lux low-light"
@@ -79,8 +79,6 @@ mechanical:
       value: "3 g"
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
 

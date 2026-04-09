@@ -4,7 +4,7 @@ meta:
   filename: "OpenMV-Super-Telephoto-Lens-Datasheet.pdf"
   modified_date: "2026-04-04"
   version: "Rev 1"
-  cover_image: "boards/super-telephoto-lens/new-super-telephoto-angle-quarter.jpg"
+  cover_image: "boards/super-telephoto-lens/new-super-telephoto-front.jpg"
 
 description: >
   This lens gives your OpenMV Cam the ability to see longer distances with extreme zoom. The
@@ -119,22 +119,26 @@ mechanical:
       value: "China"
     - dimension: "HS Code"
       value: "8473.30.2000"
+    - dimension: "UPC"
+      value: "602772227137, 638126314703"
+    - dimension: "SKU"
+      value: "Super-Telephoto-Lens-with-IR-Cut-Filter, Super-Telephoto-Lens"
     - dimension: "ECCN"
       value: "EAR99"
 
 company:
-  - field: "Company Name"
-    value: "OpenMV, LLC"
   - field: "Website"
     value: "https://openmv.io"
+  - field: "Documentation"
+    value: "https://docs.openmv.io"
+  - field: "Support"
+    value: "https://forums.openmv.io"
 
 references:
   - name: "Product Page"
     link: "https://openmv.io/products/super-telephoto-lens"
   - name: "3D Model (STEP)"
     link: "https://grabcad.com/library/super-telephoto-lens-1"
-  - name: "Documentation"
-    link: "https://docs.openmv.io"
 
 revision_history:
   - date: "2026-04-04"
