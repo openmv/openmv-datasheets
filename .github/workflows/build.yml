@@ -87,6 +87,7 @@ jobs:
             mkdir -p "$dir"
             cp "$f" "$dir/"
           done
+          rm -rf output
           git add cameras/ shields/ sensors/ lenses/ accessories/ *.pdf 2>/dev/null || true
           git commit -m "Build datasheets from ${GITHUB_SHA::8}"
           git push origin datasheets-build --force
