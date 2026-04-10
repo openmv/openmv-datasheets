@@ -10,7 +10,9 @@
 Auto-generated PDF datasheets for all [OpenMV](https://openmv.io) products — cameras, shields, sensors, lenses, and accessories.
 
 - [Building](#building)
+- [Image Generation](#image-generation)
 - [Product Categories](#product-categories)
+- [Project Structure](#project-structure)
 - [Contributing to the project](#contributing-to-the-project)
   + [Contribution guidelines](#contribution-guidelines)
 
@@ -36,6 +38,25 @@ output/
   accessories/   # Cases, cables, filters, breakouts
 ```
 
+Built datasheets are also deployed to the [`datasheets-build`](https://github.com/openmv/openmv-datasheets/tree/datasheets-build) branch on every push to `main`.
+
+---
+
+## Image Generation
+
+Product cover images can be generated as cartoon-style illustrations using OpenAI's image generation API. Generated images are stored in `generated/<category>/` and are automatically used by the build system when available, falling back to the original product photos in the `media/` submodule.
+
+```bash
+export OPENAI_API_KEY=sk-...
+
+python generate_images.py                      # Generate missing images for all products
+python generate_images.py m8-fish-eye-lens     # Generate for a specific product
+python generate_images.py --force              # Regenerate all images
+python generate_images.py --list               # See which images exist/missing
+```
+
+To revert any product to its original photo, simply delete its file from `generated/`.
+
 ---
 
 ## Product Categories
@@ -47,6 +68,27 @@ output/
 | [Sensors](products/sensors/) | 8 | Camera modules (OV5640, FLIR, GENX320, global shutter, etc.) |
 | [Lenses](products/lenses/) | 8 | M8 and M12 lenses (wide angle, telephoto, fish eye, IR) |
 | [Accessories](products/accessories/) | 7 | Cases, cables, filters, lens mounts, breakouts |
+
+---
+
+## Project Structure
+
+```
+products/          # YAML product data files (one per product)
+  cameras/
+  shields/
+  sensors/
+  lenses/
+  accessories/
+src/
+  engine.py        # PDF generation engine (ReportLab)
+  styles.py        # Shared styles, colors, fonts
+media/             # Product photos (git submodule)
+generated/         # AI-generated cartoon images (by category)
+output/            # Built PDF datasheets
+build.py           # Build system
+generate_images.py # Image generation script
+```
 
 ---
 
