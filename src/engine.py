@@ -394,10 +394,13 @@ class DatasheetBuilder:
         if "ratings" not in self.data:
             return
 
-        sec_num = self._add_section("Ratings")
+        ratings_title = self.data.get("ratings_title", "Ratings")
+        # Capture position before section heading so we can group it with first table
+        g = self._start_group()
+        sec_num = self._add_section(ratings_title)
 
+        first = True
         for subsection in self.data["ratings"]:
-            g = self._start_group()
             title = subsection["title"]
             self._add_subsection(title, sec_num)
 
@@ -432,7 +435,9 @@ class DatasheetBuilder:
             elems = self._make_table(headers, rows, col_widths, notes)
             self.elements.extend(elems)
             self.elements.append(Spacer(1, 6))
-            self._end_group(g)
+            if first:
+                self._end_group(g)
+                first = False
 
     def build_connector_section(self):
         """Build Section 3: Connector Overview / Pinout."""

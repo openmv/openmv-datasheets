@@ -32,18 +32,49 @@ system_components:
       - name: "Material"
         details: "Clear plastic."
 
+  - title: "Applications"
+    text: >
+      The Cam M4/M7 Case protects your OpenMV Cam M4 or M7 during field deployment, handling,
+      and transport while maintaining full access to all ports and visibility of onboard LEDs.
+
 mechanical:
   specs:
+    - dimension: "Length"
+      value: "51 mm"
+    - dimension: "Width"
+      value: "43 mm"
+    - dimension: "Height"
+      value: "15 mm"
     - dimension: "Weight"
       value: "14 g"
+    - dimension: "Operating Temperature"
+      value: "-20°C to +80°C"
+    - dimension: "Storage Temperature"
+      value: "-20°C to +80°C"
+    - dimension: "Country of Origin"
+      value: "China"
+    - dimension: "HS Code"
+      value: "8473.30.2000"
+    - dimension: "UPC"
+      value: "638126314727"
+    - dimension: "SKU"
+      value: "OMV-CAM-CASE-V1"
+    - dimension: "ECCN"
+      value: "EAR99"
 
 company:
   - field: "Website"
     value: "https://openmv.io"
+  - field: "Documentation"
+    value: "https://docs.openmv.io"
+  - field: "Support"
+    value: "https://forums.openmv.io"
 
 references:
   - name: "Product Page"
     link: "https://openmv.io/products/openmv-cam-case"
+  - name: "3D Model (STL)"
+    link: "https://grabcad.com/library/openmv-cam-m4-m7-case-1"
 
 revision_history:
   - date: "2026-04-04"

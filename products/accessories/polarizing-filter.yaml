@@ -30,6 +30,22 @@ system_components:
     components:
       - name: "Type"
         details: "Linear polarizing filter."
+      - name: "Construction"
+        details: "Polarizing film."
+      - name: "Extinction Ratio"
+        details: "9000"
+      - name: "Wavelength Range"
+        details: "400–700 nm"
+      - name: "Transmission (single)"
+        details: "42%"
+      - name: "Transmission (parallel)"
+        details: "36%"
+      - name: "Transmission (crossed)"
+        details: "<0.004%"
+      - name: "Thickness Tolerance"
+        details: "±10%"
+      - name: "Thickness"
+        details: "0.18 mm (±10%)"
       - name: "Mount"
         details: "Fits inside M12 lens mount of all OpenMV Cam models."
       - name: "Manufacturer"
@@ -40,18 +56,55 @@ system_components:
       - name: "Supported Cameras"
         details: "All OpenMV Cam models with M12 lens mount."
 
+  - title: "Applications"
+    text: >
+      The Polarizing Filter reduces glare and reflections for surface inspection, LCD screen
+      reading, underwater imaging, and outdoor machine vision applications.
+
 mechanical:
   specs:
+    - dimension: "Length"
+      value: "14 mm"
+    - dimension: "Width"
+      value: "14 mm"
+    - dimension: "Height"
+      value: "0.18 mm"
     - dimension: "Weight"
       value: "0.1 g"
+    - dimension: "Operating Temperature"
+      value: "-40°C to +80°C"
+    - dimension: "Storage Temperature"
+      value: "-40°C to +80°C"
+    - dimension: "Country of Origin"
+      value: "United States"
+    - dimension: "HS Code"
+      value: "8473.30.2000"
+    - dimension: "UPC"
+      value: "638126314710"
+    - dimension: "SKU"
+      value: "OMV-POLARIZING-FILTER"
+    - dimension: "ECCN"
+      value: "EAR99"
+
+certifications:
+  headers: ["Certification", "Region", "Details"]
+  table:
+    - ["RoHS", "EU", "Compliant with EU Directive 2011/65/EU (RoHS 2). All materials are lead-free."]
+    - ["REACH", "EU", "Compliant with EU Regulation (EC) No 1907/2006."]
 
 company:
   - field: "Website"
     value: "https://openmv.io"
+  - field: "Documentation"
+    value: "https://docs.openmv.io"
+  - field: "Support"
+    value: "https://forums.openmv.io"
 
 references:
   - name: "Product Page"
     link: "https://openmv.io/products/polarizing-filter"
+  - name: "3D Model"
+    link: "https://grabcad.com/library/polarizing-filter-2"
 
 revision_history:
   - date: "2026-04-04"

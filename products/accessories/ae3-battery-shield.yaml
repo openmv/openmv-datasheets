@@ -11,9 +11,10 @@ description: >
   It provides flexible power input options including a 2.1 mm DC barrel jack accepting
   1.8 V to 5.5 V (suitable for three alkaline batteries in series), a wide-range 6 V to
   36 V input with reverse voltage protection for industrial and automotive applications, and
-  a 3.7 V LiPo battery charger with 500 mA charging from either the wide-range input or
+  a 3.7 V LiPo battery charger with 100 mA charging from either the wide-range input or
   5 V USB. The board also includes a SPI-attached microSD card socket for data logging and
-  storage, addressing the AE3's lack of on-board microSD.
+  storage, addressing the AE3's lack of on-board microSD. The shield mounts directly on
+  the back of the AE3 via its board-to-board connector.
 
 target_areas: >
   Battery-powered deployments, remote sensing, field installations, data logging,
@@ -21,11 +22,11 @@ target_areas: >
 
 features:
   - label: "Low-voltage input"
-    detail: "1.8\u20135.5 V via 2.1 mm DC barrel jack. Supports three alkaline batteries in series."
+    detail: "1.8–5.5 V via 2.1 mm DC barrel jack. Supports three alkaline batteries in series."
   - label: "Wide-range input"
-    detail: "6\u201336 V input with reverse voltage protection for industrial, automotive, and solar applications."
+    detail: "6–36 V input with reverse voltage protection for industrial, automotive, and solar applications."
   - label: "LiPo charger"
-    detail: "3.7 V single-cell LiPo battery charger at 500 mA from wide-range input or 5 V USB."
+    detail: "3.7 V single-cell LiPo battery charger at 100 mA from wide-range input or 5 V USB."
   - label: "microSD storage"
     detail: "SPI-attached microSD card socket for data logging, image storage, and model files."
   - label: "Ultra-lightweight"
@@ -34,57 +35,85 @@ features:
 system_components:
   - title: "Power Input"
     components:
-      - name: "DC Barrel Jack"
-        details: "2.1 mm DC barrel jack. Accepts 1.8 V to 5.5 V input. Compatible with three alkaline batteries in series (3x 1.5 V = 4.5 V nominal)."
-      - name: "Wide-Range Input"
-        details: "6 V to 36 V input with reverse voltage protection. Suitable for 12 V automotive systems, 24 V industrial power, and solar panel direct connection."
-      - name: "LiPo Charger"
-        details: "Integrated 3.7 V single-cell LiPo battery charger. 500 mA charging current from wide-range input or 5 V USB power."
+      - name: "LV PWR"
+        details: "2.1 mm DC barrel jack. Accepts 1.8 V to 5.5 V input. Reverse voltage tolerant to -5.5 V. Compatible with three alkaline batteries in series (3x 1.5 V = 4.5 V nominal). Provides 3.0 V output, up to 800 mA draw."
+      - name: "HV PWR"
+        details: "6 V to 36 V wide-range input. Reverse voltage tolerant to -36 V. Suitable for 12 V automotive systems, 24 V industrial power, and solar panel direct connection. Provides 3.3 V output, up to 600 mA draw."
+      - name: "BAT"
+        details: "3.7 V 1S LiPo battery input. NOT reverse voltage tolerant. Charges at up to 100 mA from HV or USB inputs. Provides 3.0 V output, up to 800 mA draw."
 
   - title: "Storage"
     components:
       - name: "microSD Card"
-        details: "SPI-attached microSD card socket. Provides removable storage for data logging, captured images, trained models, and MicroPython scripts. Addresses the AE3's lack of on-board microSD slot."
+        details: "SPI-attached microSD card socket on P0–P3 (MOSI, MISO, SCLK, SS) with power enable on P11. ~300 KB/s write, ~100 KB/s read. Provides removable storage for data logging, captured images, trained models, and MicroPython scripts."
 
   - title: "Compatibility"
     components:
       - name: "OpenMV AE3"
-        details: "Designed for the OpenMV AE3 camera module. Connects via cable."
+        details: "Designed for the OpenMV AE3 camera module. Mounts directly on the back of the AE3 via board-to-board connector."
 
+  - title: "Applications"
+    text: >
+      The AE3 Battery Shield is ideal for battery-powered deployments, remote sensing, field
+      installations, data logging, solar-powered systems, and industrial monitoring where
+      flexible power input and removable storage are needed.
+
+ratings_title: "Pinout"
 ratings:
-  - title: "Power Input Specifications"
-    headers: ["Parameter", "Description", "Min", "Max", "Unit"]
+  - title: "microSD Card Pins"
+    headers: ["Pin", "Function"]
     rows:
-      - ["VDC", "DC barrel jack input", "1.8", "5.5", "V"]
-      - ["VWIDE", "Wide-range input", "6", "36", "V"]
-      - ["VBATT", "LiPo battery voltage", "3.0", "4.2", "V"]
-      - ["ICHG", "LiPo charge current", "—", "500", "mA"]
+      - ["P0", "MOSI"]
+      - ["P1", "MISO"]
+      - ["P2", "SCLK"]
+      - ["P3", "SS"]
+      - ["P11", "Power Enable"]
 
-functional_overview:
-  board_topology:
-    image: "boards/openmv-cam/openmv-ae3/battery-shield/ae3-battery-shield-front.jpg"
-    components:
-      - ref: "J1"
-        description: "2.1 mm DC barrel jack (1.8\u20135.5 V)"
-      - ref: "J2"
-        description: "Wide-range power input (6\u201336 V)"
-      - ref: "BAT"
-        description: "LiPo battery connector"
-      - ref: "SD"
-        description: "microSD card socket (SPI-attached)"
-      - ref: "CABLE"
-        description: "AE3 connection cable header"
+extra_sections:
+  - title: "Power"
+    subsections:
+      - title: "Power Input Specifications"
+        table:
+          headers: ["Input", "Voltage Range", "Output Rail", "Max Draw", "Notes"]
+          rows:
+            - ["LV PWR", "1.8–5.5 V", "3.0 V", "800 mA", "Reverse voltage tolerant to -5.5 V"]
+            - ["HV PWR", "5–36 V", "3.3 V", "600 mA", "Reverse voltage tolerant to -36 V"]
+            - ["BAT", "~3.7 V", "3.0 V", "800 mA", "NOT reverse voltage tolerant"]
+          notes:
+            - "All external interfaces have robust transient voltage protection."
+      - title: "Power Consumption"
+        table:
+          headers: ["Condition", "Current Draw", "Input"]
+          rows:
+            - ["Idle (not charging)", "2 mA", "HV or USB @ 5 V"]
+            - ["Charging LiPo", "130 mA", "HV or USB @ 5 V"]
+            - ["No load (deep sleep)", "16 µA", "LV @ 5 V"]
+            - ["No load (deep sleep)", "12 µA", "BAT @ 3.7 V"]
 
 mechanical:
   specs:
+    - dimension: "Length"
+      value: "32 mm"
+    - dimension: "Width"
+      value: "32 mm"
+    - dimension: "Height"
+      value: "12 mm"
     - dimension: "Weight"
       value: "9 g"
-
-certifications:
-  headers: ["Certification", "Region", "Details"]
-  table:
-    - ["RoHS", "EU", "Compliant with EU Directive 2011/65/EU (RoHS 2). All components and solder are lead-free."]
-    - ["REACH", "EU", "Compliant with EU Regulation (EC) No 1907/2006."]
+    - dimension: "Operating Temperature"
+      value: "-25°C to +85°C"
+    - dimension: "Storage Temperature"
+      value: "-25°C to +85°C"
+    - dimension: "Country of Origin"
+      value: "China"
+    - dimension: "HS Code"
+      value: "8473.30.1180"
+    - dimension: "UPC"
+      value: "602772227229"
+    - dimension: "SKU"
+      value: "OMV-AE3-BATTERY-SHIELD-V4"
+    - dimension: "ECCN"
+      value: "EAR99"
 
 company:
   - field: "Website"
@@ -97,12 +126,8 @@ company:
 references:
   - name: "Product Page"
     link: "https://openmv.io/products/openmv-ae3-battery-shield"
-  - name: "OpenMV AE3"
-    link: "https://openmv.io/products/openmv-ae3"
-  - name: "Documentation"
-    link: "https://docs.openmv.io"
-  - name: "Community Forum"
-    link: "https://forums.openmv.io"
+  - name: "3D Mounts"
+    link: "https://grabcad.com/library/openmv-ae3-with-a-shield-mounts-1"
 
 revision_history:
   - date: "2026-04-04"

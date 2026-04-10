@@ -41,6 +41,12 @@ system_components:
       - name: "Supported Modules"
         details: "All camera modules including PS5520 MIPI sensor. Does NOT work with PAG7936 MIPI sensor (updated cable with better impedance control in development)."
 
+  - title: "Applications"
+    text: >
+      The Camera Module Extension Cable is useful for any application where you need to place
+      the camera module and processor body in different locations, such as remote camera
+      placement, enclosures, robotics, inspection systems, and tight-space installations.
+
   - title: "Important Notes"
     components:
       - name: "Orientation"
@@ -50,18 +56,48 @@ system_components:
 
 mechanical:
   specs:
+    - dimension: "Length"
+      value: "82 mm"
+    - dimension: "Width"
+      value: "14 mm"
+    - dimension: "Height"
+      value: "3 mm"
     - dimension: "Weight"
       value: "1 g"
+    - dimension: "Operating Temperature"
+      value: "-55°C to +125°C"
+    - dimension: "Storage Temperature"
+      value: "-55°C to +125°C"
+    - dimension: "Country of Origin"
+      value: "China"
+    - dimension: "HS Code"
+      value: "8473.30.1180"
+    - dimension: "UPC"
+      value: "787303475949"
+    - dimension: "SKU"
+      value: "OMV-CAB-FPC-V1"
+    - dimension: "ECCN"
+      value: "EAR99"
+
+certifications:
+  headers: ["Certification", "Region", "Details"]
+  table:
+    - ["RoHS", "EU", "Compliant with EU Directive 2011/65/EU (RoHS 2). All components and solder are lead-free."]
+    - ["REACH", "EU", "Compliant with EU Regulation (EC) No 1907/2006."]
 
 company:
   - field: "Website"
     value: "https://openmv.io"
+  - field: "Documentation"
+    value: "https://docs.openmv.io"
+  - field: "Support"
+    value: "https://forums.openmv.io"
 
 references:
   - name: "Product Page"
     link: "https://openmv.io/products/camera-module-extension-cable"
-  - name: "Documentation"
-    link: "https://docs.openmv.io"
+  - name: "3D Model"
+    link: "https://grabcad.com/library/camera-module-extension-cable-1"
 
 revision_history:
   - date: "2026-04-04"

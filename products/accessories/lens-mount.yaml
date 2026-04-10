@@ -27,18 +27,55 @@ system_components:
       - name: "Compatibility"
         details: "All OpenMV Cam models with M12 lens mount."
 
+  - title: "Applications"
+    text: >
+      The Lens Mount is a replacement M12 lens mount for your OpenMV Cam. Use it to replace
+      a damaged or lost lens mount, or for custom builds and enclosure projects.
+
 mechanical:
   specs:
+    - dimension: "Length"
+      value: "17 mm"
+    - dimension: "Width"
+      value: "17 mm"
+    - dimension: "Height"
+      value: "15 mm"
     - dimension: "Weight"
       value: "2 g"
+    - dimension: "Operating Temperature"
+      value: "-20°C to +80°C"
+    - dimension: "Storage Temperature"
+      value: "-20°C to +80°C"
+    - dimension: "Country of Origin"
+      value: "China"
+    - dimension: "HS Code"
+      value: "8473.30.2000"
+    - dimension: "UPC"
+      value: "638126314734"
+    - dimension: "SKU"
+      value: "OMV-LENS-MOUNT"
+    - dimension: "ECCN"
+      value: "EAR99"
+
+certifications:
+  headers: ["Certification", "Region", "Details"]
+  table:
+    - ["RoHS", "EU", "Compliant with EU Directive 2011/65/EU (RoHS 2). All components and solder are lead-free."]
+    - ["REACH", "EU", "Compliant with EU Regulation (EC) No 1907/2006."]
 
 company:
   - field: "Website"
     value: "https://openmv.io"
+  - field: "Documentation"
+    value: "https://docs.openmv.io"
+  - field: "Support"
+    value: "https://forums.openmv.io"
 
 references:
   - name: "Product Page"
     link: "https://openmv.io/products/lens-mount"
+  - name: "3D Model"
+    link: "https://grabcad.com/library/lens-mount-3"
 
 revision_history:
   - date: "2026-04-04"

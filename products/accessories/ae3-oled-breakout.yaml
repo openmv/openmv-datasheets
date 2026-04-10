@@ -39,7 +39,7 @@ system_components:
   - title: "Display"
     components:
       - name: "OLED Screen"
-        details: "128x128 pixel RGB OLED display. Full-color graphics and text rendering. Can be disabled via on-board switch to save power or free up SPI bandwidth."
+        details: "128x128 pixel RGB OLED display. Full-color graphics and text rendering. Can be disabled via on-board switch to save power or free up SPI pins."
 
   - title: "User Input"
     components:
@@ -66,16 +66,76 @@ system_components:
       - name: "OpenMV AE3"
         details: "Designed exclusively for the OpenMV AE3 camera module. The AE3 plugs directly into the breakout board via its board-to-board connector."
 
+  - title: "Applications"
+    text: >
+      The AE3 OLED Breakout is ideal for development, prototyping, debugging, HMI interfaces,
+      IoT dashboards, sensor integration, interactive demos, and field testing of OpenMV AE3
+      applications.
+
+ratings_title: "Pinout"
+ratings:
+  - title: "SPI OLED Pins (ER-OLED015-1C)"
+    headers: ["Pin", "Function"]
+    rows:
+      - ["P0", "MOSI"]
+      - ["P2", "SCLK"]
+      - ["P3", "SSEL"]
+      - ["P7", "RSTN"]
+      - ["P8", "RS"]
+
+  - title: "I2C GPIO Expander Pins (PCA9674A)"
+    headers: ["Pin", "Function"]
+    rows:
+      - ["P4", "SCL"]
+      - ["P5", "SDA"]
+      - ["P9", "INT"]
+
+  - title: "Joystick Pins (AS90R)"
+    headers: ["Pin", "Function"]
+    rows:
+      - ["PCA9674A P0", "Right"]
+      - ["PCA9674A P1", "Up"]
+      - ["PCA9674A P2", "Left"]
+      - ["PCA9674A P3", "Down"]
+      - ["PCA9674A P4", "Center Button"]
+      - ["PCA9674A P6", "OLED Enable Switch"]
+
+  - title: "QWIIC Pins"
+    headers: ["Pin", "Function"]
+    rows:
+      - ["P4", "SCL"]
+      - ["P5", "SDA"]
+
+  - title: "Power Consumption"
+    headers: ["Condition", "Current Draw"]
+    rows:
+      - ["AE3 on streaming (OLED off)", "45 mA @ 5 V"]
+      - ["AE3 and OLED on streaming", "130 mA @ 5 V"]
+
 mechanical:
   specs:
+    - dimension: "Length"
+      value: "97 mm"
+    - dimension: "Width"
+      value: "59 mm"
+    - dimension: "Height"
+      value: "15 mm"
     - dimension: "Weight"
       value: "43 g"
-
-certifications:
-  headers: ["Certification", "Region", "Details"]
-  table:
-    - ["RoHS", "EU", "Compliant with EU Directive 2011/65/EU (RoHS 2). All components and solder are lead-free."]
-    - ["REACH", "EU", "Compliant with EU Regulation (EC) No 1907/2006."]
+    - dimension: "Operating Temperature"
+      value: "-20°C to +70°C"
+    - dimension: "Storage Temperature"
+      value: "-20°C to +80°C"
+    - dimension: "Country of Origin"
+      value: "China"
+    - dimension: "HS Code"
+      value: "8473.30.1180"
+    - dimension: "UPC"
+      value: "602772227144"
+    - dimension: "SKU"
+      value: "OMV-AE3-OLED-BREAKOUT"
+    - dimension: "ECCN"
+      value: "EAR99"
 
 company:
   - field: "Website"
@@ -88,12 +148,10 @@ company:
 references:
   - name: "Product Page"
     link: "https://openmv.io/products/ae3-oled-breakout"
-  - name: "OpenMV AE3"
-    link: "https://openmv.io/products/openmv-ae3"
-  - name: "Documentation"
-    link: "https://docs.openmv.io"
-  - name: "Community Forum"
-    link: "https://forums.openmv.io"
+  - name: "3D Model"
+    link: "https://grabcad.com/library/openmv-ae3-oled-breakout-board-1"
+  - name: "3D Mounts"
+    link: "https://grabcad.com/library/ae3-oled-breakout-mounts-1"
 
 revision_history:
   - date: "2026-04-04"

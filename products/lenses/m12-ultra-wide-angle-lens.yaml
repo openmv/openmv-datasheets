@@ -124,6 +124,12 @@ mechanical:
     - dimension: "ECCN"
       value: "EAR99"
 
+certifications:
+  headers: ["Certification", "Region", "Details"]
+  table:
+    - ["RoHS", "EU", "Compliant with EU Directive 2011/65/EU (RoHS 2). All components and solder are lead-free."]
+    - ["REACH", "EU", "Compliant with EU Regulation (EC) No 1907/2006."]
+
 company:
   - field: "Website"
     value: "https://openmv.io"
